@@ -7,3 +7,4 @@ categories: takeiteasy
 ---
 
 just the first post,take it easy!
+测试中文试试可以不!
