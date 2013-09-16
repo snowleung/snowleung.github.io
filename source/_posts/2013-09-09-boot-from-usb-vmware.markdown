@@ -13,3 +13,8 @@ categories: vmware
 
 * download [Plop BootManager](http://www.plop.at/en/bootmanagerdl.html)
 
+
+edit 2013-09-16:
+Tips:
+
+on vbox , base Mac OS, you shut safe remove the use device on Finder, I think it may let vbox unread the usb device, anyway, it can boot!
