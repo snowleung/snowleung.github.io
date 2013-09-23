@@ -63,13 +63,13 @@ default_asides: [asides/github.html, asides/delicious.html, asides/pinboard.html
 # ----------------------- #
 
 # Github repositories
-github_user:
+github_user: snowleung
 github_repo_count: 0
 github_show_profile_link: true
 github_skip_forks: true
 
 # Twitter
-twitter_user:
+twitter_user: snowleung
 twitter_tweet_button: true
 
 # Google +1
