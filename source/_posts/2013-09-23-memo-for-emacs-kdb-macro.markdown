@@ -12,15 +12,15 @@ categories: emacs
 
 1.Start defining macro
 
-  * 'C-x (' or <f3>  
+  * 'C-x (' or \<f3>  
 
 2.Stop defining macro
 
-* 'C-x )' or <f4>
+* 'C-x )' or \<f4>
 
 3.Execute macro
 
-* 'C-x e' or <f4>
+* 'C-x e' or \<f4>
 
 
 ## Now save to .emacs 
