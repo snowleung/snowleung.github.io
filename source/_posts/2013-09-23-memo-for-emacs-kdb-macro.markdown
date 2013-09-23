@@ -7,7 +7,7 @@ categories: emacs
 ---
 
 
-##some thing for macro to save your time:
+##use macro to save your time:
 
 
 1.Start defining macro
