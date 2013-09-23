@@ -6,7 +6,7 @@ comments: true
 categories: code
 ---
 
-{% codeblock lang:c title:helloworld %}
+{% codeblock lang:c helloworld %}
 
 #include <stdio.h>
 
