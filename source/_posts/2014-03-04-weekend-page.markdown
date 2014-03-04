@@ -1,17 +1,17 @@
 ---
 layout: post
 title: "weekend-page"
-date: 2014-02-27 22:46
+date: 2014-03-04 18:28
 comments: true
 categories: weekend_page
 ---
 ###Not done ?
 
->1.no read for unix network programing.
+>1.read nothing.
 
 ###Extra ?
 	
->1.interview : [Yinhan(www.01234.com.cn)](http://www.01234.com.cn)
+>1.visit this [清晖园](http://baike.baidu.com/view/41399.htm)
        
 ###Done ?
 
@@ -19,7 +19,7 @@ categories: weekend_page
 	
 ###Will ?
 
->1.do something about ios game dev.
+>1.focus c language
 
 		
 ###Want ?
@@ -32,7 +32,7 @@ categories: weekend_page
 
 ###Important @ February
 	
->1.know about socket! (that's broken!)
+>1.more c and unix system
 	
 ###Other 
 
