@@ -21,9 +21,13 @@ categories: [unix,Reading]
 >int open(const char *pathname, int oflag, ...)
 
 >oflag: 
+
 >>O_RDONLY
+
 >>O_WRONLY
+
 >>O_RDWR
+
 >>其他可用oflag有:O_APPEND,O_CREAT ...
 
 >pathname,有 NAME_MAX 限制
