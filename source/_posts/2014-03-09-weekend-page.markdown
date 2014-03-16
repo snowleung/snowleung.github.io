@@ -24,7 +24,9 @@ categories: weekend_page
 ###Want ?
 
 >1.keep this weekend_page running.
+
 >2.one chapter one week. 
+
 >3.foucs @ socket and system thread.
 
 ###Must be ?
