@@ -26,4 +26,8 @@ footer: true
 
 3.[catworld ios client](https://github.com/snowleung/ImagesC)
 
+4.[井字过三关 for iOS](https://github.com/snowleung/jinziqi)
+
+5.[井字过三关 for Python](https://gist.github.com/snowleung/9745538)
+
 #### 
