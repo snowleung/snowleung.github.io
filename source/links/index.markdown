@@ -19,3 +19,5 @@ Hi, Welcome to [leisiwo.com](http://leisiwo.com)
 [zespia.tw](http://zespia.tw)
 
 [当然我在扯淡](http://www.yinwang.org)
+
+[王中周的技术博客](http://wangzz.github.io)
