@@ -1,0 +1,35 @@
+---
+layout: post
+title: "i am back"
+date: 2014-09-11 00:25
+comments: true
+categories: takeiteasy
+---
+
+
+###Just back.
+
+I got a job  at [GD caihui](http://www.gdcaihui.com)
+
+But i am out now.
+
+I know something about Flask from that job.
+
+that's make me know more about WEB dev.
+
+
+I think I want to know more about HTTP.
+
+also TCP/IP. 
+
+============
+i got a new keyboard: ikbc poker2. (brown switch)
+
+i feel good.
+
+===========
+maybe i will take a logs category to log my event every day.
+
+it sound good.
+
+just do it.
