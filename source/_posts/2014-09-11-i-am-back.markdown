@@ -7,29 +7,30 @@ categories: takeiteasy
 ---
 
 
-###Just back.
+####Start
 
 I got a job  at [GD caihui](http://www.gdcaihui.com)
 
 But i am out now.
 
-I know something about Flask from that job.
+    1. I know something about Flask from that job.That's make me know more about WEB dev.
 
-that's make me know more about WEB dev.
+    2. I think I want to know more about HTTP, TCP/IP.
 
 
-I think I want to know more about HTTP.
+####NEXT
+----------
 
-also TCP/IP. 
+I got a new keyboard: ikbc poker2. (brown switch) and feel good. Just hope to happy programming!
 
-============
-i got a new keyboard: ikbc poker2. (brown switch)
+####AND NEXT
+--------
 
-i feel good.
+Maybe i will take a logs category to log my event every day.
 
-===========
-maybe i will take a logs category to log my event every day.
+And just do it.
 
-it sound good.
+####AND NEXT
+____________
 
-just do it.
+Find another job also.
