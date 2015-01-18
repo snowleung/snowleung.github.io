@@ -38,3 +38,15 @@ categories: [takeiteasy, git]
 
 参考资料
 (http://www.kafeitu.me/git/2012/03/27/git-submodule.html)[http://www.kafeitu.me/git/2012/03/27/git-submodule.html]
+
+
+UPDATE:
+
+* 尝试过subtree子命令，感觉这个指令更加多的是一种分支管理策略，所以跳不出一个很重要的点就是
+
+```git中对于子模块(子仓库)的管理都需要在父项目中有commit_id来追踪，所以个人觉得最需要的管理就是如何可以让子模块的更新最大限度的减少对父项目的影响```
+
+* 参考资料
+
+(http://aoxuis.me/posts/2013/08/07/git-subtree/)[http://aoxuis.me/posts/2013/08/07/git-subtree/]
+(http://git-scm.com/book/zh/v1/Git-%E5%B7%A5%E5%85%B7-%E5%AD%90%E6%A0%91%E5%90%88%E5%B9%B6)[http://git-scm.com/book/zh/v1/Git-%E5%B7%A5%E5%85%B7-%E5%AD%90%E6%A0%91%E5%90%88%E5%B9%B6]
