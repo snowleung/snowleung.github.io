@@ -16,4 +16,4 @@ paster create  -t basic_package mypackage
 
 related:
 
-(如何自动生成setup.py文件)[http://blog.csdn.net/jianhong1990/article/details/7951606]
+[如何自动生成setup.py文件](http://blog.csdn.net/jianhong1990/article/details/7951606)
