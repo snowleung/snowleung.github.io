@@ -25,7 +25,10 @@ google 了一下软件版本号规范、风格、规则，也没找到什么好�
 ```
 git tag -a tag_name
 
+git push origin tag_name 	#远端增加
+
 ```
+
 
 * 修改， 看起来这个打标签是比较慎重的行为，写错了只能删除。
 
