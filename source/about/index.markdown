@@ -28,4 +28,7 @@ footer: true
 
 4.井字过三关 [for iOS](https://github.com/snowleung/jinziqi),[for Python](https://gist.github.com/snowleung/9745538)
 
-#### 
+
+#### 其他
+
+1.[Books](http://www.leisiwo.com/books)
