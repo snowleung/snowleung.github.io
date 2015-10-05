@@ -20,9 +20,9 @@ footer: true
 
 #### 进行中的项目堆
 
-1.[slink 跨平台连接分享工具](http://slink.sinaapp.com)
+~~1.[slink 跨平台连接分享工具](http://slink.sinaapp.com)~~
 
-2.[catworld收集猫](http://catworld.sinaapp.com)
+~~2.[catworld收集猫](http://catworld.sinaapp.com)~~
 
 3.[catworld ios client](https://github.com/snowleung/ImagesC)
 
