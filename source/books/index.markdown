@@ -73,6 +73,9 @@ footer: true
 《情人》
 《老人与海》
 《人间失格》
+《Redis实战》
+
+《简单的逻辑学》
 
 
 **Computer**
