@@ -3,7 +3,7 @@ layout: post
 title: "python effective cheatsheet 03"
 date: 2015-03-09 23:13
 comments: true
-categories: code,python
+categories: Program
 ---
 
 

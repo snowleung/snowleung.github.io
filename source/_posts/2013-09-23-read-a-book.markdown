@@ -3,7 +3,7 @@ layout: post
 title: "Read a book"
 date: 2013-09-23 13:51
 comments: true
-categories: Reading
+categories: Read&Talk&Think
 ---
 
 今天读了一点书

@@ -3,7 +3,7 @@ layout: post
 title: "ansible and vagrant provision"
 date: 2014-09-17 16:47
 comments: true
-categories: [code,vagrant]
+categories: Program
 ---
 
 使用python开发Web app，所以总是想有一个自动化部署的开发环境。

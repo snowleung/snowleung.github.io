@@ -3,7 +3,7 @@ layout: post
 title: "using git tags"
 date: 2015-03-08 18:05
 comments: true
-categories: [code, git]
+categories: Program
 ---
 
 ### 想用版本去规范一下自己写的程序

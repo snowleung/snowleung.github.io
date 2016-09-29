@@ -3,7 +3,7 @@ layout: post
 title: "python logging"
 date: 2014-09-15 01:11
 comments: true
-categories: [code,Python_library]
+categories: Program
 ---
 
 

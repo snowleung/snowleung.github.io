@@ -3,7 +3,7 @@ layout: post
 title: "fileIO_index"
 date: 2014-03-16 17:07
 comments: true
-categories: [unix,Reading]
+categories: Program
 ---
 
 3.2 文件描述符 @ <unistd.h>

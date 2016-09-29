@@ -3,7 +3,7 @@ layout: post
 title: "boot_from_usb_vmware"
 date: 2013-09-09 18:02
 comments: true
-categories: vmware
+categories: Program
 ---
 
 #boot from usb in vmware

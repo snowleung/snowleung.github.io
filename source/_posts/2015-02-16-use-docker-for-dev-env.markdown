@@ -3,7 +3,7 @@ layout: post
 title: "Use docker for dev env"
 date: 2015-02-16 16:52
 comments: true
-categories: vagrant
+categories: Program
 ---
 
 ### 使用docker去搭建一个简单的开发环境

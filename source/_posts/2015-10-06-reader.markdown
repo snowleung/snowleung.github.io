@@ -3,7 +3,7 @@ layout: post
 title: "Reader"
 date: 2015-10-06 00:37
 comments: true
-categories: Reading
+categories: Read&Talk&Think
 ---
 
 #阅读的层次

@@ -3,7 +3,7 @@ layout: post
 title: "use PasteScript"
 date: 2015-01-18 11:39
 comments: true
-categories: Python_library
+categories: Program
 ---
 ### 使用PasteScript来生成setup.py文件
 

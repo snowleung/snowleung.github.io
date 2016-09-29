@@ -3,7 +3,7 @@ layout: post
 title: "Try ELK"
 date: 2015-03-29 22:49
 comments: true
-categories: coding
+categories: Program
 ---
 
 ### ELK: Elasticsearch + Logstash + Kibana

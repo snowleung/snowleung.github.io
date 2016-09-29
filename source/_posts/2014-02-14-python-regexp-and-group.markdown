@@ -3,7 +3,7 @@ layout: post
 title: "python regexp and group"
 date: 2014-02-14 18:07
 comments: true
-categories: [code,Reading]
+categories: Program
 ---
 
 

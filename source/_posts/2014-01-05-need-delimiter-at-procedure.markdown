@@ -3,7 +3,7 @@ layout: post
 title: "need delimiter at procedure"
 date: 2014-01-05 10:46
 comments: true
-categories: mysql
+categories: Program
 ---
 
 if use this syntax:

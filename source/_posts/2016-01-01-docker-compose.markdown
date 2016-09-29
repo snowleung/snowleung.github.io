@@ -3,7 +3,7 @@ layout: post
 title: "docker compose"
 date: 2016-01-01 23:13
 comments: true
-categories: vagrant, docker
+categories: Program
 ---
 
 ###ENV

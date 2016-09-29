@@ -3,7 +3,7 @@ layout: post
 title: "use git submodule"
 date: 2015-01-10 00:16
 comments: true
-categories: [takeiteasy, git]
+categories: Program
 ---
 ### 我有一个.emacs文件，如何用submodule去维护其他模块？
 #### 如何添加子模块

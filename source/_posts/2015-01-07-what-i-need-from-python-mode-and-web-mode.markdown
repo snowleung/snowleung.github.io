@@ -3,7 +3,7 @@ layout: post
 title: "what i need from python-mode and web-mode"
 date: 2015-01-07 00:29
 comments: true
-categories: emacs
+categories: Program
 ---
 
 #web-mode
