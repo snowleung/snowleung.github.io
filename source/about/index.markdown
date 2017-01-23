@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: home
 title: "about"
 date: 2014-01-13 18:10
 comments: true
@@ -31,4 +31,5 @@ footer: true
 
 #### 其他
 
-1.[Books](http://www.leisiwo.com/books)
+* [Books](http://www.leisiwo.com/books)
+* [Links](http://www.leisiwo.com/links)
