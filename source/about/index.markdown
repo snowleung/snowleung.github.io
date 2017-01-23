@@ -1,13 +1,10 @@
 ---
 layout: home
-title: "about"
+title: about
 date: 2014-01-13 18:10
-comments: true
-sharing: true
-footer: true
 ---
-#### 自我介绍
 
+#### 自我介绍
 
 1.1988破蛋
 
@@ -31,5 +28,5 @@ footer: true
 
 #### 其他
 
-* [Books](http://www.leisiwo.com/books)
-* [Links](http://www.leisiwo.com/links)
+* [Books](/books)
+* [Links](/links)
