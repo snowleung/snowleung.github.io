@@ -4,7 +4,7 @@
   <div class="article-read-more">
     <p class="meta">
       {% include post/date.html %}{{ time }}
-      <a rel="full-article" href="{{ root_url }}{{ post.url }}">{{ post.title }}</a>
+      <a rel="full-article" href="{{ root_url }}{{ post.url }}" {% if post.keywords %}title="{{ post.keywords }}"{% endif %}> {{ post.title }}</a>
     </p>
   </div>
 {% else %}

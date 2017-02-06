@@ -4,6 +4,8 @@ title: "Good Sense For Redis Data Type"
 date: 2016-12-15 19:01
 comments: true
 categories: Program
+keywords: redis, datatype, database
+description: Simple to understand redis datatypes
 ---
 
 ###Redis
