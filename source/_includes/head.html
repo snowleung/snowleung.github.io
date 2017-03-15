@@ -8,7 +8,7 @@
   <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
   <meta name="author" content="{{ site.author }}">
   <!--[if lt IE 9]>
-    <script src="http://x.papaapp.com/farm1/a571d2/8dda131d/html5shiv.js"></script>
+      <script src="//cdn.bootcss.com/html5shiv/r29/html5.js"></script>
     <![endif]-->
   {% capture description %}{% if page.description %}{{ page.description }}{% else %}{{ content | raw_content }}{% endif %}{% endcapture %}
   <meta name="description" content="{{ description | strip_html | condense_spaces | truncate:150 }}">
@@ -22,7 +22,7 @@
   <link rel="canonical" href="{{ canonical }}">
   <link href="{{ root_url }}/favicon.png" rel="icon">
   <link href="{{ root_url }}/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <script type="text/javascript" src="http://t.papaapp.com/js/libs/jquery/1.7.2/jquery.js"></script>
+  <script src="//cdn.bootcss.com/jquery/1.7.2/jquery.min.js"></script>
   <link href="{{ site.subscribe_rss }}" rel="alternate" title="{{site.title}}" type="application/atom+xml">
 
   {% include custom/head.html %}
