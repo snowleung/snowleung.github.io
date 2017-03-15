@@ -18,6 +18,8 @@ http://www.leisiwo.com/blog/2015/02/16/use-docker-for-dev-env/
 
 如今再次看了一下docker的整个流程，所以有这个笔记
 
+<!--More-->
+
 ---
 
 ###回答问题：

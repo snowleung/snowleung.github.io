@@ -10,6 +10,8 @@ categories: Program
 
 * 是Django请求、响应处理的一个钩子(Hook)框架，用于全局修改Django的输入或输出。
 
+<!--More-->
+
 ###Middleware order and layering###
 
 * 中间件的顺序结构可以考虑为“洋葱”的结构（一层包一层）

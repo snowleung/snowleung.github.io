@@ -8,7 +8,7 @@ description: SEO for Octopress is very simple
 ---
 
 >add META **keywords** and **description** is very important for SEO and aslo basic. 
-	
+
 
 ### FIRST
 
@@ -20,6 +20,8 @@ page.description }  } { % elsif page.layout == "home" % } { {
 site.description } } { %else% } { { content | raw_content  } } 
 { %endif% }{ % endcapture % } 
 ```
+
+<!--More-->
 
 ### Option One:
 
