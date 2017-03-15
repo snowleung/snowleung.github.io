@@ -1,5 +1,11 @@
-<ul class="main-navigation">
-  <li style='float:left;margin-right:7px'><a class='nav' href="{{ root_url }}/">Blog</a></li>
-  <li style='float:left;margin-right:7px'><a class='nav' href="{{ root_url }}/archives">Archives</a></li>
-  <li ><a class='nav' href="{{ root_url }}/about">About</a></li>
-</ul><br><br>
+<!---
+  {% if site.simple_search %}
+<form action="{{ site.simple_search }}" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:{{ site.url | shorthand_url }}" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  {% endif %}
+
+--->
