@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: page
 title: about
 date: 2014-01-13 18:10
 ---

@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: page
 title: "books"
 date: 2015-10-05 18:02
 comments: true

@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: page
 title: "links"
 date: 2014-01-29 22:14
 comments: true
