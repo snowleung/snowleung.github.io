@@ -3,6 +3,13 @@ layout: page
 title: about
 date: 2014-01-13 18:10
 ---
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#nav-menu .current").removeClass("current");
+	$("#nav-menu .about-nav").addClass("current");
+});
+</script>
+
 
 #### 自我介绍
 

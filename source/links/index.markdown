@@ -6,6 +6,13 @@ comments: true
 sharing: true
 footer: true
 ---
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#nav-menu .current").removeClass("current");
+	$("#nav-menu .links-nav").addClass("current");
+});
+</script>
+
 
 ###先link为上，互link请在下面写上哦！
 
