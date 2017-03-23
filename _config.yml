@@ -70,6 +70,7 @@ theme: maupassant
 deploy:
   type: git
   repo: https://github.com/snowleung/snowleung.github.io
+  branch: master
 
 
 # Extensions
