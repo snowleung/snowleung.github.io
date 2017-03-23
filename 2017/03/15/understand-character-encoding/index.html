@@ -1,0 +1,100 @@
+<!DOCTYPE html><html lang="zh-cn"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="About learning, programming and happy hacking!"><title>Understand_Character_encoding | Hexo</title><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/5.0.0/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.2/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.2/grids-responsive-min.css"><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">Understand_Character_encoding</h1><a id="logo" href="/.">Hexo</a><p class="description"></p></div><div id="nav-menu"><a href="/." class="current"><i class="fa fa-home"> Start</i></a><a href="/archives/"><i class="fa fa-archive"> Archiv</i></a><a href="/about/"><i class="fa fa-user"> Über</i></a><a href="/atom.xml"><i class="fa fa-rss"> RSS</i></a></div></div><div id="layout" class="pure-g"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">Understand_Character_encoding</h1><div class="post-meta">Mar 15, 2017<script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js" async></script><span id="busuanzi_container_page_pv"> | <span id="busuanzi_value_page_pv"></span><span> Hits</span></span></div><div class="post-content"><h1 id="弄清字符编码和它的编码方式"><a href="#弄清字符编码和它的编码方式" class="headerlink" title="弄清字符编码和它的编码方式"></a>弄清字符编码和它的编码方式</h1><p>计算机中，用0和1来作为最小单位，<strong>意义</strong>是假或真，用一定数量的0和1组合来描述世界，一定数量组合的内容足够多时，我们就可以称之为语言。</p>
+<p>同样，在中文里，每一个中文字就是一个最小单位，每一个最小单位都有自己的<strong>意义</strong> ，数量足够多后，同样也称为语言。</p>
+<a id="more"></a>
+<h2 id="基础概念"><a href="#基础概念" class="headerlink" title="基础概念"></a>基础概念</h2><ul>
+<li><em>字符</em>（<a href="https://en.wikipedia.org/wiki/Character_(computing" target="_blank" rel="external">Character</a>)），在计算机中就是一个信息的最小载体。对于中文的则可以叫<a href="https://zh.wikipedia.org/wiki/%E5%AD%97%E4%BD%8D" target="_blank" rel="external">字素</a>，所以a，b，你，我，都代表一个<em>字符</em>。</li>
+<li>UTF（Unicode Transformation Format）：Unicode转换格式</li>
+<li>Byte：字节、位元组（港澳台）；Bit：比特、位元（港澳台）；1 Byte = 8 bit</li>
+</ul>
+<h2 id="字符编码（字符集）"><a href="#字符编码（字符集）" class="headerlink" title="字符编码（字符集）"></a>字符编码（字符集）</h2><p>对于<strong>字符编码</strong>这四个字，我理解为<strong>语言</strong>，和上面的语言一样，而计算机的语言，也可以理解为计算机的字符编码（字符集）。如果字符编码更难理解，可以参看<a href="https://zh.wikipedia.org/wiki/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81" target="_blank" rel="external">字符编码</a>的维基百科。如果还是很难理解，则可以想象为</p>
+<ul>
+<li>字符编码（字符集）是</li>
+<li>字符</li>
+<li>通过编码</li>
+<li>的方式</li>
+<li>被识别</li>
+<li>的过程</li>
+</ul>
+<p>相当于：f(x)=y 中</p>
+<ul>
+<li>f(x)=y（字符编码（字符集））是</li>
+<li>x（字符）</li>
+<li>通过f()（编码）</li>
+<li>的f(x)（方式）</li>
+<li>与y对应（被识别）</li>
+<li>的过程</li>
+</ul>
+<p><strong>虽然不严谨，但是不妨记忆</strong>。</p>
+<p>至于为什么可以字符编码可以同义为字符集，<a href="https://zh.wikipedia.org/wiki/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81" target="_blank" rel="external">wiki</a>中的简单字符集是这么说的</p>
+<blockquote>
+<p>按照惯例，人们认为字符集和字符编码是<a href="https://zh.wikipedia.org/wiki/%E5%90%8C%E4%B9%89%E8%AF%8D" target="_blank" rel="external">同义词</a>，因为使用同样的标准来定义提供什么字符并且这些字符如何编码到一系列的代码单元（通常一个字符一个单元）。由于历史的原因，<a href="https://zh.wikipedia.org/wiki/MIME" target="_blank" rel="external">MIME</a>和使用这种编码的系统使用术语<strong>字符集</strong>来表示用于将一组字符编码成一系列八位字节数据的整个系统。</p>
+</blockquote>
+<p>大概是f(x)=y可以称为<em>函数</em>一样吧</p>
+<p>##ASCII和它的编码方式</p>
+<p><a href="https://zh.wikipedia.org/wiki/ASCII" target="_blank" rel="external">ASCII</a>是：</p>
+<blockquote>
+<p><strong>ASCII</strong>（发音： <a href="https://zh.wikipedia.org/wiki/Help:%E8%8B%B1%E8%AA%9E%E5%9C%8B%E9%9A%9B%E9%9F%B3%E6%A8%99" target="_blank" rel="external">/ˈæski/</a> <a href="https://zh.wikipedia.org/wiki/Wikipedia:%E7%99%BC%E9%9F%B3%E9%87%8D%E6%8B%BC" target="_blank" rel="external"><strong>*ass</strong>-kee*</a><a href="https://zh.wikipedia.org/wiki/ASCII#cite_note-1" target="_blank" rel="external">[1]</a>，<strong>A</strong>merican <strong>S</strong>tandard <strong>C</strong>ode for <strong>I</strong>nformation <strong>I</strong>nterchange，<strong>美国信息交换标准代码</strong>）是基于<a href="https://zh.wikipedia.org/wiki/%E6%8B%89%E4%B8%81%E5%AD%97%E6%AF%8D" target="_blank" rel="external">拉丁字母</a>的一套<a href="https://zh.wikipedia.org/wiki/%E7%94%B5%E8%84%91" target="_blank" rel="external">电脑</a><a href="https://zh.wikipedia.org/wiki/%E7%BC%96%E7%A0%81" target="_blank" rel="external">编码</a>系统。它主要用于显示<a href="https://zh.wikipedia.org/wiki/%E7%8F%BE%E4%BB%A3%E8%8B%B1%E8%AA%9E" target="_blank" rel="external">现代英语</a>，而其扩展版本<a href="https://zh.wikipedia.org/wiki/EASCII" target="_blank" rel="external">EASCII</a>则可以部分支持其他<a href="https://zh.wikipedia.org/wiki/%E8%A5%BF%E6%AC%A7" target="_blank" rel="external">西欧</a><a href="https://zh.wikipedia.org/wiki/%E8%AF%AD%E8%A8%80" target="_blank" rel="external">语言</a>，并等同于国际标准<strong>ISO/IEC 646</strong>。</p>
+</blockquote>
+<p>它定义了127个字符</p>
+<p>它的编码方式是：</p>
+<blockquote>
+<p>使用7位（bits）表示一个字符，共128字符；</p>
+</blockquote>
+<h2 id="Unicode和它的编码方式（方案）"><a href="#Unicode和它的编码方式（方案）" class="headerlink" title="Unicode和它的编码方式（方案）"></a>Unicode和它的编码方式（方案）</h2><p>Unicode没有说字符集来修饰是因为unicode本身就是字符集的意思，可以表述为<strong>统一码（字符集）</strong>，由<a href="http://zh.wikipedia.org/wiki/%E9%80%9A%E7%94%A8%E5%AD%97%E7%AC%A6%E9%9B%86" target="_blank" rel="external">UCS</a>的标准发展而来。</p>
+<p><strong>它的编码</strong>(UTF)方式（方案）：有UTF-8, UTF-16, UTF-32</p>
+<p>其中UTF-8是可变长的编码方式：</p>
+<blockquote>
+<ol>
+<li>对于单字节的符号，字节的第一位设为0，后面7位为这个符号的unicode码。</li>
+<li>对于n字节的符号（1&lt;n&lt;5），第一个字节的前n位都设为1，第n+1位设为0，后面字节的前两位一律设为10。剩下的没有提及的二进制位，全部为这个符号的unicode码。</li>
+</ol>
+</blockquote>
+<h2 id="GBxxx和它的编码方式"><a href="#GBxxx和它的编码方式" class="headerlink" title="GBxxx和它的编码方式"></a>GBxxx和它的编码方式</h2><p>中国国家标准总局发布的是GB 2312，所以用这个来简述中文编码。</p>
+<p>包含6763个汉字<em>字符</em></p>
+<p>编码方式：</p>
+<blockquote>
+<p>每个汉字及符号以两个<a href="https://zh.wikipedia.org/wiki/%E5%AD%97%E8%8A%82" target="_blank" rel="external">字节</a>来表示。第一个字节称为“高位字节”，第二个字节称为“低位字节”。</p>
+</blockquote>
+<p>PS：汉字和符号均是<em>字符</em>的意思</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ul>
+<li>ASCII，GBxxx等（<a href="https://zh.wikipedia.org/wiki/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81#.E5.AD.97.E7.AC.A6.E7.BC.96.E7.A0.81.EF.BC.88.E4.B8.8D.E5.85.A8.EF.BC.89" target="_blank" rel="external">查看更多</a>）<ul>
+<li>它们既是字符集（字符编码），也有自己的编码方式。</li>
+</ul>
+</li>
+<li>Unicode是全球统一的字符编码（字符集/字符编码）<ul>
+<li>目标是：全世界的字符都能在Unicode找到</li>
+<li>UTF-8，UTF16，UTF32都是Unicode的编码方式（用各自的方法实现Unicode）</li>
+</ul>
+</li>
+<li>以下用故事来说说</li>
+</ul>
+<blockquote>
+<p>在2333年的某一天，我遇到一个人，脑子里就想给他打招呼。于是我脑子里就有了一个<code>&#39;你好&#39;的想法</code>。我跑过去，<code>用中文的方式</code>对着他喊：你好啊。他一脸萌比，看起来他听不懂中文，于是我<code>用英文的方式</code>再喊一次：Hello!然后他对着我傻笑，看起来似懂非懂。最后我<code>用额头碰了碰他的额头的方式</code>传送了<code>&#39;你好&#39;的想法</code>给他，他终于懂了。</p>
+</blockquote>
+<ul>
+<li><code>&#39;你好&#39;的想法</code>：Unicode</li>
+<li><code>用中文的方式</code>：<ul>
+<li>用：以GB2312编码方式</li>
+<li>中文：GB2312</li>
+</ul>
+</li>
+<li><code>用英文的方式</code>：<ul>
+<li>用：以ASCII编码方式</li>
+<li>英文：ASCII</li>
+</ul>
+</li>
+<li><code>用额头碰了碰他的额头的方式</code>：可能是UTF-8或其它编码方式</li>
+</ul>
+<h2 id="资料链接"><a href="#资料链接" class="headerlink" title="资料链接"></a>资料链接</h2><p><a href="http://selfboot.cn/2014/08/28/character_encoding/" target="_blank" rel="external">人机交互之字符编码</a></p>
+<p><a href="http://www.ruanyifeng.com/blog/2007/10/ascii_unicode_and_utf-8.html" target="_blank" rel="external">字符编码笔记：ASCII，Unicode和UTF-8</a></p>
+<p><a href="http://www.cnblogs.com/skynet/archive/2011/05/03/2035105.html" target="_blank" rel="external">字符集和字符编码（Charset &amp; Encoding）</a></p>
+<p><a href="https://zh.wikipedia.org/wiki/%E6%B1%89%E5%AD%97%E5%86%85%E7%A0%81%E6%89%A9%E5%B1%95%E8%A7%84%E8%8C%83" target="_blank" rel="external">汉字内码扩展规范</a></p>
+<p><a href="https://zh.wikipedia.org/wiki/GB_2312" target="_blank" rel="external">GB 2312</a></p>
+<p><a href="https://zh.wikipedia.org/wiki/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81" target="_blank" rel="external">字符编码</a></p>
+<p><a href="https://zh.wikipedia.org/wiki/Unicode" target="_blank" rel="external">Unicode</a></p>
+</div><script type="text/javascript" src="/js/share.js?v=0.0.0" async></script><a data-url="http://yoursite.com/2017/03/15/understand-character-encoding/" data-id="cj0mxtoki0035sypi7v3jzqin" class="article-share-link">Aktie</a><div class="tags"></div><div class="post-nav"><a href="/2017/03/16/python-code-encodings/" class="pre">Python Code Encodings</a><a href="/2017/02/07/two-options-to-seo-for-octopress/" class="next">Two options to SEO for Octopress</a></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><form action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank" class="search-form"><input type="text" name="q" maxlength="20" placeholder="Search"/><input type="hidden" name="sitesearch" value="http://yoursite.com"/></form></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> Kategorien</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Program/">Program</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Read-Talk-Think/">Read&Talk&Think</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/takeiteasy/">takeiteasy</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/weekend-page/">weekend_page</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> Letzte</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/03/24/hello-world/">Hello World</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/21/ansible-up-and-running-note/">ansible up and running note</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/16/python-code-encodings/">Python Code Encodings</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/15/understand-character-encoding/">Understand_Character_encoding</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/07/two-options-to-seo-for-octopress/">Two options to SEO for Octopress</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/15/good-sense-for-redis-data-type/">Good Sense For Redis Data Type</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/07/https-notes/">HTTPS NOTES</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/01/review-django-middleware/">Review Django: Middleware</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/28/have-a-talk-with-product-manager/">Have a talk with product manager</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/01/docker-compose/">docker compose</a></li></ul></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">© <a href="/." rel="nofollow">Hexo.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a id="rocket" href="#top" class="show"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.pack.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="/css/jquery.fancybox.css?v=0.0.0"><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create','UA-91470533-1','auto');ga('send','pageview');
+</script><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>

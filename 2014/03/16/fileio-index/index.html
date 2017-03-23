@@ -1,0 +1,91 @@
+<!DOCTYPE html><html lang="zh-cn"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="About learning, programming and happy hacking!"><title>fileIO_index | Hexo</title><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/5.0.0/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.2/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.2/grids-responsive-min.css"><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">fileIO_index</h1><a id="logo" href="/.">Hexo</a><p class="description"></p></div><div id="nav-menu"><a href="/." class="current"><i class="fa fa-home"> Start</i></a><a href="/archives/"><i class="fa fa-archive"> Archiv</i></a><a href="/about/"><i class="fa fa-user"> Über</i></a><a href="/atom.xml"><i class="fa fa-rss"> RSS</i></a></div></div><div id="layout" class="pure-g"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">fileIO_index</h1><div class="post-meta">Mar 16, 2014<span> | </span><span class="category"><a href="/categories/Program/">Program</a></span><script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js" async></script><span id="busuanzi_container_page_pv"> | <span id="busuanzi_value_page_pv"></span><span> Hits</span></span></div><div class="post-content"><p>3.2 文件描述符 @ <unistd.h></unistd.h></p>
+<blockquote>
+<p>POSIX</p>
+<ol>
+<li><p>STDIN_FILENO</p>
+</li>
+<li><p>STDOUT_FILENO</p>
+</li>
+<li><p>STDERR_FILENO</p>
+</li>
+</ol>
+</blockquote>
+<p>3.3 open @ <fcntl.h></fcntl.h></p>
+<blockquote>
+<p>int open(const char *pathname, int oflag, …)</p>
+<p>oflag: </p>
+<blockquote>
+<p>O_RDONLY</p>
+<p>O_WRONLY</p>
+<p>O_RDWR</p>
+<p>其他可用oflag有:O_APPEND,O_CREAT …</p>
+</blockquote>
+<p>pathname,有 NAME_MAX 限制</p>
+</blockquote>
+<p>3.4 creat @ <fcntl.h></fcntl.h></p>
+<blockquote>
+<p>int creat(const char *pathname, mode_t mode)</p>
+<p>the same whit this function: </p>
+<p>open(pathname, O_WRONLY|O_CREAT|O_TRUNC, mode) </p>
+</blockquote>
+<p>3.5 close @ <unistd.h></unistd.h></p>
+<blockquote>
+<p>int close(int filedes)</p>
+</blockquote>
+<p>3.6 lseek @ <unistd.h></unistd.h></p>
+<blockquote>
+<p>off_t lseek(int filedes, off_t offset, int whence) </p>
+</blockquote>
+<p>3.7 read @ <unistd.h></unistd.h></p>
+<blockquote>
+<p>ssize_t read(int filedes, void *buf, size_t nbytes)</p>
+</blockquote>
+<p>3.8 write @ <unistd.h></unistd.h></p>
+<blockquote>
+<p>ssize_t write(int filedes, const void *buf, size_t nbytes)</p>
+</blockquote>
+<p>3.9 I/O 效率</p>
+<p>&gt;</p>
+<p>3.10 文件共享</p>
+<blockquote>
+<p>v node</p>
+</blockquote>
+<p>3.11 原子操作</p>
+<blockquote>
+<p>ssize_t pread(int filedes, void *buf, size_t bytes, off_t offset)</p>
+<p>ssize_t pwrite(int filedes, void *buf, size_t bytes, off_t offset)</p>
+</blockquote>
+<p>3.12 dup和dup2</p>
+<blockquote>
+<p>int dup(int filedes)</p>
+<p>int dup(int filedes, int filedes2)</p>
+<p>dup 返回新文件描述符一定是当前可用文件描述符中的最小数值。</p>
+</blockquote>
+<p>3.13 sync, fsync, fdatasync</p>
+<blockquote>
+<p>int fsync(int filedes), 只对filedes写入磁盘后返回，适用数据库操作</p>
+<p>int fdatasync(int filedes), 只影响文件数据部分，fsync还会更新文件属性</p>
+<p>void sync(void),将缓冲排入写队列后返回（未必写入磁盘）</p>
+</blockquote>
+<p>3.14 fcntl @ fcntl,h</p>
+<blockquote>
+<p>int fcntl(int filedes, int cmd, …/<em>int arg</em>/)</p>
+<p>改变已打开的文件的性质。</p>
+<p>fcntl的返回值与命令有关。</p>
+<p>复制一个现有的描述符 cmd = F_DUPFD</p>
+<p>获得/设置文件描述符标记 F_GETFD 或 F_SETFD</p>
+</blockquote>
+<p>3.15 ioctl</p>
+<blockquote>
+<p>int ioctl(int filedes, int request, …)</p>
+</blockquote>
+<p>3.16 /dev/fd</p>
+<blockquote>
+<p>打开文件/dev/fd/n 等于有效复制描述符n (假定描述符n是打开的)</p>
+</blockquote>
+</div><script type="text/javascript" src="/js/share.js?v=0.0.0" async></script><a data-url="http://yoursite.com/2014/03/16/fileio-index/" data-id="cj0mxtoht001dsypiltm81twn" class="article-share-link">Aktie</a><div class="tags"></div><div class="post-nav"><a href="/2014/03/17/weekend-page/" class="pre">weekend-page</a><a href="/2014/03/09/weekend-page/" class="next">weekend-page</a></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><form action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank" class="search-form"><input type="text" name="q" maxlength="20" placeholder="Search"/><input type="hidden" name="sitesearch" value="http://yoursite.com"/></form></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> Kategorien</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Program/">Program</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Read-Talk-Think/">Read&Talk&Think</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/takeiteasy/">takeiteasy</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/weekend-page/">weekend_page</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> Letzte</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/03/24/hello-world/">Hello World</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/21/ansible-up-and-running-note/">ansible up and running note</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/16/python-code-encodings/">Python Code Encodings</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/15/understand-character-encoding/">Understand_Character_encoding</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/07/two-options-to-seo-for-octopress/">Two options to SEO for Octopress</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/15/good-sense-for-redis-data-type/">Good Sense For Redis Data Type</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/07/https-notes/">HTTPS NOTES</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/01/review-django-middleware/">Review Django: Middleware</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/28/have-a-talk-with-product-manager/">Have a talk with product manager</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/01/docker-compose/">docker compose</a></li></ul></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">© <a href="/." rel="nofollow">Hexo.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a id="rocket" href="#top" class="show"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.pack.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="/css/jquery.fancybox.css?v=0.0.0"><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create','UA-91470533-1','auto');ga('send','pageview');
+</script><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>
