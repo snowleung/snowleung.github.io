@@ -1,0 +1,1134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Software Dev</title>
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2017-03-23T21:41:06.000Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>Sam Leung</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://yoursite.com/2017/03/24/hello-world/"/>
+    <id>http://yoursite.com/2017/03/24/hello-world/</id>
+    <published>2017-03-23T21:41:06.000Z</published>
+    <updated>2017-03-23T21:41:06.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>ansible up and running note</title>
+    <link href="http://yoursite.com/2017/03/21/ansible-up-and-running-note/"/>
+    <id>http://yoursite.com/2017/03/21/ansible-up-and-running-note/</id>
+    <published>2017-03-21T01:33:00.000Z</published>
+    <updated>2017-03-23T21:50:54.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="What’s-Ansible"><a href="#What’s-Ansible" class="headerlink" title="What’s Ansible"></a>What’s Ansible</h2><h3 id="Ansible-is-Simple-IT-Automation"><a href="#Ansible-is-Simple-IT-Automation" class="headerlink" title="Ansible is Simple IT Automation"></a><a href="https://www.ansible.com/" target="_blank" rel="external">Ansible is Simple IT Automation</a></h3><a id="more"></a>
+<h2 id="QuickView"><a href="#QuickView" class="headerlink" title="QuickView"></a>QuickView</h2><blockquote>
+<p>few step to complete.</p>
+</blockquote>
+<ol>
+<li>less config of ansible(<a href="http://docs.ansible.com/ansible/intro_configuration.html#getting-the-latest-configuration" target="_blank" rel="external">ansible.cfg</a>)</li>
+<li>decide hosts(your server, connections and everything if your can find the server)</li>
+<li>generate <a href="http://docs.ansible.com/ansible/playbooks.html" target="_blank" rel="external">Playbook</a><ul>
+<li>play with tasks(support by <a href="http://docs.ansible.com/ansible/modules_by_category.html" target="_blank" rel="external">Module</a>)</li>
+</ul>
+</li>
+<li>execute ansible playbook.</li>
+<li>get some coffee and wait complete.</li>
+</ol>
+<h2 id="Playbook"><a href="#Playbook" class="headerlink" title="Playbook"></a>Playbook</h2><blockquote>
+<p>basic config in your playbook wit yaml(syntax).</p>
+</blockquote>
+<p><a href="http://docs.ansible.com/ansible/playbooks_intro.html#basics" target="_blank" rel="external">Basic</a>: include <code>hosts</code>,<code>remote_user</code>,<code>tasks</code>.</p>
+<p>with <code>tasks</code> <a href="http://docs.ansible.com/ansible/playbooks_intro.html#tasks-list" target="_blank" rel="external">section</a>, use this code to ‘play with tasks’</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="attr">tasks:</span></div><div class="line"><span class="attr">    - name:</span> <span class="string">test</span> <span class="string">connection</span></div><div class="line"><span class="attr">      ping:</span></div><div class="line"><span class="attr">      remote_user:</span> <span class="string">yourname</span></div></pre></td></tr></table></figure>
+<h5 id="tips-with-‘Handlers-Running-Operations-On-Change‘"><a href="#tips-with-‘Handlers-Running-Operations-On-Change‘" class="headerlink" title="tips with ‘Handlers: Running Operations On Change‘"></a>tips with ‘<a href="http://docs.ansible.com/ansible/playbooks_intro.html#tasks-list" target="_blank" rel="external">Handlers: Running Operations On Change</a>‘</h5><blockquote>
+<p>I use it for <strong>restart service</strong> and <strong>restart server</strong>, only.</p>
+</blockquote>
+<p>include <code>notify</code> in your <code>task</code> like this:</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="attr">- name:</span> <span class="string">template</span> <span class="string">configuration</span> <span class="string">file</span></div><div class="line"><span class="attr">  template:</span> <span class="string">src=template.j2</span> <span class="string">dest=/etc/foo.conf</span></div><div class="line"><span class="attr">  notify:</span></div><div class="line"><span class="bullet">     -</span> <span class="string">restart</span> <span class="string">memcached</span></div><div class="line"><span class="bullet">     -</span> <span class="string">restart</span> <span class="string">apache</span></div></pre></td></tr></table></figure>
+<p>AND than add <code>handlers</code> section in your <strong>Playbook</strong>:</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="attr">handlers:</span></div><div class="line"><span class="attr">    - name:</span> <span class="string">restart</span> <span class="string">memcached</span></div><div class="line"><span class="attr">      service:</span> <span class="string">name=memcached</span> <span class="string">state=restarted</span></div><div class="line"><span class="attr">    - name:</span> <span class="string">restart</span> <span class="string">apache</span></div><div class="line"><span class="attr">      service:</span> <span class="string">name=apache</span> <span class="string">state=restarted</span></div></pre></td></tr></table></figure>
+<p>full example on ansible <a href="http://docs.ansible.com/ansible/playbooks_intro.html#playbook-language-example" target="_blank" rel="external">doc</a>.</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="meta">---</span></div><div class="line"><span class="attr">- hosts:</span> <span class="string">webservers</span></div><div class="line"><span class="attr">  vars:</span></div><div class="line"><span class="attr">    http_port:</span> <span class="number">80</span></div><div class="line"><span class="attr">    max_clients:</span> <span class="number">200</span></div><div class="line"><span class="attr">  remote_user:</span> <span class="string">root</span></div><div class="line"><span class="attr">  tasks:</span></div><div class="line"><span class="attr">  - name:</span> <span class="string">ensure</span> <span class="string">apache</span> <span class="string">is</span> <span class="string">at</span> <span class="string">the</span> <span class="string">latest</span> <span class="string">version</span></div><div class="line"><span class="attr">    yum:</span> <span class="string">name=httpd</span> <span class="string">state=latest</span></div><div class="line"><span class="attr">  - name:</span> <span class="string">write</span> <span class="string">the</span> <span class="string">apache</span> <span class="string">config</span> <span class="string">file</span></div><div class="line"><span class="attr">    template:</span> <span class="string">src=/srv/httpd.j2</span> <span class="string">dest=/etc/httpd.conf</span></div><div class="line"><span class="attr">    notify:</span></div><div class="line"><span class="bullet">    -</span> <span class="string">restart</span> <span class="string">apache</span></div><div class="line"><span class="attr">  - name:</span> <span class="string">ensure</span> <span class="string">apache</span> <span class="string">is</span> <span class="string">running</span> <span class="string">(and</span> <span class="string">enable</span> <span class="string">it</span> <span class="string">at</span> <span class="string">boot)</span></div><div class="line"><span class="attr">    service:</span> <span class="string">name=httpd</span> <span class="string">state=started</span> <span class="string">enabled=yes</span></div><div class="line"><span class="attr">  handlers:</span></div><div class="line"><span class="attr">    - name:</span> <span class="string">restart</span> <span class="string">apache</span></div><div class="line"><span class="attr">      service:</span> <span class="string">name=httpd</span> <span class="string">state=restarted</span></div></pre></td></tr></table></figure>
+<h2 id="REFERENCE"><a href="#REFERENCE" class="headerlink" title="REFERENCE"></a>REFERENCE</h2><ul>
+<li><p><a href="https://www.amazon.com/Ansible-Automating-Configuration-Management-Deployment/dp/1491915323/ref=sr_1_1?ie=UTF8&amp;qid=1490059919&amp;sr=8-1&amp;keywords=ansible+up+and+running" target="_blank" rel="external">Ansible: Up and Running: Automating Configuration Management and Deployment the Easy Way</a></p>
+</li>
+<li><p><a href="http://docs.ansible.com/ansible/index.html" target="_blank" rel="external">Ansible Documentation</a></p>
+</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;What’s-Ansible&quot;&gt;&lt;a href=&quot;#What’s-Ansible&quot; class=&quot;headerlink&quot; title=&quot;What’s Ansible&quot;&gt;&lt;/a&gt;What’s Ansible&lt;/h2&gt;&lt;h3 id=&quot;Ansible-is-Simple-IT-Automation&quot;&gt;&lt;a href=&quot;#Ansible-is-Simple-IT-Automation&quot; class=&quot;headerlink&quot; title=&quot;Ansible is Simple IT Automation&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://www.ansible.com/&quot;&gt;Ansible is Simple IT Automation&lt;/a&gt;&lt;/h3&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Python Code Encodings</title>
+    <link href="http://yoursite.com/2017/03/16/python-code-encodings/"/>
+    <id>http://yoursite.com/2017/03/16/python-code-encodings/</id>
+    <published>2017-03-16T02:59:00.000Z</published>
+    <updated>2017-03-23T21:50:54.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Python2的编码问题，老生畅谈<br><a id="more"></a></p>
+<p>##Python2.x的str</p>
+<p><strong>str</strong>对象和<strong>unicode</strong>对象同样可以表示字符串(<a href="https://docs.python.org/2/library/stdtypes.html#sequence-types-str-unicode-list-tuple-bytearray-buffer-xrange" target="_blank" rel="external">5.6. Sequence Types</a>)，所以它们应该有相同的操作方式(<a href="https://docs.python.org/2/library/stdtypes.html#string-methods" target="_blank" rel="external">5.6.1. String Methods</a>)。</p>
+<p>可是，str并不是真正的字符串，它是字节串。所以如果用str类型来保存中文的话，会得到len(‘a啊’)是4的结果：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">Python <span class="number">2.7</span><span class="number">.13</span> (default, Dec <span class="number">17</span> <span class="number">2016</span>, <span class="number">23</span>:<span class="number">03</span>:<span class="number">43</span>)</div><div class="line">[GCC <span class="number">4.2</span><span class="number">.1</span> Compatible Apple LLVM <span class="number">8.0</span><span class="number">.0</span> (clang<span class="number">-800.0</span><span class="number">.42</span><span class="number">.1</span>)] on darwin</div><div class="line">Type <span class="string">"help"</span>, <span class="string">"copyright"</span>, <span class="string">"credits"</span> <span class="keyword">or</span> <span class="string">"license"</span> <span class="keyword">for</span> more information.</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>test = <span class="string">'a啊'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>len(test)</div><div class="line"><span class="number">4</span></div></pre></td></tr></table></figure>
+<p>在这个过程中，Python隐式编码方式转换了‘啊’这个字，然后保存到test中。</p>
+<p>这个隐式编码方式到底是什么，这是由<strong>系统locale決定</strong>的。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">Python <span class="number">2.7</span><span class="number">.13</span> (default, Dec <span class="number">17</span> <span class="number">2016</span>, <span class="number">23</span>:<span class="number">03</span>:<span class="number">43</span>)</div><div class="line">[GCC <span class="number">4.2</span><span class="number">.1</span> Compatible Apple LLVM <span class="number">8.0</span><span class="number">.0</span> (clang<span class="number">-800.0</span><span class="number">.42</span><span class="number">.1</span>)] on darwin</div><div class="line">Type <span class="string">"help"</span>, <span class="string">"copyright"</span>, <span class="string">"credits"</span> <span class="keyword">or</span> <span class="string">"license"</span> <span class="keyword">for</span> more information.</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> locale</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>locale.getdefaultlocale()</div><div class="line">(<span class="string">'zh_CN'</span>, <span class="string">'UTF-8'</span>)</div></pre></td></tr></table></figure>
+<p>所以，就有以下过程</p>
+<blockquote>
+<p>你输入的—&gt;Python转一下—&gt;保存到str中</p>
+</blockquote>
+<p>有了这个过程，在<code>Python转一下</code>的时候，如果转不了（比如你输入的是中文，Python用ASCII来转一下），就会引发出<strong>UnicodeEncodeError</strong>或<strong>UnicodeDecodeError</strong> 的问题了。</p>
+<h2 id="Python2-x的Unicode"><a href="#Python2-x的Unicode" class="headerlink" title="Python2.x的Unicode"></a>Python2.x的Unicode</h2><p>Python支持Unicode，把</p>
+<blockquote>
+<p>你输入的—&gt;Python转一下—&gt;保存到str中</p>
+</blockquote>
+<p>这个过程改为</p>
+<blockquote>
+<p>你输入的是Unicode–&gt;Python转一下—&gt;保存到str中</p>
+</blockquote>
+<p>那么，几乎就不会出错了。在Python中，把u放在str前面，就代表你输入的用Unicode来保存。Python操作就少很多以下的误会</p>
+<p>误会1，字符串长度:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>test = <span class="string">'你好'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>len(test)<span class="comment">#正确的应该是2</span></div><div class="line"><span class="number">6</span></div></pre></td></tr></table></figure>
+<p>误会2，字符串截取:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>test = <span class="string">'你好'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">print</span> test[<span class="number">0</span>]</div><div class="line">�</div></pre></td></tr></table></figure>
+<p>以上都是因为没有使用Unicode来保存字符串。</p>
+<h2 id="更多的decode和encode问题"><a href="#更多的decode和encode问题" class="headerlink" title="更多的decode和encode问题"></a>更多的decode和encode问题</h2><p>Python中编码问题，本质上是</p>
+<blockquote>
+<p>你要操作一个字符串，Python把你要的字符串拿出来包装一下，给你操作</p>
+</blockquote>
+<p>其中，<strong>Python把你要的字符串拿出来包装一下</strong>就是坑的所在。</p>
+<h3 id="decode"><a href="#decode" class="headerlink" title="decode"></a>decode</h3><blockquote>
+<p>将str类型转为unicode类型</p>
+</blockquote>
+<h3 id="encode"><a href="#encode" class="headerlink" title="encode"></a>encode</h3><blockquote>
+<p>将unicode类型转为str类型</p>
+</blockquote>
+<p>以下例子运用decode来说明</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>test = <span class="string">'好'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>test.decode(<span class="string">'gb2312'</span>)</div><div class="line">Traceback (most recent call last):</div><div class="line">  File <span class="string">"&lt;stdin&gt;"</span>, line <span class="number">1</span>, <span class="keyword">in</span> &lt;module&gt;</div><div class="line">UnicodeDecodeError: <span class="string">'gb2312'</span> codec can<span class="string">'t decode byte 0xbd in position 2: incomplete multibyte sequence</span></div></pre></td></tr></table></figure>
+<p><strong>失败</strong>。因为test是用locale指定的方式进行编码的（隐式），所以也需要用locale的指定的方式解码。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>test = <span class="string">'好'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>test.decode(<span class="string">'utf-8'</span>)</div><div class="line"><span class="string">u'\u597d'</span></div></pre></td></tr></table></figure>
+<p><strong>成功</strong></p>
+<p>以下例子说明decode</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>test = <span class="string">u'好'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>test.encode(<span class="string">'utf-8'</span>)</div><div class="line"><span class="string">'\xe5\xa5\xbd'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>test.encode(<span class="string">'gbk'</span>)</div><div class="line"><span class="string">'\xba\xc3'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>test.encode(<span class="string">'gb2312'</span>)</div><div class="line"><span class="string">'\xba\xc3'</span></div></pre></td></tr></table></figure>
+<p><strong>成功</strong>，因为你原来的字符串就是unicode，所以你可以用任何支持的编码方式来对unicode进行编码，得到str对象。</p>
+<h2 id="隐式编码和解码"><a href="#隐式编码和解码" class="headerlink" title="隐式编码和解码"></a>隐式编码和解码</h2><p>正常的操作</p>
+<ul>
+<li>str + str，返回的是str；unicode+unicode，返回的是unicode</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'a'</span> + <span class="string">'b'</span></div><div class="line"><span class="string">'ab'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">u'a'</span> + <span class="string">u'b'</span></div><div class="line"><span class="string">u'ab'</span></div></pre></td></tr></table></figure>
+<p>演示隐式操作</p>
+<ul>
+<li>str + unicode，返回的是unicode；隐式地str<strong>解码</strong>为unicode，再＋</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'a'</span> + <span class="string">u'b'</span></div><div class="line"><span class="string">u'ab'</span></div></pre></td></tr></table></figure>
+<ul>
+<li>str操作，两次操作，都是相同的错误；隐式地unicode<strong>编码</strong>为acii（但是失败了，再str。</li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&gt;&gt;&gt; str(u'你')</div><div class="line">Traceback (most recent call last):</div><div class="line">  File "&lt;stdin&gt;", line 1, in &lt;module&gt;</div><div class="line">UnicodeEncodeError: 'ascii' codec can't encode character u'\u4f60' in position 0: ordinal not in range(128)</div><div class="line">&gt;&gt;&gt;</div><div class="line">&gt;&gt;&gt; str(u'你'.encode('ascii'))</div><div class="line">Traceback (most recent call last):</div><div class="line">  File "&lt;stdin&gt;", line 1, in &lt;module&gt;</div><div class="line">UnicodeEncodeError: 'ascii' codec can't encode character u'\u4f60' in position 0: ordinal not in range(128)</div><div class="line">&gt;&gt;&gt;</div></pre></td></tr></table></figure>
+<h2 id="还有什么没提到"><a href="#还有什么没提到" class="headerlink" title="还有什么没提到"></a>还有什么没提到</h2><h6 id="Q：为什么在Python代码中，能看见下面的声明"><a href="#Q：为什么在Python代码中，能看见下面的声明" class="headerlink" title="Q：为什么在Python代码中，能看见下面的声明"></a>Q：为什么在Python代码中，能看见下面的声明</h6><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># -*- coding: &lt;encoding name&gt; -*-</span></div></pre></td></tr></table></figure>
+<p>A：<a href="https://www.python.org/dev/peps/pep-0263/" target="_blank" rel="external">PEP 263 – Defining Python Source Code Encodings</a></p>
+<h6 id="Q：为什么互联网（HTML）推荐UTF-8？"><a href="#Q：为什么互联网（HTML）推荐UTF-8？" class="headerlink" title="Q：为什么互联网（HTML）推荐UTF-8？"></a>Q：为什么互联网（HTML）推荐UTF-8？</h6><p>A：因为UTF-8的编码方式，非常特别，<a href="http://www.ruanyifeng.com/blog/2007/10/ascii_unicode_and_utf-8.html" target="_blank" rel="external">它可以使用1~4个字节表示一个符号，根据不同的符号而变化字节长度</a>。可以达到节省带宽和存储空间的效果</p>
+<p>######Q：如果我用Python3的话，还有这些编码问题么？</p>
+<p>A：朋友，Python3里面，几乎没了上面的所有问题。看看Python作者Guido van Rossum在2007年写的What’s New In Python 3.0中的<a href="https://docs.python.org/3/whatsnew/3.0.html#text-vs-data-instead-of-unicode-vs-8-bit" target="_blank" rel="external">Text Vs. Data Instead Of Unicode Vs. 8-bit</a>：</p>
+<blockquote>
+<p>Everything you thought you knew about binary data and Unicode has changed</p>
+</blockquote>
+<h5 id="其它资源"><a href="#其它资源" class="headerlink" title="其它资源"></a>其它资源</h5><ul>
+<li><a href="http://selfboot.cn/2016/12/28/py_encode_decode/" target="_blank" rel="external">Python2.x 字符编码终极指南</a></li>
+<li><a href="http://blog.ernest.me/post/python-setdefaultencoding-unicode-bytes" target="_blank" rel="external">立即停止使用 setdefaultencoding(‘utf-8’)， 以及为什么</a></li>
+<li><a href="https://www.azavea.com/blog/2014/03/24/solving-unicode-problems-in-python-2-7/" target="_blank" rel="external">Solving Unicode Problems in Python 2.7</a></li>
+<li><a href="https://docs.python.org/2/howto/unicode.html" target="_blank" rel="external">Unicode HOWTO</a></li>
+<li><a href="http://zhangbohun.github.io/2016/05/29/Python2%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%BC%96%E7%A0%81%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/" target="_blank" rel="external">Python2字符串编码问题总结</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/Unicode" target="_blank" rel="external">Unicode</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Python2的编码问题，老生畅谈&lt;br&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Understand_Character_encoding</title>
+    <link href="http://yoursite.com/2017/03/15/understand-character-encoding/"/>
+    <id>http://yoursite.com/2017/03/15/understand-character-encoding/</id>
+    <published>2017-03-15T03:20:00.000Z</published>
+    <updated>2017-03-23T21:50:54.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="弄清字符编码和它的编码方式"><a href="#弄清字符编码和它的编码方式" class="headerlink" title="弄清字符编码和它的编码方式"></a>弄清字符编码和它的编码方式</h1><p>计算机中，用0和1来作为最小单位，<strong>意义</strong>是假或真，用一定数量的0和1组合来描述世界，一定数量组合的内容足够多时，我们就可以称之为语言。</p>
+<p>同样，在中文里，每一个中文字就是一个最小单位，每一个最小单位都有自己的<strong>意义</strong> ，数量足够多后，同样也称为语言。</p>
+<a id="more"></a>
+<h2 id="基础概念"><a href="#基础概念" class="headerlink" title="基础概念"></a>基础概念</h2><ul>
+<li><em>字符</em>（<a href="https://en.wikipedia.org/wiki/Character_(computing" target="_blank" rel="external">Character</a>)），在计算机中就是一个信息的最小载体。对于中文的则可以叫<a href="https://zh.wikipedia.org/wiki/%E5%AD%97%E4%BD%8D" target="_blank" rel="external">字素</a>，所以a，b，你，我，都代表一个<em>字符</em>。</li>
+<li>UTF（Unicode Transformation Format）：Unicode转换格式</li>
+<li>Byte：字节、位元组（港澳台）；Bit：比特、位元（港澳台）；1 Byte = 8 bit</li>
+</ul>
+<h2 id="字符编码（字符集）"><a href="#字符编码（字符集）" class="headerlink" title="字符编码（字符集）"></a>字符编码（字符集）</h2><p>对于<strong>字符编码</strong>这四个字，我理解为<strong>语言</strong>，和上面的语言一样，而计算机的语言，也可以理解为计算机的字符编码（字符集）。如果字符编码更难理解，可以参看<a href="https://zh.wikipedia.org/wiki/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81" target="_blank" rel="external">字符编码</a>的维基百科。如果还是很难理解，则可以想象为</p>
+<ul>
+<li>字符编码（字符集）是</li>
+<li>字符</li>
+<li>通过编码</li>
+<li>的方式</li>
+<li>被识别</li>
+<li>的过程</li>
+</ul>
+<p>相当于：f(x)=y 中</p>
+<ul>
+<li>f(x)=y（字符编码（字符集））是</li>
+<li>x（字符）</li>
+<li>通过f()（编码）</li>
+<li>的f(x)（方式）</li>
+<li>与y对应（被识别）</li>
+<li>的过程</li>
+</ul>
+<p><strong>虽然不严谨，但是不妨记忆</strong>。</p>
+<p>至于为什么可以字符编码可以同义为字符集，<a href="https://zh.wikipedia.org/wiki/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81" target="_blank" rel="external">wiki</a>中的简单字符集是这么说的</p>
+<blockquote>
+<p>按照惯例，人们认为字符集和字符编码是<a href="https://zh.wikipedia.org/wiki/%E5%90%8C%E4%B9%89%E8%AF%8D" target="_blank" rel="external">同义词</a>，因为使用同样的标准来定义提供什么字符并且这些字符如何编码到一系列的代码单元（通常一个字符一个单元）。由于历史的原因，<a href="https://zh.wikipedia.org/wiki/MIME" target="_blank" rel="external">MIME</a>和使用这种编码的系统使用术语<strong>字符集</strong>来表示用于将一组字符编码成一系列八位字节数据的整个系统。</p>
+</blockquote>
+<p>大概是f(x)=y可以称为<em>函数</em>一样吧</p>
+<p>##ASCII和它的编码方式</p>
+<p><a href="https://zh.wikipedia.org/wiki/ASCII" target="_blank" rel="external">ASCII</a>是：</p>
+<blockquote>
+<p><strong>ASCII</strong>（发音： <a href="https://zh.wikipedia.org/wiki/Help:%E8%8B%B1%E8%AA%9E%E5%9C%8B%E9%9A%9B%E9%9F%B3%E6%A8%99" target="_blank" rel="external">/ˈæski/</a> <a href="https://zh.wikipedia.org/wiki/Wikipedia:%E7%99%BC%E9%9F%B3%E9%87%8D%E6%8B%BC" target="_blank" rel="external"><strong>*ass</strong>-kee*</a><a href="https://zh.wikipedia.org/wiki/ASCII#cite_note-1" target="_blank" rel="external">[1]</a>，<strong>A</strong>merican <strong>S</strong>tandard <strong>C</strong>ode for <strong>I</strong>nformation <strong>I</strong>nterchange，<strong>美国信息交换标准代码</strong>）是基于<a href="https://zh.wikipedia.org/wiki/%E6%8B%89%E4%B8%81%E5%AD%97%E6%AF%8D" target="_blank" rel="external">拉丁字母</a>的一套<a href="https://zh.wikipedia.org/wiki/%E7%94%B5%E8%84%91" target="_blank" rel="external">电脑</a><a href="https://zh.wikipedia.org/wiki/%E7%BC%96%E7%A0%81" target="_blank" rel="external">编码</a>系统。它主要用于显示<a href="https://zh.wikipedia.org/wiki/%E7%8F%BE%E4%BB%A3%E8%8B%B1%E8%AA%9E" target="_blank" rel="external">现代英语</a>，而其扩展版本<a href="https://zh.wikipedia.org/wiki/EASCII" target="_blank" rel="external">EASCII</a>则可以部分支持其他<a href="https://zh.wikipedia.org/wiki/%E8%A5%BF%E6%AC%A7" target="_blank" rel="external">西欧</a><a href="https://zh.wikipedia.org/wiki/%E8%AF%AD%E8%A8%80" target="_blank" rel="external">语言</a>，并等同于国际标准<strong>ISO/IEC 646</strong>。</p>
+</blockquote>
+<p>它定义了127个字符</p>
+<p>它的编码方式是：</p>
+<blockquote>
+<p>使用7位（bits）表示一个字符，共128字符；</p>
+</blockquote>
+<h2 id="Unicode和它的编码方式（方案）"><a href="#Unicode和它的编码方式（方案）" class="headerlink" title="Unicode和它的编码方式（方案）"></a>Unicode和它的编码方式（方案）</h2><p>Unicode没有说字符集来修饰是因为unicode本身就是字符集的意思，可以表述为<strong>统一码（字符集）</strong>，由<a href="http://zh.wikipedia.org/wiki/%E9%80%9A%E7%94%A8%E5%AD%97%E7%AC%A6%E9%9B%86" target="_blank" rel="external">UCS</a>的标准发展而来。</p>
+<p><strong>它的编码</strong>(UTF)方式（方案）：有UTF-8, UTF-16, UTF-32</p>
+<p>其中UTF-8是可变长的编码方式：</p>
+<blockquote>
+<ol>
+<li>对于单字节的符号，字节的第一位设为0，后面7位为这个符号的unicode码。</li>
+<li>对于n字节的符号（1&lt;n&lt;5），第一个字节的前n位都设为1，第n+1位设为0，后面字节的前两位一律设为10。剩下的没有提及的二进制位，全部为这个符号的unicode码。</li>
+</ol>
+</blockquote>
+<h2 id="GBxxx和它的编码方式"><a href="#GBxxx和它的编码方式" class="headerlink" title="GBxxx和它的编码方式"></a>GBxxx和它的编码方式</h2><p>中国国家标准总局发布的是GB 2312，所以用这个来简述中文编码。</p>
+<p>包含6763个汉字<em>字符</em></p>
+<p>编码方式：</p>
+<blockquote>
+<p>每个汉字及符号以两个<a href="https://zh.wikipedia.org/wiki/%E5%AD%97%E8%8A%82" target="_blank" rel="external">字节</a>来表示。第一个字节称为“高位字节”，第二个字节称为“低位字节”。</p>
+</blockquote>
+<p>PS：汉字和符号均是<em>字符</em>的意思</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ul>
+<li>ASCII，GBxxx等（<a href="https://zh.wikipedia.org/wiki/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81#.E5.AD.97.E7.AC.A6.E7.BC.96.E7.A0.81.EF.BC.88.E4.B8.8D.E5.85.A8.EF.BC.89" target="_blank" rel="external">查看更多</a>）<ul>
+<li>它们既是字符集（字符编码），也有自己的编码方式。</li>
+</ul>
+</li>
+<li>Unicode是全球统一的字符编码（字符集/字符编码）<ul>
+<li>目标是：全世界的字符都能在Unicode找到</li>
+<li>UTF-8，UTF16，UTF32都是Unicode的编码方式（用各自的方法实现Unicode）</li>
+</ul>
+</li>
+<li>以下用故事来说说</li>
+</ul>
+<blockquote>
+<p>在2333年的某一天，我遇到一个人，脑子里就想给他打招呼。于是我脑子里就有了一个<code>&#39;你好&#39;的想法</code>。我跑过去，<code>用中文的方式</code>对着他喊：你好啊。他一脸萌比，看起来他听不懂中文，于是我<code>用英文的方式</code>再喊一次：Hello!然后他对着我傻笑，看起来似懂非懂。最后我<code>用额头碰了碰他的额头的方式</code>传送了<code>&#39;你好&#39;的想法</code>给他，他终于懂了。</p>
+</blockquote>
+<ul>
+<li><code>&#39;你好&#39;的想法</code>：Unicode</li>
+<li><code>用中文的方式</code>：<ul>
+<li>用：以GB2312编码方式</li>
+<li>中文：GB2312</li>
+</ul>
+</li>
+<li><code>用英文的方式</code>：<ul>
+<li>用：以ASCII编码方式</li>
+<li>英文：ASCII</li>
+</ul>
+</li>
+<li><code>用额头碰了碰他的额头的方式</code>：可能是UTF-8或其它编码方式</li>
+</ul>
+<h2 id="资料链接"><a href="#资料链接" class="headerlink" title="资料链接"></a>资料链接</h2><p><a href="http://selfboot.cn/2014/08/28/character_encoding/" target="_blank" rel="external">人机交互之字符编码</a></p>
+<p><a href="http://www.ruanyifeng.com/blog/2007/10/ascii_unicode_and_utf-8.html" target="_blank" rel="external">字符编码笔记：ASCII，Unicode和UTF-8</a></p>
+<p><a href="http://www.cnblogs.com/skynet/archive/2011/05/03/2035105.html" target="_blank" rel="external">字符集和字符编码（Charset &amp; Encoding）</a></p>
+<p><a href="https://zh.wikipedia.org/wiki/%E6%B1%89%E5%AD%97%E5%86%85%E7%A0%81%E6%89%A9%E5%B1%95%E8%A7%84%E8%8C%83" target="_blank" rel="external">汉字内码扩展规范</a></p>
+<p><a href="https://zh.wikipedia.org/wiki/GB_2312" target="_blank" rel="external">GB 2312</a></p>
+<p><a href="https://zh.wikipedia.org/wiki/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81" target="_blank" rel="external">字符编码</a></p>
+<p><a href="https://zh.wikipedia.org/wiki/Unicode" target="_blank" rel="external">Unicode</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;弄清字符编码和它的编码方式&quot;&gt;&lt;a href=&quot;#弄清字符编码和它的编码方式&quot; class=&quot;headerlink&quot; title=&quot;弄清字符编码和它的编码方式&quot;&gt;&lt;/a&gt;弄清字符编码和它的编码方式&lt;/h1&gt;&lt;p&gt;计算机中，用0和1来作为最小单位，&lt;strong&gt;意义&lt;/strong&gt;是假或真，用一定数量的0和1组合来描述世界，一定数量组合的内容足够多时，我们就可以称之为语言。&lt;/p&gt;
+&lt;p&gt;同样，在中文里，每一个中文字就是一个最小单位，每一个最小单位都有自己的&lt;strong&gt;意义&lt;/strong&gt; ，数量足够多后，同样也称为语言。&lt;/p&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Two options to SEO for Octopress</title>
+    <link href="http://yoursite.com/2017/02/07/two-options-to-seo-for-octopress/"/>
+    <id>http://yoursite.com/2017/02/07/two-options-to-seo-for-octopress/</id>
+    <published>2017-02-07T12:55:00.000Z</published>
+    <updated>2017-03-23T21:50:54.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>add META <strong>keywords</strong> and <strong>description</strong> is very important for SEO and aslo basic. </p>
+</blockquote>
+<h3 id="FIRST"><a href="#FIRST" class="headerlink" title="FIRST"></a>FIRST</h3><blockquote>
+<p>Add this code in source/_include/header.html</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&#123; % capture description % &#125; &#123; % if page.description % &#125; &#123; &#123;</div><div class="line">page.description &#125;  &#125; &#123; % elsif page.layout == &quot;home&quot; % &#125; &#123; &#123;</div><div class="line">site.description &#125; &#125; &#123; %else% &#125; &#123; &#123; content | raw_content  &#125; &#125; </div><div class="line">&#123; %endif% &#125;&#123; % endcapture % &#125;</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<h3 id="Option-One"><a href="#Option-One" class="headerlink" title="Option One:"></a>Option One:</h3><blockquote>
+<p>Add <strong>keywords</strong> and <strong>description</strong> in your article.</p>
+</blockquote>
+<p>Every post has this:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">---</div><div class="line">layout: post</div><div class="line">title: &quot;Three options to SEO for Octopress&quot;</div><div class="line">date: 2017-02-07 20:55</div><div class="line">comments: true</div><div class="line">---</div></pre></td></tr></table></figure></p>
+<p>So you just do like following this, add <strong>keywords</strong> and <strong>description</strong>, and<br>octopress will auto-generate the META info in your HTML file.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">---</div><div class="line">layout: post</div><div class="line">title: &quot;Three options to SEO for Octopress&quot;</div><div class="line">date: 2017-02-07 20:55</div><div class="line">comments: true</div><div class="line">keywords: your, keywords, here</div><div class="line">desctiption: your description here</div><div class="line">---</div></pre></td></tr></table></figure></p>
+<h3 id="Option-Two"><a href="#Option-Two" class="headerlink" title="Option Two:"></a>Option Two:</h3><blockquote>
+<p>Add <strong>keywords</strong> and <strong>description</strong> in your site config file.</p>
+</blockquote>
+<p>open _config.yml, you will see this<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">url: http://snowleung.github.io</div><div class="line">title: Software Dev</div><div class="line">subtitle: Make World More Beautiful</div><div class="line">author: Samuel Leung</div><div class="line">simple_search: https://google.com/search</div></pre></td></tr></table></figure></p>
+<p>new line and add this:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">description: About learning, programming and happy hacking!</div><div class="line">keywords: learning, programing, developer, algorithm</div></pre></td></tr></table></figure></p>
+<p>octopress will generate META info at all HTML file if you not specify<br><strong>keywords</strong> and <strong>description</strong>.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      SEO for Octopress is very simple
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Good Sense For Redis Data Type</title>
+    <link href="http://yoursite.com/2016/12/15/good-sense-for-redis-data-type/"/>
+    <id>http://yoursite.com/2016/12/15/good-sense-for-redis-data-type/</id>
+    <published>2016-12-15T11:01:00.000Z</published>
+    <updated>2017-03-23T21:50:54.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>###Redis</p>
+<ul>
+<li>Redis is an open source (BSD licensed), in-memory data structure<br>store, used as a database, cache and message broker.</li>
+</ul>
+<p>###给妹子说的DataType</p>
+<p>Redis支持Strings, Lists, Sets, Hashes, Sorted sets, Bitmaps and<br>HyperLogLogs数种数据结构。下面就给妹子讲解前五种（Strings, Lists,<br>Sets, Hashes, Sorted sets,）</p>
+<a id="more"></a>
+<p>####Strings(String)</p>
+<ul>
+<li>String，大家都叫他字符串。字符串意思是字符＋串，字符就是类似a,b,c,d等<br>等的，串就是把他们组合在一起（如abcd）；正如吉他谱，如果把Redis比喻为一首吉他曲子，弦（Bm，C）＋谱（拨弦）为一个小节，<br>多个小节组成的Strings，就可以奏响Redis这首曲子了。所以Redis中的String，<br>就是<strong>键为和弦，值为谱</strong>的这种结构。</li>
+</ul>
+<p>####Lists(List)</p>
+<ul>
+<li>List，大家都叫他列表。如果Redis是一个卖糖葫芦串的商人，那么每一个List就是他手<br>中用竹签穿起山楂来的一个串。那Redis中的List，就是<strong>键为竹签，值为山楂</strong>的这种结构</li>
+</ul>
+<p>####Sets(Set)</p>
+<ul>
+<li>Set，大家都叫他集合。集合相当于一个容器，包含在容器里面的“东西”可以叫<br>为“元素”；元素与元素之间并<strong>无顺序</strong>，并且各个元素是<br><strong>不重复</strong>的。如果Redis是一个生果礼品店，那么每一个Set就<br>是他包装好的生果篮，生果篮里面的生果都放在一起，没有先后顺序，而且同一<br>种生果不应该多于一个（只有一个苹果，不能两个）。所以，Redis中的Set，就<br>是<strong>键为生果篮，值为生果（不重复）</strong>的结构。</li>
+</ul>
+<p>####Hashes(Hash)</p>
+<ul>
+<li>Hash，可以叫他为哈希表。中学的时候学过f(x)=y，表述为当x一定时，通过<br>f(x)总会得到y，而哈希表就是用来表达这个思维过程的。如果Redis是一家蔬菜<br>店，那么每一个hash就是<strong>一个菜类</strong>和<strong>与之对应的价钱</strong>的表格。所以，在<br>Redis中的Hash，就是<strong>键为菜类，值为对应的价钱</strong>的结构。</li>
+</ul>
+<h4 id="Sorted-Sets"><a href="#Sorted-Sets" class="headerlink" title="Sorted Sets"></a>Sorted Sets</h4><ul>
+<li>已排序的集合，回忆之前Sets，提及<strong>无顺序</strong>，那么，这个Sorted Sets就是<strong>有<br>顺序</strong>的。比如我们将生果篮里面的生果，按体积大小来做区分的话，就可以得<br>到一个顺序，比如西瓜最大，到菠萝，到苹果，到草莓这么一个顺序，那原本无<br>序的生果篮，就变成有顺序的了。所以，Redis中的Sorted Set，就是<strong>键为生<br>果篮，值为生果（不重复）与体积大小（可排序）</strong>的结构。</li>
+</ul>
+<p>###REFERENCE:</p>
+<ul>
+<li><a href="https://redis.io/topics/data-types" target="_blank" rel="external">Data types(Redis)</a></li>
+<li><a href="https://redis.io/topics/data-types-intro" target="_blank" rel="external">An introduction to Redis data types and abstractions</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Key-value_database" target="_blank" rel="external">Key-value database</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Hash_table" target="_blank" rel="external">Hash table</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      Simple to understand redis datatypes
+    
+    </summary>
+    
+      <category term="Program" scheme="http://yoursite.com/categories/Program/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>HTTPS NOTES</title>
+    <link href="http://yoursite.com/2016/12/07/https-notes/"/>
+    <id>http://yoursite.com/2016/12/07/https-notes/</id>
+    <published>2016-12-07T14:49:00.000Z</published>
+    <updated>2017-03-23T21:50:54.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>###HTTPS###</p>
+<p>HTTP over SSL/TLS，在安全传输层中传输HTTP内容</p>
+<p>###SSL/TLS###</p>
+<p>SSL(Secure Socket Layer)<br>TLS(Transport Layer Security)<br>SSL3.0相当于TLS1.0。SSL主要用来为双方计算程序通讯时，保障数据的完整性和私密性。</p>
+<p>私密性</p>
+<ul>
+<li>过程：利用密钥，对正文使用密码（指定的算法）进行加密后传输；收到密文后，使用指定的密钥选择密码，对密文进行解密</li>
+<li>编／解码使用相同的密钥——对称密钥加密系统；编／解码使用不同的密钥——非对称密钥加密系统；</li>
+</ul>
+<p>完整性</p>
+<ul>
+<li>对正文添加一个数字签名，用于收到报文后对数字签名进行校验，则可验证完整性</li>
+</ul>
+<p>SSL handshake（SSL握手）refer：《HTTP权威指南》</p>
+<ul>
+<li>客户端发送可供选择的密码并请求证书</li>
+<li>服务器发送选中的密码和证书</li>
+<li>客户端发送保密信息；客户端和服务器生成密钥</li>
+<li>客户端和服务端互相告知，开始加密过程</li>
+</ul>
+<p>使用openssl命令查看HTTPS过程</p>
+<pre><code>openssl s_client -state -connect www.leisiwo.com:443 -servername leisiwo.com
+</code></pre><p>SNI(Server Name Indication)</p>
+<ul>
+<li>TLS 扩展。通过不加密的HOSTNAME来让服务器选择指定的HOSTNAME所需的证书，来完成TLS。</li>
+</ul>
+<p>####如何在github pages（custom domain）上使用HTTPS####</p>
+<ul>
+<li>参考<a href="https://blog.cloudflare.com/secure-and-fast-github-pages-with-cloudflare/" target="_blank" rel="external">secure-and-fast-github-pages-with-cloudflare</a></li>
+</ul>
+<p>####REFERENCE####</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Transport_Layer_Security" target="_blank" rel="external">Transport Layer Security</a></li>
+<li><a href="https://en.wikipedia.org/wiki/HTTPS" target="_blank" rel="external">HTTPS</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Server_Name_Indication" target="_blank" rel="external">Server Name Indication</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;###HTTPS###&lt;/p&gt;
+&lt;p&gt;HTTP over SSL/TLS，在安全传输层中传输HTTP内容&lt;/p&gt;
+&lt;p&gt;###SSL/TLS###&lt;/p&gt;
+&lt;p&gt;SSL(Secure Socket Layer)&lt;br&gt;TLS(Transport Layer Security
+    
+    </summary>
+    
+      <category term="Program" scheme="http://yoursite.com/categories/Program/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Review Django: Middleware</title>
+    <link href="http://yoursite.com/2016/12/01/review-django-middleware/"/>
+    <id>http://yoursite.com/2016/12/01/review-django-middleware/</id>
+    <published>2016-12-01T07:11:00.000Z</published>
+    <updated>2017-03-23T21:50:54.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>###What’s Django Middleware###</p>
+<ul>
+<li>是Django请求、响应处理的一个钩子(Hook)框架，用于全局修改Django的输入或输出。</li>
+</ul>
+<a id="more"></a>
+<p>###Middleware order and layering###</p>
+<ul>
+<li>中间件的顺序结构可以考虑为“洋葱”的结构（一层包一层）</li>
+<li>request处理顺序从上到下（遇到response就立即停止），response返回顺序由下到上（遇到Exception就立即停止）</li>
+</ul>
+<p>###Writing your own middleware###</p>
+<ul>
+<li>定义一个Python的类，其中包含以下方法（至少一个）<ul>
+<li>process_request(request)# 在所有request中，并且在Django决定执行哪个view之前，会调用此方法</li>
+<li>process_view(request, view_func, view_args, view_kwargs) #在Django执行view之前，会调用此方法</li>
+<li>process_template_response(request, response) # 在view完成执行后、如果response包含render方法，会调用此方法（这表明</li>
+<li>process_response(request, response) #在所有的response被返回浏览器之前，会调用此方法</li>
+<li>process_exception(request, exception) #当view执行时引发异常时，会调用此方法</li>
+</ul>
+</li>
+</ul>
+<p>###Code Example###</p>
+<p>Forbids access to User-Agents in settings.DISALLOWED_USER_AGENTS</p>
+<ul>
+<li>CommonMiddleware: <a href="https://docs.djangoproject.com/en/1.8/_modules/django/middleware/common/#CommonMiddleware" target="_blank" rel="external">https://docs.djangoproject.com/en/1.8/_modules/django/middleware/common/#CommonMiddleware</a></li>
+</ul>
+<p>###REFERENCE###</p>
+<ul>
+<li>Middleware (Django document):  <a href="https://docs.djangoproject.com/en/1.8/topics/http/middleware/" target="_blank" rel="external">https://docs.djangoproject.com/en/1.8/topics/http/middleware/</a></li>
+<li>Hooking (wiki): <a href="https://en.wikipedia.org/wiki/Hooking" target="_blank" rel="external">https://en.wikipedia.org/wiki/Hooking</a></li>
+<li>Understanding Django Middlewares(by Akshar Raaj) :<a href="http://agiliq.com/blog/2015/07/understanding-django-middlewares/" target="_blank" rel="external">http://agiliq.com/blog/2015/07/understanding-django-middlewares/</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;###What’s Django Middleware###&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;是Django请求、响应处理的一个钩子(Hook)框架，用于全局修改Django的输入或输出。&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="Program" scheme="http://yoursite.com/categories/Program/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Have a talk with product manager</title>
+    <link href="http://yoursite.com/2016/09/28/have-a-talk-with-product-manager/"/>
+    <id>http://yoursite.com/2016/09/28/have-a-talk-with-product-manager/</id>
+    <published>2016-09-28T10:31:00.000Z</published>
+    <updated>2017-03-23T21:50:54.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>从老东家离职一段时间了，但是行业圈子很小，前些天聊着才知道，一位好朋友Fery（也是旧同事，是一名Product Manager）居然在我家附近的公司上班，再次感叹圈子真的很小，于是约了饭，交流了一些想法。</p>
+<a id="more"></a>
+<h3 id="Fery眼中的软件技术的进步"><a href="#Fery眼中的软件技术的进步" class="headerlink" title="Fery眼中的软件技术的进步"></a>Fery眼中的软件技术的进步</h3><blockquote>
+<p>对于Fery来说，软件，其实就是他们构建他们脑中产品的一个载体。软件进步<br>对于他们来说，只是这个进步了的软件更好的实现了之前的产品而已。<br>Fery认为，软件技术的进步（其实所有的进步）都离不开两个字，创造和创新。</p>
+</blockquote>
+<ul>
+<li><strong><em>蜡烛和电灯，钨丝和铁丝</em></strong></li>
+</ul>
+<p>从字面来看，创造就是“从无到有”，创新就是“优化现有”。这两个关键字我之前<br>也有听说，也是赞同的。创造和创新总是纠缠不清。<br>Fery举出的例子也很不错，他说，属于创造的，可以看看蜡烛和电灯。蜡烛用于<br>照明，电灯也可用于照明，电灯本身来说，就属于创造了，属于“从无到有”。对<br>于照明这个需求，电灯很好的替代了之前的蜡烛这个产品。而创新，就可以看看<br>电灯中的钨丝和铁丝。如果电灯之前用铁丝的，之后用了钨丝，那就可以属于创新，是“优化现有”。</p>
+<h3 id="没有软件技术完成不了的逻辑"><a href="#没有软件技术完成不了的逻辑" class="headerlink" title="没有软件技术完成不了的逻辑"></a>没有软件技术完成不了的逻辑</h3><blockquote>
+<p>谈完创造和创新，从Fery眼里看来，现今的软件技术，是肯定可以解决任何PM<br>的需求的。</p>
+</blockquote>
+<ul>
+<li><strong><em>这个能实现吗?</em></strong></li>
+</ul>
+<p>我和PM合作，会常常听到PM问：“这个能实现吗？”其实，对于程序员来说，也和Fery的看法一样，一定能实现。本质上，现在市面上能遇到的需求，都是已经存在过或者被实现过的需求，所以我和Fery都一致觉得，暂时没有发现软件技术实现不了的需求。深究里面的原因，其实也和创造创新有点关系，市场上属于创造需求的极少极少，那么绝大部分属于创新的需求，其实要实现基本也不会遇到无法解决的问题。</p>
+<h3 id="兴趣才是第一驱动力"><a href="#兴趣才是第一驱动力" class="headerlink" title="兴趣才是第一驱动力"></a>兴趣才是第一驱动力</h3><blockquote>
+<p>Fery是一位非常，极度愿意，并且爱，折腾的Product Manager（我认为）</p>
+</blockquote>
+<ul>
+<li><strong><em>爱折腾</em></strong></li>
+</ul>
+<p>他直邮的Micro Server Gen 8，看得我口水直流。他自己在上面弄了不少Website。对于我闲赋，他建议我去折腾一些自己喜欢的东西。我对他说的话表示理解。以前我也无限折腾，现在的我居然得了懒这个陋习。我问Fery是否会对重复的需求有厌倦，他说并不会。因为重复的需求他可以更加深入的思考如何更快速的完成需求。Fery会觉得，重复需求是一定会出现的，而优秀的产品包含的其中的一个要素，就是如何让用户从重复中解脱出来。</p>
+<ul>
+<li><strong><em>人生苦短，要用Python</em></strong></li>
+</ul>
+<p>Fery也会写一些程序。他说他也喜欢用Python写程序，他觉得Python很好理解。他还谈到Python很简单，要用什么功能就去import一下，再写个函数实现一下就好了，非常快速。Fery对Python包的理解，大概应该就是一个功能的集合。而功能的集合，他又提到了微服务。</p>
+<ul>
+<li><strong><em>凑在一起成了桌子</em></strong></li>
+</ul>
+<p>Fery对于微服务的印象是Kelly做桌面（微服务），Sam做桌腿（微服务）。各式各样的微服务，是可以互相组合打包的，打包就是Kelly的桌面加上Sam做的桌腿，凑成了桌子。Fery对于微服务的看法挺简单易懂的，凑在一起成了桌子这个过程，就是Fery要做的事。所以，微服务越多，Fery能做的事也应该越多。</p>
+<h3 id="架构师之路，第十一公司"><a href="#架构师之路，第十一公司" class="headerlink" title="架构师之路，第十一公司"></a>架构师之路，第十一公司</h3><blockquote>
+<p>在第十一家公司成为架构师</p>
+</blockquote>
+<p>软件技术常见的业务场景就是电商。Fery和我谈到重复的需求，大多数都是在电商企业。比如一家卖手表的，自然又要做进存销系统。换一个卖手链的，也离不开进存销系统。进存销系统的重复出现，自然就会催生一个通用的解决方案。当你待过十家电商公司，在跳槽到第十一家的时候，似乎就可以成为那家公司的软件架构师了。Fery对于一个程序员怎么做架构师，提出了以上的看法。</p>
+<h3 id="没有人用的产品就是垃圾"><a href="#没有人用的产品就是垃圾" class="headerlink" title="没有人用的产品就是垃圾"></a>没有人用的产品就是垃圾</h3><blockquote>
+<p>Jack说过。</p>
+</blockquote>
+<p>Jack是旧公司的CEO。他和Fery直接沟通，Fery赞同他说的这句话。这句话是在我说我想做一个爬虫，功能是去把好看的T shirt图片下载到本地。在我说完这个之后，Fery就说当兴趣玩玩可以，但是，对于你现在的能力，实现这样一个程序可谓并没什么难。<br>我觉得的确如此，我的程序实现业务逻辑根本没有任何难度。Fery从产品的角度，说这个需求并没什么用，因为没人用，所以只能玩玩。他的话确实提醒了我，我写完了这个程序，其实并没有什么成就感，因为也只是重复劳动。从技术的角度去看，这样一个“玩玩”的程序，最大的价值，大概只有怎么组织代码以便更好阅读，程序如何更快。而上述提到的，其实就是所有程序员最保值的价值所在。</p>
+<h3 id="关键意见领袖"><a href="#关键意见领袖" class="headerlink" title="关键意见领袖"></a>关键意见领袖</h3><blockquote>
+<p>为了减少探索时间，甚至开始认同KOL(Key Opinion Leader)所说的话。</p>
+</blockquote>
+<ul>
+<li><strong><em>权威</em></strong></li>
+</ul>
+<p>Opinion Leader，其实我觉得就是权威人士。通俗一些就是牛人。我觉得偏理工<br>科的行业，都需要牛人来带领发展，我和Fery都认为，跟随牛人大多数没错，而<br>前提当然是需要自己懂得分辨什么是牛人</p>
+<hr>
+<p><strong>以上由Sam整理，加上个人意见后写出，如有不妥请联系。</strong></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;从老东家离职一段时间了，但是行业圈子很小，前些天聊着才知道，一位好朋友Fery（也是旧同事，是一名Product Manager）居然在我家附近的公司上班，再次感叹圈子真的很小，于是约了饭，交流了一些想法。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Read&amp;Talk&amp;Think" scheme="http://yoursite.com/categories/Read-Talk-Think/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>docker compose</title>
+    <link href="http://yoursite.com/2016/01/01/docker-compose/"/>
+    <id>http://yoursite.com/2016/01/01/docker-compose/</id>
+    <published>2016-01-01T15:13:00.000Z</published>
+    <updated>2017-03-23T21:50:54.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>###ENV</p>
+<p><a href="http://dockerpool.com/static/books/docker_practice/dockerfile/basic_structure.html" target="_blank" rel="external">http://dockerpool.com/static/books/docker_practice/dockerfile/basic_structure.html</a></p>
+<p>看完上面的链接，已经可以说对docker到底怎么用有了基本知识了。对于开发的运用中，这个已经能够满足</p>
+<p>当年在这篇中写了相关的东西，缺少dns和fig</p>
+<p><a href="http://www.leisiwo.com/blog/2015/02/16/use-docker-for-dev-env/" target="_blank" rel="external">http://www.leisiwo.com/blog/2015/02/16/use-docker-for-dev-env/</a></p>
+<p>如今再次看了一下docker的整个流程，所以有这个笔记</p>
+<a id="more"></a>
+<hr>
+<p>###回答问题：</p>
+<ul>
+<li>DNS</li>
+</ul>
+<p>A：我们用DNS问题来解决无需记忆每次容器启动时的ip地址，本质上就是要通过<br>ip地址找到容器。但是深入思考，访问容器无非两个场景</p>
+<p>a) 容器之间访问</p>
+<p>b) 非容器之间的访问</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">关于a)，容器之间的访问，其实已经有很好的解决方案就是使用--link参数解决</div><div class="line">Document: https://docs.docker.com/engine/reference/commandline/run/#run</div><div class="line">使用--link之后，容器之间就可以进行通讯了，而通讯的参数，用的是类似环境</div><div class="line">变量的方式</div><div class="line">例如如果用mysql，那么就会有MYSQLDB_ROOT_PASS_WORD这样的变量来标注</div><div class="line">root的密码，对于python来说os.environ[&apos;MYSQLDB_ROOT_PASS_WORD&apos;]即可获得</div><div class="line">密码。</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">关于b)，非容器之间的访问，则只需要在宿主上做好转发即可。（-p参数可以指</div><div class="line">定转发端口）我使用的是vbox虚拟机中的环境运行docker，所以物理机</div><div class="line">上访问docker容器，只需要固定vbox虚拟机中ip即可。</div><div class="line">大概是</div><div class="line">container_ip_port:virutalmashine_ip_port --&gt; virtualmashine_ip_port</div><div class="line">--&gt; your_macbook_access</div></pre></td></tr></table></figure>
+<p>REFERENCE</p>
+<p>【Docker 中的网络功能介绍】<a href="http://dockerpool.com/static/books/docker_practice/network/README.html" target="_blank" rel="external">http://dockerpool.com/static/books/docker_practice/network/README.html</a><br>这里更加系统的说明了上面的事。</p>
+<ul>
+<li>fig</li>
+</ul>
+<p>A：请使用docker-compose<br>【compose file reference】<a href="https://docs.docker.com/compose/compose-file/#compose-file-reference" target="_blank" rel="external">https://docs.docker.com/compose/compose-file/#compose-file-reference</a></p>
+<p>以上回答完毕。</p>
+<hr>
+<p>###接下来说说其他基础知识</p>
+<ul>
+<li>VOLUMES</li>
+</ul>
+<p>【Docker 数据管理】<a href="http://dockerpool.com/static/books/docker_practice/data_management/README.html" target="_blank" rel="external">http://dockerpool.com/static/books/docker_practice/data_management/README.html</a></p>
+<p>【volume】 <a href="http://dockone.io/article/129" target="_blank" rel="external">http://dockone.io/article/129</a> 说的非常清晰，推荐</p>
+<ul>
+<li>dockerfile</li>
+</ul>
+<p>dockerfile 我认为是一个image commit的集合，所以如果你还在一行一行的<br>commit，写完之后不妨组合到dockerfile中，下次可以docker build 搞定</p>
+<hr>
+<p>###其他：</p>
+<p>以上仅对docker用于快速搭建开发环境所做的一些思考，不可用于生产。</p>
+<p>REFERENCE</p>
+<p>【compose Example django】<a href="https://docs.docker.com/compose/django/" target="_blank" rel="external">https://docs.docker.com/compose/django/</a></p>
+<p>【docker file reference】<a href="https://docs.docker.com/engine/reference/builder/#dockerfile-reference" target="_blank" rel="external">https://docs.docker.com/engine/reference/builder/#dockerfile-reference</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;###ENV&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://dockerpool.com/static/books/docker_practice/dockerfile/basic_structure.html&quot;&gt;http://dockerpool.com/static/books/docker_practice/dockerfile/basic_structure.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;看完上面的链接，已经可以说对docker到底怎么用有了基本知识了。对于开发的运用中，这个已经能够满足&lt;/p&gt;
+&lt;p&gt;当年在这篇中写了相关的东西，缺少dns和fig&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.leisiwo.com/blog/2015/02/16/use-docker-for-dev-env/&quot;&gt;http://www.leisiwo.com/blog/2015/02/16/use-docker-for-dev-env/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;如今再次看了一下docker的整个流程，所以有这个笔记&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Program" scheme="http://yoursite.com/categories/Program/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Reader</title>
+    <link href="http://yoursite.com/2015/10/06/reader/"/>
+    <id>http://yoursite.com/2015/10/06/reader/</id>
+    <published>2015-10-05T16:37:00.000Z</published>
+    <updated>2017-03-23T21:50:54.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>看了如何阅读一本书所做的笔记</p>
+<a id="more"></a>
+<p>#阅读的层次</p>
+<ul>
+<li>基础阅读 elementary reading</li>
+<li>检视阅读 inspectional reading</li>
+<li>分析阅读 analytical reading</li>
+<li>主题阅读 syntopical reading</li>
+</ul>
+<p>#基础阅读阶段</p>
+<ul>
+<li>阅读准备阶段</li>
+<li>学会阅读简单读物</li>
+<li>快速建立字汇的能力（所用方法是从上下文所供的线索，“揭发”不熟悉的字眼）</li>
+<li>精炼与增进前面所学的技巧</li>
+</ul>
+<h1 id="检视阅读层次"><a href="#检视阅读层次" class="headerlink" title="检视阅读层次"></a>检视阅读层次</h1><ul>
+<li>略读或粗读</li>
+<li>一本书的分类<br><strong> 知道自己在读的是哪类数，而且要求越早知道越好
+</strong> 理论性与实用性作品</li>
+<li>透视一本书<br><strong> 使用一个单一的句子，或最多几句话（一小段文字）来叙述整本书的内容
+</strong> 讲书中重要的边张列举出来，说明它们如何按照顺序组成一个整体的架构<br><strong> 不只是将各个部分排列出来，而且要列出各个部分的纲要，就像是各个部分<br>自成一个整体，各有各的整体性与复杂度
+</strong> 找出作者要问的问题</li>
+<li>与作者找出共通的词义<br><strong> 找出重要单字，透过它们与作者达成共识
+</strong> 将一本书最重要的句子全出来，找出其中的主旨<br><strong> 从相关文句关联中，设法架构出一本书的基本论述
+</strong> 找出作者的解答</li>
+</ul>
+<h1 id="公正地评断一本书"><a href="#公正地评断一本书" class="headerlink" title="公正地评断一本书"></a>公正地评断一本书</h1><ul>
+<li>修辞就是要知道如何去说服对方</li>
+<li>当你不同意作者的观点时，要理性地表达自己的意见，不要无力地辩驳或竞争</li>
+<li>不要争强好辩</li>
+<li>尊重知识与个人观点的不同，在作任何评断之前，都要找出理论基础</li>
+</ul>
+<p>#REFERENCE</p>
+<ul>
+<li><a href="http://www.amazon.cn/%E5%A6%82%E4%BD%95%E9%98%85%E8%AF%BB%E4%B8%80%E6%9C%AC%E4%B9%A6-%E8%8E%AB%E6%8F%90%E9%BB%98%C2%B7J%C2%B7%E8%89%BE%E5%BE%B7%E5%8B%92/dp/B00IX8NX5A/ref=sr_1_1?ie=UTF8&amp;qid=1444064900&amp;sr=8-1&amp;keywords=%E5%A6%82%E4%BD%95%E9%98%85%E8%AF%BB%E4%B8%80%E6%9C%AC%E4%B9%A6" target="_blank" rel="external">如何阅读一本书-亚马逊</a></li>
+<li><a href="http://item.jd.com/11435655.html" target="_blank" rel="external">如何阅读一本书-京东</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;看了如何阅读一本书所做的笔记&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Read&amp;Talk&amp;Think" scheme="http://yoursite.com/categories/Read-Talk-Think/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Try ELK</title>
+    <link href="http://yoursite.com/2015/03/29/try-elk/"/>
+    <id>http://yoursite.com/2015/03/29/try-elk/</id>
+    <published>2015-03-29T14:49:00.000Z</published>
+    <updated>2017-03-23T21:50:54.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="ELK-Elasticsearch-Logstash-Kibana"><a href="#ELK-Elasticsearch-Logstash-Kibana" class="headerlink" title="ELK: Elasticsearch + Logstash + Kibana"></a>ELK: Elasticsearch + Logstash + Kibana</h3><ul>
+<li>这里是一个在ubuntu14.04 box上的一些操作</li>
+<li><p>base :<a href="https://www.digitalocean.com/community/tutorials/how-to-install-elasticsearch-logstash-and-kibana-4-on-ubuntu-14-04" target="_blank" rel="external">How To Install Elasticsearch, Logstash, and Kibana 4 on Ubuntu 14.04</a></p>
+</li>
+<li><p>准备(pcre,zlib是安装ngnix所需的包)</p>
+</li>
+<li><img src="https://raw.githubusercontent.com/snowleung/snowleung.github.io/master/assets/photos/Screen_Shot_2015-03-29_at_10.52.15_pm.png" alt="packages"></li>
+</ul>
+<ul>
+<li>然后按base中步骤配置各个组件</li>
+<li>ps: 安装jdk, <a href="https://www.liberiangeek.net/2014/03/daily-ubuntu-tips-manually-install-oracle-java-jdk-8-in-ubuntu/" target="_blank" rel="external">Daily Ubuntu Tips – Manually Install Oracle Java JDK 8 In Ubuntu</a></li>
+</ul>
+<h3 id="Logstash-config"><a href="#Logstash-config" class="headerlink" title="Logstash config"></a>Logstash config</h3><ul>
+<li>在logstash的文件夹中，建立一个conf.d的文件夹，用来放logstash的conf文件</li>
+<li>一份从stdin中抓取信息的配置</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">input &#123; stdin &#123; &#125; &#125;  </div><div class="line">  </div><div class="line">filter &#123;  </div><div class="line">  grok &#123;  </div><div class="line">    match =&gt; &#123; &quot;message&quot; =&gt; &quot;%&#123;DAY&#125;/%&#123;MONTH&#125;/%&#123;YEAR&#125; %&#123;LOGLEVEL&#125; %&#123;URIPATHPARAM&#125; %&#123;WORD&#125;&quot; &#125;  </div><div class="line">  &#125;  </div><div class="line">  date &#123;  </div><div class="line">    match =&gt; [ &quot;timestamp&quot; , &quot;dd/MMM/yyyy:HH:mm:ss Z&quot; ]  </div><div class="line">  &#125;  </div><div class="line">&#125;  </div><div class="line">  </div><div class="line">output &#123;  </div><div class="line">  elasticsearch &#123; host =&gt; localhost &#125;  </div><div class="line">  stdout &#123; codec =&gt; rubydebug &#125;  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>配置由三个部分组成，可见分别是input, filter, output</li>
+<li>input，就是来源，我指定了从std in作为输入源, 当然还可以指定为<a href="http://logstash.net/docs/1.4.2/inputs/file" target="_blank" rel="external">file</a>, <a href="http://logstash.net/docs/1.4.2/inputs/redis" target="_blank" rel="external">redis</a> 等等</li>
+<li>filter，就是对来源进行过滤， grok的pattern. <a href="http://logstash.net/docs/1.4.2/filters/grok" target="_blank" rel="external">grok</a></li>
+<li>output，将过滤后的结果输出到指定的地方，这里指定输出到elasticsearch为输出</li>
+<li>指定完成后，就可以启动logstash了</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">./logstash -f ../conf.d</div></pre></td></tr></table></figure>
+<ul>
+<li><p>等待成功启动后（这的确需要好几秒）， 就可以直接在当前命令行中输入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Tue/Jan/15 ERROR /api/login gotsomeerror</div></pre></td></tr></table></figure>
+</li>
+<li><p>会马上反馈</p>
+</li>
+<li><img src="https://raw.githubusercontent.com/snowleung/snowleung.github.io/master/assets/photos/Screen_Shot_2015-03-29_at_11.19.30_pm.png" alt="response"></li>
+<li>然后在kibana中就可以看到刚刚的输入的收集结果了</li>
+</ul>
+<h3 id="其他REF"><a href="#其他REF" class="headerlink" title="其他REF"></a>其他REF</h3><ul>
+<li>ref: <a href="http://www.cnblogs.com/yjf512/p/4199105.html" target="_blank" rel="external">使用elk+redis搭建nginx日志分析平台</a></li>
+<li>ref: <a href="http://logstash.net/docs/1.4.2/configuration" target="_blank" rel="external">Logstash Config</a></li>
+<li>ref: <a href="http://logstash.net/docs/1.4.2" target="_blank" rel="external">Logstash 1.4.2 doc</a></li>
+<li>很好的一个grok在线debug网站 <a href="http://grokdebug.herokuapp.com/" target="_blank" rel="external">grok debugger</a></li>
+</ul>
+<h3 id="TODO"><a href="#TODO" class="headerlink" title="TODO"></a>TODO</h3><ul>
+<li>了解如何对采集到的日志记录进行分析</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;ELK-Elasticsearch-Logstash-Kibana&quot;&gt;&lt;a href=&quot;#ELK-Elasticsearch-Logstash-Kibana&quot; class=&quot;headerlink&quot; title=&quot;ELK: Elasticsearch + Logst
+    
+    </summary>
+    
+      <category term="Program" scheme="http://yoursite.com/categories/Program/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>python effective cheatsheet 03</title>
+    <link href="http://yoursite.com/2015/03/09/python-effective-cheatsheet-03/"/>
+    <id>http://yoursite.com/2015/03/09/python-effective-cheatsheet-03/</id>
+    <published>2015-03-09T15:13:00.000Z</published>
+    <updated>2017-03-23T21:50:54.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="其实是读书猫纸"><a href="#其实是读书猫纸" class="headerlink" title="其实是读书猫纸"></a>其实是读书猫纸</h3><ul>
+<li><a href="http://www.amazon.cn/Effective%E7%B3%BB%E5%88%97%E4%B8%9B%E4%B9%A6-%E7%BC%96%E5%86%99%E9%AB%98%E8%B4%A8%E9%87%8F%E4%BB%A3%E7%A0%81-%E6%94%B9%E5%96%84Python%E7%A8%8B%E5%BA%8F%E7%9A%8491%E4%B8%AA%E5%BB%BA%E8%AE%AE-%E5%BC%A0%E9%A2%96/dp/B00KYFJTP8/ref=sr_1_1?ie=UTF8&amp;qid=1425914107&amp;sr=8-1&amp;keywords=%E6%94%B9%E5%96%84python" target="_blank" rel="external">Effective系列丛书:编写高质量代码:改善Python程序的91个建议</a></li>
+</ul>
+<h3 id="03"><a href="#03" class="headerlink" title="03"></a>03</h3><ul>
+<li>import, 会生成pyc文件， 不会循环引用；from xxx import xxx， 会命名空间冲突，会循环引用； import 会编译和新建一个对象到sys.modules中</li>
+<li>优先使用absoult import，而不是from .. import xx</li>
+<li>++i == +(+)i，不是自增</li>
+<li>with syntax, 上下文管理器、协议</li>
+<li>try, except, else, while else, for else</li>
+<li>捕获异常原则，精确、有序、易读</li>
+<li>finally中return 会令函数提前返回</li>
+<li>string: more join, less +，字符串内存不可变相关</li>
+<li>more format(), less %</li>
+<li>对象的id, type, value，可变对象和不可变对象</li>
+<li><p>列表解析：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">[expr for iter_item in iterable if cond_expr ], list</div><div class="line">(expr for iter_item in iterable if cond_expr), tuple</div><div class="line">&#123;expr for iter_item in iterable if cond_expr&#125;, set</div><div class="line">&#123;expr1, expr2 for iter_item in iterable if cond_expr&#125;, dict</div></pre></td></tr></table></figure>
+</li>
+<li><p>传参数， 传的是对象。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">共享可变对象的内存地址</div><div class="line">不可变对象的操作则重新分配</div></pre></td></tr></table></figure>
+</li>
+<li><p>使用None做可变参数</p>
+</li>
+<li><p>慎用可变参数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">*args (a,b,c,...)</div><div class="line">**kwargs k1=v1, k2=v2, k3=v3</div><div class="line">装饰器</div><div class="line">参数不确定</div><div class="line">class中的多态</div></pre></td></tr></table></figure>
+</li>
+<li><p>str – 普通用户， repr – 开发者, 可配合eval()</p>
+</li>
+<li>@classmethod, @staticmethod<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">@classmethod 多态，类变量互相独立</div><div class="line">@staticmethod 方便用类组织代码</div></pre></td></tr></table></figure>
+</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;其实是读书猫纸&quot;&gt;&lt;a href=&quot;#其实是读书猫纸&quot; class=&quot;headerlink&quot; title=&quot;其实是读书猫纸&quot;&gt;&lt;/a&gt;其实是读书猫纸&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.amazon.cn/Effective%E7%B
+    
+    </summary>
+    
+      <category term="Program" scheme="http://yoursite.com/categories/Program/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>using git tags</title>
+    <link href="http://yoursite.com/2015/03/08/using-git-tags/"/>
+    <id>http://yoursite.com/2015/03/08/using-git-tags/</id>
+    <published>2015-03-08T10:05:00.000Z</published>
+    <updated>2017-03-23T21:50:54.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="想用版本去规范一下自己写的程序"><a href="#想用版本去规范一下自己写的程序" class="headerlink" title="想用版本去规范一下自己写的程序"></a>想用版本去规范一下自己写的程序</h3><p>google 了一下软件版本号规范、风格、规则，也没找到什么好网页，所以还是觉得按自己的想法好了。</p>
+<p>约定：</p>
+<ul>
+<li>init版本为0.1.0</li>
+<li>每次小阶段开发就增加尾号，小阶段暂时为： bugfix、refactor</li>
+<li>增加一些重要的更新时，中间版本号为1，尾号重置为0</li>
+<li>看起来第一个0永远都达不到啊【碎碎念】</li>
+<li>在readme.md上增加一个changelog节，写明小阶段开发的change</li>
+</ul>
+<h3 id="使用git-tag去写版本的部分"><a href="#使用git-tag去写版本的部分" class="headerlink" title="使用git tag去写版本的部分"></a>使用git tag去写版本的部分</h3><ul>
+<li>增加</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git tag -a tag_name</div><div class="line"></div><div class="line">git push origin tag_name 	#远端增加</div></pre></td></tr></table></figure>
+<ul>
+<li><p>修改， 看起来这个打标签是比较慎重的行为，写错了只能删除。</p>
+</li>
+<li><p>删除</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git tag -d tag_name</div></pre></td></tr></table></figure>
+<ul>
+<li>远端删除</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git push origin :/refs/tags/tag_name</div></pre></td></tr></table></figure>
+<p>ref: </p>
+<ul>
+<li><p><a href="http://blog.wu-boy.com/2010/11/git-%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6-%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E6%A8%99%E7%B1%A4tag/" target="_blank" rel="external">[Git] 版本控制: 如何使用標籤(Tag)</a></p>
+</li>
+<li><p><a href="http://git-scm.com/book/zh/v1/Git-%E5%9F%BA%E7%A1%80-%E6%89%93%E6%A0%87%E7%AD%BE" target="_blank" rel="external">2.6 Git 基础 - 打标签</a></p>
+</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;想用版本去规范一下自己写的程序&quot;&gt;&lt;a href=&quot;#想用版本去规范一下自己写的程序&quot; class=&quot;headerlink&quot; title=&quot;想用版本去规范一下自己写的程序&quot;&gt;&lt;/a&gt;想用版本去规范一下自己写的程序&lt;/h3&gt;&lt;p&gt;google 了一下软件版本号规范、
+    
+    </summary>
+    
+      <category term="Program" scheme="http://yoursite.com/categories/Program/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Use docker for dev env</title>
+    <link href="http://yoursite.com/2015/02/16/use-docker-for-dev-env/"/>
+    <id>http://yoursite.com/2015/02/16/use-docker-for-dev-env/</id>
+    <published>2015-02-16T08:52:00.000Z</published>
+    <updated>2017-03-23T21:50:54.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="使用docker去搭建一个简单的开发环境"><a href="#使用docker去搭建一个简单的开发环境" class="headerlink" title="使用docker去搭建一个简单的开发环境"></a>使用docker去搭建一个简单的开发环境</h3><p>基于ubuntu14.03lts vagrant box 做的演示</p>
+<p>演示所需image</p>
+<ul>
+<li>django:1.7.4 image</li>
+<li>mysql image</li>
+</ul>
+<p>首先就是pull images</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">vagrant ssh</div><div class="line">sudo -i</div><div class="line"></div><div class="line">docker pull django：1.7.4</div></pre></td></tr></table></figure>
+<h4 id="先做django-project"><a href="#先做django-project" class="headerlink" title="先做django project"></a>先做django project</h4><ul>
+<li>在vagrant默认的目录下建一个项目叫hello</li>
+<li>然后</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">docker run -d -p 8080:8080  -v /vagrant/hello/:/home/ -it django:1.7.4 python /home/manage.py runserver 0.0.0.0:8080</div></pre></td></tr></table></figure>
+<ul>
+<li>/vagrant/hello 是虚拟机默认挂在宿主机的目录</li>
+<li>/mnt/hello 是docker container里面的目录</li>
+<li>所以意思就是挂docker container里面的目录到vm的目录(因为vm默认也挂了宿主机的目录，所以省了一步)</li>
+<li>-d deamon模式</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">docker inspect &apos;your container id&apos;</div></pre></td></tr></table></figure>
+<p>找到ip地址就可以访问了</p>
+<h4 id="设定mysql了"><a href="#设定mysql了" class="headerlink" title="设定mysql了"></a>设定mysql了</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">docker pull mysql</div><div class="line">docker run -d -e MYSQL_ROOT_PASSWORD=root -it mysql:latest</div></pre></td></tr></table></figure>
+<ul>
+<li>启动一个mysql container之后，就可以用docker inspect 查看他的ip，然后把ip填入django settings.py中</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">docker inspect &apos;mysql container id&apos;</div></pre></td></tr></table></figure>
+<h4 id="结束"><a href="#结束" class="headerlink" title="结束"></a>结束</h4><ul>
+<li>首先，用docker做这些事比较合适真实环境中的多个<em>系统</em>交互，比如多个web server都要互相交互</li>
+<li>要理解container， 在这里我觉得Container就是一些个服务(service)的集合</li>
+<li>docker来做这个事感觉很有 运维味</li>
+<li>上面的过程中可以看到，container之间都是有ip的，而且这个ip在每次container重启的时候都会变，这就使得每次都需要重新设定ip地址，貌似有解决方法，看这里<a href="https://github.com/ggtools/docker-tools" target="_blank" rel="external">github</a></li>
+<li>所以在没有ddns之前觉得用这个来做开发环境有点累</li>
+<li>之后补ddns</li>
+<li>之后补fig工具</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;使用docker去搭建一个简单的开发环境&quot;&gt;&lt;a href=&quot;#使用docker去搭建一个简单的开发环境&quot; class=&quot;headerlink&quot; title=&quot;使用docker去搭建一个简单的开发环境&quot;&gt;&lt;/a&gt;使用docker去搭建一个简单的开发环境&lt;/h3&gt;&lt;
+    
+    </summary>
+    
+      <category term="Program" scheme="http://yoursite.com/categories/Program/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>use PasteScript</title>
+    <link href="http://yoursite.com/2015/01/18/use-pastescript/"/>
+    <id>http://yoursite.com/2015/01/18/use-pastescript/</id>
+    <published>2015-01-18T03:39:00.000Z</published>
+    <updated>2017-03-23T21:50:54.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="使用PasteScript来生成setup-py文件"><a href="#使用PasteScript来生成setup-py文件" class="headerlink" title="使用PasteScript来生成setup.py文件"></a>使用PasteScript来生成setup.py文件</h3><ul>
+<li>最重要的是避免手写生成setup.py文件，所以找到了PasteScript这个包</li>
+<li>交互式生成setup.py包只需要<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">paster create  -t basic_package mypackage</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>related:</p>
+<p><a href="http://blog.csdn.net/jianhong1990/article/details/7951606" target="_blank" rel="external">如何自动生成setup.py文件</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;使用PasteScript来生成setup-py文件&quot;&gt;&lt;a href=&quot;#使用PasteScript来生成setup-py文件&quot; class=&quot;headerlink&quot; title=&quot;使用PasteScript来生成setup.py文件&quot;&gt;&lt;/a&gt;使用PasteS
+    
+    </summary>
+    
+      <category term="Program" scheme="http://yoursite.com/categories/Program/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>use git submodule</title>
+    <link href="http://yoursite.com/2015/01/10/use-git-submodule/"/>
+    <id>http://yoursite.com/2015/01/10/use-git-submodule/</id>
+    <published>2015-01-09T16:16:00.000Z</published>
+    <updated>2017-03-23T21:50:54.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="我有一个-emacs文件，如何用submodule去维护其他模块？"><a href="#我有一个-emacs文件，如何用submodule去维护其他模块？" class="headerlink" title="我有一个.emacs文件，如何用submodule去维护其他模块？"></a>我有一个.emacs文件，如何用submodule去维护其他模块？</h3><h4 id="如何添加子模块"><a href="#如何添加子模块" class="headerlink" title="如何添加子模块"></a>如何添加子模块</h4><ul>
+<li>git submodule add resp path</li>
+<li>git submodule init</li>
+<li>git submodule update</li>
+<li>git status (这时会看到.submodule和commit_id未提交)</li>
+<li>git commit (保存子模块和子模块的commit_id)</li>
+</ul>
+<h4 id="如何更新子模块"><a href="#如何更新子模块" class="headerlink" title="如何更新子模块"></a>如何更新子模块</h4><ul>
+<li>cd 子模块</li>
+<li>git pull origin master ，不能git pull，因为You are not currently on a branch.</li>
+<li>cd .. &amp;&amp; git status (这里会看到子模块的commit id更新了)</li>
+<li>git commit (提交子模块更新)</li>
+</ul>
+<h4 id="新成员加入开发，如何获取clone项目"><a href="#新成员加入开发，如何获取clone项目" class="headerlink" title="新成员加入开发，如何获取clone项目?"></a>新成员加入开发，如何获取clone项目?</h4><ul>
+<li>git clone resp (父)</li>
+<li>git submodule init (子项目没有内容)</li>
+<li>git submodule update （更新到上次提交到父项目的子项目commit_id， 所以如果此时子项目有更新，需要重新走更新子模块的流程）</li>
+<li>快捷方式:git clone –recursive resp (同时clone所有模块,只到父模块中记录过的commit-id)</li>
+</ul>
+<h4 id="如何删除子模块"><a href="#如何删除子模块" class="headerlink" title="如何删除子模块"></a>如何删除子模块</h4><ul>
+<li>很麻烦<br><a href="http://www.kafeitu.me/git/2012/03/27/git-submodule.html" target="_blank" rel="external">看这里吧</a></li>
+</ul>
+<p>####总结</p>
+<ul>
+<li>子模块在父项目中只是记录commit_id，也依赖它来执行操作</li>
+<li>submodule 为的就是在父项目中永远只更新子模块内容</li>
+<li>所以父项目中不要有需要修改子模块内容的<em>想法</em></li>
+</ul>
+<p><a href="http://www.kafeitu.me/git/2012/03/27/git-submodule.html" target="_blank" rel="external">参考资料</a></p>
+<p>UPDATE:</p>
+<ul>
+<li>尝试过subtree子命令，感觉这个指令更加多的是一种分支管理策略，所以跳不出一个很重要的点就是</li>
+</ul>
+<p><code>git中对于子模块(子仓库)的管理都需要在父项目中有commit_id来追踪，所以个人觉得最需要的管理就是如何可以让子模块的更新最大限度的减少对父项目的影响</code></p>
+<ul>
+<li>参考资料</li>
+<li><a href="http://aoxuis.me/posts/2013/08/07/git-subtree/" target="_blank" rel="external">http://aoxuis.me/posts/2013/08/07/git-subtree/</a></li>
+<li><a href="http://git-scm.com/book/zh/v1/Git-%E5%B7%A5%E5%85%B7-%E5%AD%90%E6%A0%91%E5%90%88%E5%B9%B6" target="_blank" rel="external">http://git-scm.com/book/zh/v1/Git-%E5%B7%A5%E5%85%B7-%E5%AD%90%E6%A0%91%E5%90%88%E5%B9%B6</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;我有一个-emacs文件，如何用submodule去维护其他模块？&quot;&gt;&lt;a href=&quot;#我有一个-emacs文件，如何用submodule去维护其他模块？&quot; class=&quot;headerlink&quot; title=&quot;我有一个.emacs文件，如何用submodule去
+    
+    </summary>
+    
+      <category term="Program" scheme="http://yoursite.com/categories/Program/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>what i need from python-mode and web-mode</title>
+    <link href="http://yoursite.com/2015/01/07/what-i-need-from-python-mode-and-web-mode/"/>
+    <id>http://yoursite.com/2015/01/07/what-i-need-from-python-mode-and-web-mode/</id>
+    <published>2015-01-06T16:29:00.000Z</published>
+    <updated>2017-03-23T21:50:54.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>#web-mode</p>
+<ul>
+<li>插入元素, [C-c C-e i]</li>
+<li>删除整块元素, [C-c C-e k]</li>
+<li>选择整块元素, [C-c C-e s]</li>
+<li>选择整块元素内容(相当于跳转到元素内部), [C-c C-e a]</li>
+<li>插入属性, [C-c C-a i]</li>
+<li>折叠, [C-c C-f]</li>
+<li>缩进缓冲区, [C-c C-i]</li>
+<li>标准化DOM [C-c C-d n]</li>
+<li>html注释 [M-;]</li>
+</ul>
+<p>#python-mode</p>
+<ul>
+<li>快速展开<ol>
+<li>插入class, [C-c C-t c]</li>
+<li>插入def, [C-c C-t d]</li>
+<li>插入for, [C-c C-t f]</li>
+<li>插入if, [C-c C-t i]</li>
+<li>插入try, [C-c C-t t]</li>
+</ol>
+</li>
+<li>def/class跳转,[C-c C-j]</li>
+<li>使用pyflakes分析,[C-c C-v]</li>
+<li>直接运行脚本, [C-c C-c]</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;#web-mode&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;插入元素, [C-c C-e i]&lt;/li&gt;
+&lt;li&gt;删除整块元素, [C-c C-e k]&lt;/li&gt;
+&lt;li&gt;选择整块元素, [C-c C-e s]&lt;/li&gt;
+&lt;li&gt;选择整块元素内容(相当于跳转到元素内部), [C-c C-
+    
+    </summary>
+    
+      <category term="Program" scheme="http://yoursite.com/categories/Program/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>test post</title>
+    <link href="http://yoursite.com/2014/12/18/test-post/"/>
+    <id>http://yoursite.com/2014/12/18/test-post/</id>
+    <published>2014-12-18T15:05:00.000Z</published>
+    <updated>2017-03-23T21:50:54.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>#just test post</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;#just test post&lt;/p&gt;
+
+    
+    </summary>
+    
+      <category term="takeiteasy" scheme="http://yoursite.com/categories/takeiteasy/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>gokit and foosball</title>
+    <link href="http://yoursite.com/2014/12/18/gokit-and-foosball/"/>
+    <id>http://yoursite.com/2014/12/18/gokit-and-foosball/</id>
+    <published>2014-12-18T04:13:00.000Z</published>
+    <updated>2017-03-23T21:50:54.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>#概述<br>基于Python语言进行开发，并使用了Django框架</p>
+<p>#For <a href="http://www.gizwits.com" target="_blank" rel="external">Gizwits</a></p>
+<p>##依赖的安装包</p>
+<ul>
+<li><a href="https://github.com/gizwits/gservice_sdk_py" target="_blank" rel="external">gservice_sdk_py</a></li>
+</ul>
+<p>##步骤</p>
+<p>###配置gokit。</p>
+<ul>
+<li>请参考<a href="https://github.com/smartfoosball/foosball-mcu/wiki/How-To-Build-Smart-FoosBall-with-GoKit" target="_blank" rel="external">How To Build Smart FoosBall with GoKit</a></li>
+</ul>
+<p>###通过机智云获取gokit反馈的数据</p>
+<ul>
+<li>注册成为<a href="http://www.gizwits.com" target="_blank" rel="external">机智云</a>的开发者，依照<a href="https://github.com/smartfoosball/foosball-mcu/wiki/How-To-Build-Smart-FoosBall-with-GoKit#步骤" target="_blank" rel="external">步骤</a>配置好gokit产品。</li>
+<li>安装<a href="https://github.com/gizwits/gservice_sdk_py" target="_blank" rel="external">gservice_sdk_py</a></li>
+<li>使用机智云注册的gotki产品信息配置<strong>gservice_sdk</strong>的client，然后调用<strong>retrieve_product_histroy_data</strong>方法从机智云获取设备数据。</li>
+<li>根据<strong>retrieve_product_histroy_data</strong>返回的数据更新网站的进球数据, 代码：<a href="https://github.com/smartfoosball/fooscloud/blob/dev/smartfoosball/management/commands/goals.py" target="_blank" rel="external">Command</a><br>APPID和PRODUCK_KEY的获取如下图：<br><img src="https://raw.githubusercontent.com/snowleung/snowleung.github.io/master/assets/photos/app_id_pkey.png" alt="app_id_pk"><br>关键代码如下:</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">gsc = GServiceClient(settings.GW_APPID)</div><div class="line">ts  = 0</div><div class="line">d_team = &#123;&apos;red&apos;: 1, &apos;blue&apos;: 2&#125;</div><div class="line">d_position = &#123;&apos;red_van&apos;: 1, &apos;red_rear&apos;: 2, &apos;blue_van&apos;: 3, &apos;blue_rear&apos;: 4&#125;</div><div class="line">while True:</div><div class="line">    try:</div><div class="line">        game = Game.objects.filter(status=Game.Status.playing.value).first()</div><div class="line">        data = gsc.retrieve_product_histroy_data(settings.PRODUCT_KEY, start_ts=ts, limit=10).json()[&apos;data&apos;]</div></pre></td></tr></table></figure>
+<p>#For <a href="http://weixin.qq.com/" target="_blank" rel="external">Wechat</a></p>
+<p>##依赖的安装包</p>
+<ul>
+<li><a href="https://pypi.python.org/pypi/wechatpy/0.7.2" target="_blank" rel="external">wechatpy 0.7.2</a></li>
+<li><a href="https://pypi.python.org/pypi/enum34/1.0.4" target="_blank" rel="external">enum34 1.0.4</a></li>
+<li><a href="https://pypi.python.org/pypi/requests/2.5.0" target="_blank" rel="external">requests 2.5.0</a></li>
+</ul>
+<p>##步骤</p>
+<p>###编写wechat_echo代码, <a href="https://github.com/smartfoosball/fooscloud/blob/dev/smartfoosball/views.py" target="_blank" rel="external">WechatEcho</a>部份代碼如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line">class WechatEcho(View):</div><div class="line"></div><div class="line">    def get(self, request):</div><div class="line">        signature = request.GET.get(&apos;signature&apos;, &apos;&apos;)</div><div class="line">        timestamp = request.GET.get(&apos;timestamp&apos;, &apos;&apos;)</div><div class="line">        nonce = request.GET.get(&apos;nonce&apos;, &apos;&apos;)</div><div class="line">        echo_str = request.GET.get(&apos;echostr&apos;, &apos;&apos;)</div><div class="line"></div><div class="line">        try:</div><div class="line">            check_signature(TOKEN, signature, timestamp, nonce)</div><div class="line">        except InvalidSignatureException:</div><div class="line">            return HttpResponse(status=403)</div><div class="line">        return HttpResponse(echo_str)</div><div class="line"></div><div class="line">    def post(self, request):</div><div class="line">        signature = request.GET.get(&apos;signature&apos;, &apos;&apos;)</div><div class="line">        timestamp = request.GET.get(&apos;timestamp&apos;, &apos;&apos;)</div><div class="line">        nonce = request.GET.get(&apos;nonce&apos;, &apos;&apos;)</div><div class="line">        echo_str = request.GET.get(&apos;echostr&apos;, &apos;&apos;)</div><div class="line"></div><div class="line">        try:</div><div class="line">            check_signature(TOKEN, signature, timestamp, nonce)</div><div class="line">        except InvalidSignatureException:</div><div class="line">            return HttpResponse(status=403)</div><div class="line"></div><div class="line">        msg = parse_message(request.body)</div><div class="line">        if msg.type == &apos;event&apos;:</div><div class="line">            if msg.event == &apos;subscribe&apos; or msg.event == &apos;subscribe_scan&apos;:</div><div class="line">                # 订阅时的事件</div><div class="line">                reply = create_reply(u&apos;菜鸟，来一局...&apos;, msg)</div><div class="line">                return HttpResponse(reply.render())</div><div class="line"></div><div class="line">        reply = TextReply(content=u&apos;你好，有任何问题请直接回复，我们会尽快处理。&apos;, message=msg)</div><div class="line">        return HttpResponse(reply.render())</div><div class="line">``` </div><div class="line">###启用服务器配置(测试坏境)</div><div class="line">* 登录[微信sanbox](http://mp.weixin.qq.com/debug/cgi-bin/sandbox?t=sandbox/login), 扫描二维码并登陆。</div><div class="line">* **修改接口配置信息**如图。在[urls.py]()增加</div></pre></td></tr></table></figure></p>
+<p>url(r’^wechat_echo$’, csrf_exempt(views.WechatEcho.as_view()), name=”wechat_echo”)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">![api](https://raw.githubusercontent.com/snowleung/snowleung.github.io/master/assets/photos/wechat_api_url.jpeg)</div><div class="line"></div><div class="line">###使用OAUTH方式获取微信用户授权。</div><div class="line">* 登录[微信sanbox](http://mp.weixin.qq.com/debug/cgi-bin/sandbox?t=sandbox/login), 扫描二维码并登陆。在[urls.py]()下增加一条url设置</div></pre></td></tr></table></figure></p>
+<p>url(r’^wechat/oauth2$’, views.wechat_oauth2, name=”wechat_oauth2”)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">根据下图修改**OAuth网页端授权页面**:</div><div class="line">    ![api](https://raw.githubusercontent.com/snowleung/snowleung.github.io/master/assets/photos/wechat_oauth1.png)  </div><div class="line">    ![api](https://raw.githubusercontent.com/snowleung/snowleung.github.io/master/assets/photos/wechat_oauth2.png)</div><div class="line">* 依照微信文档[网页授权获取用户基本信息](http://mp.weixin.qq.com/wiki/17/c0f37d5704f0b64713d5d2c37b468d75.html),编写**用户同意授权**代码[BaseWeixinView](https://github.com/smartfoosball/fooscloud/blob/dev/smartfoosball/views.py)</div><div class="line">* **拉取用户信息**[wechat_oauth2](https://github.com/smartfoosball/fooscloud/blob/dev/smartfoosball/views.py)部份代碼如下：</div></pre></td></tr></table></figure></p>
+<p>class BaseWeixinView(View):<br>    def dispatch(self, <em>args, **kwargs):<br>        if not self.request.user.is_authenticated():<br>            redirect_uri = urllib.urlencode({<br>                    ‘redirect_uri’:<br>                        ‘http://‘ + self.request.get_host() + reverse(“wechat_oauth2”)})<br>            return redirect(‘<a href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=%s&amp;%s&amp;response_type=code&amp;scope=snsapi_userinfo&amp;state=STATE#wechat_redirect" target="_blank" rel="external">https://open.weixin.qq.com/connect/oauth2/authorize?appid=%s&amp;%s&amp;response_type=code&amp;scope=snsapi_userinfo&amp;state=STATE#wechat_redirect</a>‘ % (WX_APPID, redirect_uri))<br>        return super(BaseWeixinView, self).dispatch(</em>args, **kwargs)</p>
+<p>def wechat_oauth2(request):<br>    code = request.GET.get(‘code’)<br>    if code:<br>        params={‘appid’: WX_APPID,<br>                ‘secret’: WX_SECRET,<br>                ‘code’: code,<br>                ‘grant_type’: ‘authorization_code’}<br>        try:<br>            resp = requests.get(‘<a href="https://api.weixin.qq.com/sns/oauth2/access_token" target="_blank" rel="external">https://api.weixin.qq.com/sns/oauth2/access_token</a>‘,<br>                                params=params)<br>            tokens = json.loads(resp.content)<br>            openid = tokens[‘openid’]<br>            params = {‘access_token’: tokens[‘access_token’],<br>                      ‘openid’: openid,<br>                      ‘lang’: ‘zh_CN’}<br>            resp = requests.get(‘<a href="https://api.weixin.qq.com/sns/userinfo" target="_blank" rel="external">https://api.weixin.qq.com/sns/userinfo</a>‘, params=params)<br>            user = json.loads(resp.content)<br>```<br>2014-12-18</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;#概述&lt;br&gt;基于Python语言进行开发，并使用了Django框架&lt;/p&gt;
+&lt;p&gt;#For &lt;a href=&quot;http://www.gizwits.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Gizwits&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;##依赖的安装
+    
+    </summary>
+    
+      <category term="takeiteasy" scheme="http://yoursite.com/categories/takeiteasy/"/>
+    
+    
+  </entry>
+  
+</feed>
