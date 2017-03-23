@@ -1,0 +1,72 @@
+---
+layout: post
+title: "Try ELK"
+date: 2015-03-29 22:49
+comments: true
+categories: Program
+---
+
+### ELK: Elasticsearch + Logstash + Kibana
+
+* 这里是一个在ubuntu14.04 box上的一些操作
+* base :[How To Install Elasticsearch, Logstash, and Kibana 4 on Ubuntu 14.04](https://www.digitalocean.com/community/tutorials/how-to-install-elasticsearch-logstash-and-kibana-4-on-ubuntu-14-04)
+
+* 准备(pcre,zlib是安装ngnix所需的包)
+* ![packages](https://raw.githubusercontent.com/snowleung/snowleung.github.io/master/assets/photos/Screen_Shot_2015-03-29_at_10.52.15_pm.png)
+
+
+* 然后按base中步骤配置各个组件
+* ps: 安装jdk, [Daily Ubuntu Tips – Manually Install Oracle Java JDK 8 In Ubuntu](https://www.liberiangeek.net/2014/03/daily-ubuntu-tips-manually-install-oracle-java-jdk-8-in-ubuntu/)
+
+
+### Logstash config
+
+* 在logstash的文件夹中，建立一个conf.d的文件夹，用来放logstash的conf文件
+* 一份从stdin中抓取信息的配置
+
+```
+input { stdin { } }  
+  
+filter {  
+  grok {  
+    match => { "message" => "%{DAY}/%{MONTH}/%{YEAR} %{LOGLEVEL} %{URIPATHPARAM} %{WORD}" }  
+  }  
+  date {  
+    match => [ "timestamp" , "dd/MMM/yyyy:HH:mm:ss Z" ]  
+  }  
+}  
+  
+output {  
+  elasticsearch { host => localhost }  
+  stdout { codec => rubydebug }  
+}  
+```
+
+* 配置由三个部分组成，可见分别是input, filter, output
+* input，就是来源，我指定了从std in作为输入源, 当然还可以指定为[file](http://logstash.net/docs/1.4.2/inputs/file), [redis](http://logstash.net/docs/1.4.2/inputs/redis) 等等
+* filter，就是对来源进行过滤， grok的pattern. [grok](http://logstash.net/docs/1.4.2/filters/grok)
+* output，将过滤后的结果输出到指定的地方，这里指定输出到elasticsearch为输出
+* 指定完成后，就可以启动logstash了
+
+```
+./logstash -f ../conf.d
+
+```
+* 等待成功启动后（这的确需要好几秒）， 就可以直接在当前命令行中输入
+```
+Tue/Jan/15 ERROR /api/login gotsomeerror
+```
+* 会马上反馈
+* ![response](https://raw.githubusercontent.com/snowleung/snowleung.github.io/master/assets/photos/Screen_Shot_2015-03-29_at_11.19.30_pm.png)
+* 然后在kibana中就可以看到刚刚的输入的收集结果了
+
+
+### 其他REF
+
+* ref: [使用elk+redis搭建nginx日志分析平台](http://www.cnblogs.com/yjf512/p/4199105.html)
+* ref: [Logstash Config](http://logstash.net/docs/1.4.2/configuration)
+* ref: [Logstash 1.4.2 doc](http://logstash.net/docs/1.4.2)
+* 很好的一个grok在线debug网站 [grok debugger](http://grokdebug.herokuapp.com/)
+
+### TODO
+* 了解如何对采集到的日志记录进行分析
