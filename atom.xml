@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-03-24T01:40:00.000Z</updated>
+  <updated>2017-03-24T01:47:19.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,11 +20,11 @@
     <link href="http://yoursite.com/2017/03/24/from-octopress-to-hexo/"/>
     <id>http://yoursite.com/2017/03/24/from-octopress-to-hexo/</id>
     <published>2017-03-23T23:36:55.000Z</published>
-    <updated>2017-03-24T01:40:00.000Z</updated>
+    <updated>2017-03-24T01:47:19.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Hello-Hexo"><a href="#Hello-Hexo" class="headerlink" title="Hello Hexo"></a>Hello Hexo</h2><p>from octopress to hexo, because:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">when I write, I&apos;m blogger. when I coding, I&apos;m programmer.</div></pre></td></tr></table></figure>
-<a id="more"></a>
+<p>So I use <a href="https://hexo.io" target="_blank" rel="external">hexo</a> to handle my blog.<br><a id="more"></a></p>
 <h2 id="Install"><a href="#Install" class="headerlink" title="Install"></a>Install</h2><ul>
 <li>Follow <a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="external">offical</a></li>
 </ul>
@@ -46,6 +46,7 @@
     
       &lt;h2 id=&quot;Hello-Hexo&quot;&gt;&lt;a href=&quot;#Hello-Hexo&quot; class=&quot;headerlink&quot; title=&quot;Hello Hexo&quot;&gt;&lt;/a&gt;Hello Hexo&lt;/h2&gt;&lt;p&gt;from octopress to hexo, because:&lt;/p&gt;
 &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;when I write, I&amp;apos;m blogger. when I coding, I&amp;apos;m programmer.&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;So I use &lt;a href=&quot;https://hexo.io&quot;&gt;hexo&lt;/a&gt; to handle my blog.&lt;br&gt;
     
     </summary>
     
