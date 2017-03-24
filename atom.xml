@@ -4,9 +4,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="https://www.leisiwo.com/"/>
   <updated>2017-03-24T01:47:19.000Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>https://www.leisiwo.com/</id>
   
   <author>
     <name>Sam Leung</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>from octopress to hexo</title>
-    <link href="http://yoursite.com/2017/03/24/from-octopress-to-hexo/"/>
-    <id>http://yoursite.com/2017/03/24/from-octopress-to-hexo/</id>
+    <link href="https://www.leisiwo.com/2017/03/24/from-octopress-to-hexo/"/>
+    <id>https://www.leisiwo.com/2017/03/24/from-octopress-to-hexo/</id>
     <published>2017-03-23T23:36:55.000Z</published>
     <updated>2017-03-24T01:47:19.000Z</updated>
     
@@ -55,8 +55,8 @@
   
   <entry>
     <title>ansible up and running note</title>
-    <link href="http://yoursite.com/2017/03/21/ansible-up-and-running-note/"/>
-    <id>http://yoursite.com/2017/03/21/ansible-up-and-running-note/</id>
+    <link href="https://www.leisiwo.com/2017/03/21/ansible-up-and-running-note/"/>
+    <id>https://www.leisiwo.com/2017/03/21/ansible-up-and-running-note/</id>
     <published>2017-03-21T01:33:00.000Z</published>
     <updated>2017-03-23T21:50:54.000Z</updated>
     
@@ -108,8 +108,8 @@
   
   <entry>
     <title>Python Code Encodings</title>
-    <link href="http://yoursite.com/2017/03/16/python-code-encodings/"/>
-    <id>http://yoursite.com/2017/03/16/python-code-encodings/</id>
+    <link href="https://www.leisiwo.com/2017/03/16/python-code-encodings/"/>
+    <id>https://www.leisiwo.com/2017/03/16/python-code-encodings/</id>
     <published>2017-03-16T02:59:00.000Z</published>
     <updated>2017-03-23T21:50:54.000Z</updated>
     
@@ -202,8 +202,8 @@
   
   <entry>
     <title>Understand_Character_encoding</title>
-    <link href="http://yoursite.com/2017/03/15/understand-character-encoding/"/>
-    <id>http://yoursite.com/2017/03/15/understand-character-encoding/</id>
+    <link href="https://www.leisiwo.com/2017/03/15/understand-character-encoding/"/>
+    <id>https://www.leisiwo.com/2017/03/15/understand-character-encoding/</id>
     <published>2017-03-15T03:20:00.000Z</published>
     <updated>2017-03-23T21:50:54.000Z</updated>
     
@@ -315,8 +315,8 @@
   
   <entry>
     <title>Two options to SEO for Octopress</title>
-    <link href="http://yoursite.com/2017/02/07/two-options-to-seo-for-octopress/"/>
-    <id>http://yoursite.com/2017/02/07/two-options-to-seo-for-octopress/</id>
+    <link href="https://www.leisiwo.com/2017/02/07/two-options-to-seo-for-octopress/"/>
+    <id>https://www.leisiwo.com/2017/02/07/two-options-to-seo-for-octopress/</id>
     <published>2017-02-07T12:55:00.000Z</published>
     <updated>2017-03-23T21:50:54.000Z</updated>
     
@@ -352,8 +352,8 @@
   
   <entry>
     <title>Good Sense For Redis Data Type</title>
-    <link href="http://yoursite.com/2016/12/15/good-sense-for-redis-data-type/"/>
-    <id>http://yoursite.com/2016/12/15/good-sense-for-redis-data-type/</id>
+    <link href="https://www.leisiwo.com/2016/12/15/good-sense-for-redis-data-type/"/>
+    <id>https://www.leisiwo.com/2016/12/15/good-sense-for-redis-data-type/</id>
     <published>2016-12-15T11:01:00.000Z</published>
     <updated>2017-03-23T21:50:54.000Z</updated>
     
@@ -398,15 +398,15 @@
     
     </summary>
     
-      <category term="Program" scheme="http://yoursite.com/categories/Program/"/>
+      <category term="Program" scheme="https://www.leisiwo.com/categories/Program/"/>
     
     
   </entry>
   
   <entry>
     <title>HTTPS NOTES</title>
-    <link href="http://yoursite.com/2016/12/07/https-notes/"/>
-    <id>http://yoursite.com/2016/12/07/https-notes/</id>
+    <link href="https://www.leisiwo.com/2016/12/07/https-notes/"/>
+    <id>https://www.leisiwo.com/2016/12/07/https-notes/</id>
     <published>2016-12-07T14:49:00.000Z</published>
     <updated>2017-03-23T21:50:54.000Z</updated>
     
@@ -457,15 +457,15 @@
     
     </summary>
     
-      <category term="Program" scheme="http://yoursite.com/categories/Program/"/>
+      <category term="Program" scheme="https://www.leisiwo.com/categories/Program/"/>
     
     
   </entry>
   
   <entry>
     <title>Review Django: Middleware</title>
-    <link href="http://yoursite.com/2016/12/01/review-django-middleware/"/>
-    <id>http://yoursite.com/2016/12/01/review-django-middleware/</id>
+    <link href="https://www.leisiwo.com/2016/12/01/review-django-middleware/"/>
+    <id>https://www.leisiwo.com/2016/12/01/review-django-middleware/</id>
     <published>2016-12-01T07:11:00.000Z</published>
     <updated>2017-03-23T21:50:54.000Z</updated>
     
@@ -512,15 +512,15 @@
     
     </summary>
     
-      <category term="Program" scheme="http://yoursite.com/categories/Program/"/>
+      <category term="Program" scheme="https://www.leisiwo.com/categories/Program/"/>
     
     
   </entry>
   
   <entry>
     <title>Have a talk with product manager</title>
-    <link href="http://yoursite.com/2016/09/28/have-a-talk-with-product-manager/"/>
-    <id>http://yoursite.com/2016/09/28/have-a-talk-with-product-manager/</id>
+    <link href="https://www.leisiwo.com/2016/09/28/have-a-talk-with-product-manager/"/>
+    <id>https://www.leisiwo.com/2016/09/28/have-a-talk-with-product-manager/</id>
     <published>2016-09-28T10:31:00.000Z</published>
     <updated>2017-03-23T21:50:54.000Z</updated>
     
@@ -580,15 +580,15 @@
     
     </summary>
     
-      <category term="Read&amp;Talk&amp;Think" scheme="http://yoursite.com/categories/Read-Talk-Think/"/>
+      <category term="Read&amp;Talk&amp;Think" scheme="https://www.leisiwo.com/categories/Read-Talk-Think/"/>
     
     
   </entry>
   
   <entry>
     <title>docker compose</title>
-    <link href="http://yoursite.com/2016/01/01/docker-compose/"/>
-    <id>http://yoursite.com/2016/01/01/docker-compose/</id>
+    <link href="https://www.leisiwo.com/2016/01/01/docker-compose/"/>
+    <id>https://www.leisiwo.com/2016/01/01/docker-compose/</id>
     <published>2016-01-01T15:13:00.000Z</published>
     <updated>2017-03-23T21:50:54.000Z</updated>
     
@@ -596,7 +596,7 @@
 <p><a href="http://dockerpool.com/static/books/docker_practice/dockerfile/basic_structure.html" target="_blank" rel="external">http://dockerpool.com/static/books/docker_practice/dockerfile/basic_structure.html</a></p>
 <p>看完上面的链接，已经可以说对docker到底怎么用有了基本知识了。对于开发的运用中，这个已经能够满足</p>
 <p>当年在这篇中写了相关的东西，缺少dns和fig</p>
-<p><a href="http://www.leisiwo.com/blog/2015/02/16/use-docker-for-dev-env/" target="_blank" rel="external">http://www.leisiwo.com/blog/2015/02/16/use-docker-for-dev-env/</a></p>
+<p><a href="http://www.leisiwo.com/blog/2015/02/16/use-docker-for-dev-env/">http://www.leisiwo.com/blog/2015/02/16/use-docker-for-dev-env/</a></p>
 <p>如今再次看了一下docker的整个流程，所以有这个笔记</p>
 <a id="more"></a>
 <hr>
@@ -646,15 +646,15 @@
     
     </summary>
     
-      <category term="Program" scheme="http://yoursite.com/categories/Program/"/>
+      <category term="Program" scheme="https://www.leisiwo.com/categories/Program/"/>
     
     
   </entry>
   
   <entry>
     <title>Reader</title>
-    <link href="http://yoursite.com/2015/10/06/reader/"/>
-    <id>http://yoursite.com/2015/10/06/reader/</id>
+    <link href="https://www.leisiwo.com/2015/10/06/reader/"/>
+    <id>https://www.leisiwo.com/2015/10/06/reader/</id>
     <published>2015-10-05T16:37:00.000Z</published>
     <updated>2017-03-23T21:50:54.000Z</updated>
     
@@ -704,15 +704,15 @@
     
     </summary>
     
-      <category term="Read&amp;Talk&amp;Think" scheme="http://yoursite.com/categories/Read-Talk-Think/"/>
+      <category term="Read&amp;Talk&amp;Think" scheme="https://www.leisiwo.com/categories/Read-Talk-Think/"/>
     
     
   </entry>
   
   <entry>
     <title>Try ELK</title>
-    <link href="http://yoursite.com/2015/03/29/try-elk/"/>
-    <id>http://yoursite.com/2015/03/29/try-elk/</id>
+    <link href="https://www.leisiwo.com/2015/03/29/try-elk/"/>
+    <id>https://www.leisiwo.com/2015/03/29/try-elk/</id>
     <published>2015-03-29T14:49:00.000Z</published>
     <updated>2017-03-23T21:50:54.000Z</updated>
     
@@ -767,15 +767,15 @@
     
     </summary>
     
-      <category term="Program" scheme="http://yoursite.com/categories/Program/"/>
+      <category term="Program" scheme="https://www.leisiwo.com/categories/Program/"/>
     
     
   </entry>
   
   <entry>
     <title>python effective cheatsheet 03</title>
-    <link href="http://yoursite.com/2015/03/09/python-effective-cheatsheet-03/"/>
-    <id>http://yoursite.com/2015/03/09/python-effective-cheatsheet-03/</id>
+    <link href="https://www.leisiwo.com/2015/03/09/python-effective-cheatsheet-03/"/>
+    <id>https://www.leisiwo.com/2015/03/09/python-effective-cheatsheet-03/</id>
     <published>2015-03-09T15:13:00.000Z</published>
     <updated>2017-03-23T21:50:54.000Z</updated>
     
@@ -818,15 +818,15 @@
     
     </summary>
     
-      <category term="Program" scheme="http://yoursite.com/categories/Program/"/>
+      <category term="Program" scheme="https://www.leisiwo.com/categories/Program/"/>
     
     
   </entry>
   
   <entry>
     <title>using git tags</title>
-    <link href="http://yoursite.com/2015/03/08/using-git-tags/"/>
-    <id>http://yoursite.com/2015/03/08/using-git-tags/</id>
+    <link href="https://www.leisiwo.com/2015/03/08/using-git-tags/"/>
+    <id>https://www.leisiwo.com/2015/03/08/using-git-tags/</id>
     <published>2015-03-08T10:05:00.000Z</published>
     <updated>2017-03-23T21:50:54.000Z</updated>
     
@@ -869,15 +869,15 @@
     
     </summary>
     
-      <category term="Program" scheme="http://yoursite.com/categories/Program/"/>
+      <category term="Program" scheme="https://www.leisiwo.com/categories/Program/"/>
     
     
   </entry>
   
   <entry>
     <title>Use docker for dev env</title>
-    <link href="http://yoursite.com/2015/02/16/use-docker-for-dev-env/"/>
-    <id>http://yoursite.com/2015/02/16/use-docker-for-dev-env/</id>
+    <link href="https://www.leisiwo.com/2015/02/16/use-docker-for-dev-env/"/>
+    <id>https://www.leisiwo.com/2015/02/16/use-docker-for-dev-env/</id>
     <published>2015-02-16T08:52:00.000Z</published>
     <updated>2017-03-23T21:50:54.000Z</updated>
     
@@ -924,15 +924,15 @@
     
     </summary>
     
-      <category term="Program" scheme="http://yoursite.com/categories/Program/"/>
+      <category term="Program" scheme="https://www.leisiwo.com/categories/Program/"/>
     
     
   </entry>
   
   <entry>
     <title>use PasteScript</title>
-    <link href="http://yoursite.com/2015/01/18/use-pastescript/"/>
-    <id>http://yoursite.com/2015/01/18/use-pastescript/</id>
+    <link href="https://www.leisiwo.com/2015/01/18/use-pastescript/"/>
+    <id>https://www.leisiwo.com/2015/01/18/use-pastescript/</id>
     <published>2015-01-18T03:39:00.000Z</published>
     <updated>2017-03-23T21:50:54.000Z</updated>
     
@@ -951,15 +951,15 @@
     
     </summary>
     
-      <category term="Program" scheme="http://yoursite.com/categories/Program/"/>
+      <category term="Program" scheme="https://www.leisiwo.com/categories/Program/"/>
     
     
   </entry>
   
   <entry>
     <title>use git submodule</title>
-    <link href="http://yoursite.com/2015/01/10/use-git-submodule/"/>
-    <id>http://yoursite.com/2015/01/10/use-git-submodule/</id>
+    <link href="https://www.leisiwo.com/2015/01/10/use-git-submodule/"/>
+    <id>https://www.leisiwo.com/2015/01/10/use-git-submodule/</id>
     <published>2015-01-09T16:16:00.000Z</published>
     <updated>2017-03-23T21:50:54.000Z</updated>
     
@@ -1010,15 +1010,15 @@
     
     </summary>
     
-      <category term="Program" scheme="http://yoursite.com/categories/Program/"/>
+      <category term="Program" scheme="https://www.leisiwo.com/categories/Program/"/>
     
     
   </entry>
   
   <entry>
     <title>what i need from python-mode and web-mode</title>
-    <link href="http://yoursite.com/2015/01/07/what-i-need-from-python-mode-and-web-mode/"/>
-    <id>http://yoursite.com/2015/01/07/what-i-need-from-python-mode-and-web-mode/</id>
+    <link href="https://www.leisiwo.com/2015/01/07/what-i-need-from-python-mode-and-web-mode/"/>
+    <id>https://www.leisiwo.com/2015/01/07/what-i-need-from-python-mode-and-web-mode/</id>
     <published>2015-01-06T16:29:00.000Z</published>
     <updated>2017-03-23T21:50:54.000Z</updated>
     
@@ -1061,15 +1061,15 @@
     
     </summary>
     
-      <category term="Program" scheme="http://yoursite.com/categories/Program/"/>
+      <category term="Program" scheme="https://www.leisiwo.com/categories/Program/"/>
     
     
   </entry>
   
   <entry>
     <title>test post</title>
-    <link href="http://yoursite.com/2014/12/18/test-post/"/>
-    <id>http://yoursite.com/2014/12/18/test-post/</id>
+    <link href="https://www.leisiwo.com/2014/12/18/test-post/"/>
+    <id>https://www.leisiwo.com/2014/12/18/test-post/</id>
     <published>2014-12-18T15:05:00.000Z</published>
     <updated>2017-03-23T21:50:54.000Z</updated>
     
@@ -1083,15 +1083,15 @@
     
     </summary>
     
-      <category term="takeiteasy" scheme="http://yoursite.com/categories/takeiteasy/"/>
+      <category term="takeiteasy" scheme="https://www.leisiwo.com/categories/takeiteasy/"/>
     
     
   </entry>
   
   <entry>
     <title>gokit and foosball</title>
-    <link href="http://yoursite.com/2014/12/18/gokit-and-foosball/"/>
-    <id>http://yoursite.com/2014/12/18/gokit-and-foosball/</id>
+    <link href="https://www.leisiwo.com/2014/12/18/gokit-and-foosball/"/>
+    <id>https://www.leisiwo.com/2014/12/18/gokit-and-foosball/</id>
     <published>2014-12-18T04:13:00.000Z</published>
     <updated>2017-03-23T21:50:54.000Z</updated>
     
@@ -1137,7 +1137,7 @@
     
     </summary>
     
-      <category term="takeiteasy" scheme="http://yoursite.com/categories/takeiteasy/"/>
+      <category term="takeiteasy" scheme="https://www.leisiwo.com/categories/takeiteasy/"/>
     
     
   </entry>
