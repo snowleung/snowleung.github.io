@@ -12,6 +12,7 @@ from octopress to hexo, because:
 when I write, I'm blogger. when I coding, I'm programmer.
 ```
 
+So I use [hexo](https://hexo.io) to handle my blog.
 <!--More-->
 
 ## Install
