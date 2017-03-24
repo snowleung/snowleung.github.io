@@ -8,12 +8,13 @@ keywords: redis, datatype, database
 description: Simple to understand redis datatypes
 ---
 
-###Redis
+
+### Redis
 
 * Redis is an open source (BSD licensed), in-memory data structure
   store, used as a database, cache and message broker.
 
-###给妹子说的DataType
+### 给妹子说的DataType
 
 Redis支持Strings, Lists, Sets, Hashes, Sorted sets, Bitmaps and
 HyperLogLogs数种数据结构。下面就给妹子讲解前五种（Strings, Lists,
@@ -21,19 +22,19 @@ Sets, Hashes, Sorted sets,）
 
 <!--More-->
 
-####Strings(String)
+#### Strings(String)
 
 * String，大家都叫他字符串。字符串意思是字符＋串，字符就是类似a,b,c,d等
   等的，串就是把他们组合在一起（如abcd）；正如吉他谱，如果把Redis比喻为一首吉他曲子，弦（Bm，C）＋谱（拨弦）为一个小节，
   多个小节组成的Strings，就可以奏响Redis这首曲子了。所以Redis中的String，
   就是__键为和弦，值为谱__的这种结构。
 
-####Lists(List)
+#### Lists(List)
 
 * List，大家都叫他列表。如果Redis是一个卖糖葫芦串的商人，那么每一个List就是他手
   中用竹签穿起山楂来的一个串。那Redis中的List，就是__键为竹签，值为山楂__的这种结构
 
-####Sets(Set)
+#### Sets(Set)
 
 * Set，大家都叫他集合。集合相当于一个容器，包含在容器里面的“东西”可以叫
   为“元素”；元素与元素之间并__无顺序__，并且各个元素是
@@ -42,7 +43,7 @@ Sets, Hashes, Sorted sets,）
   种生果不应该多于一个（只有一个苹果，不能两个）。所以，Redis中的Set，就
   是__键为生果篮，值为生果（不重复）__的结构。
 
-####Hashes(Hash)
+#### Hashes(Hash)
 
 * Hash，可以叫他为哈希表。中学的时候学过f(x)=y，表述为当x一定时，通过
   f(x)总会得到y，而哈希表就是用来表达这个思维过程的。如果Redis是一家蔬菜
@@ -58,7 +59,7 @@ Sets, Hashes, Sorted sets,）
   果篮，值为生果（不重复）与体积大小（可排序）__的结构。
 
 
-###REFERENCE:
+### REFERENCE:
 
 * [Data types(Redis)](https://redis.io/topics/data-types)
 * [An introduction to Redis data types and abstractions](https://redis.io/topics/data-types-intro)
