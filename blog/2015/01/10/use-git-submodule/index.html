@@ -1,0 +1,45 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="About learning, programming and happy hacking!"><title>use git submodule | Software Dev</title><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/5.0.0/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.2/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.2/grids-responsive-min.css"><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><link rel="alternate" type="application/atom+xml" href="/atom.xml"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">use git submodule</h1><a id="logo" href="/.">Software Dev</a><p class="description"></p></div><div id="nav-menu"><a href="/." class="current"><i class="fa fa-home"> Home</i></a><a href="/archives/"><i class="fa fa-archive"> Archive</i></a><a href="/about/"><i class="fa fa-user"> About</i></a><a href="/atom.xml"><i class="fa fa-rss"> RSS</i></a></div></div><div id="layout" class="pure-g"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">use git submodule</h1><div class="post-meta">Jan 10, 2015<span> | </span><span class="category"><a href="/categories/Program/">Program</a></span><script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js" async></script><span id="busuanzi_container_page_pv"> | <span id="busuanzi_value_page_pv"></span><span> Hits</span></span></div><div class="post-content"><h3 id="我有一个-emacs文件，如何用submodule去维护其他模块？"><a href="#我有一个-emacs文件，如何用submodule去维护其他模块？" class="headerlink" title="我有一个.emacs文件，如何用submodule去维护其他模块？"></a>我有一个.emacs文件，如何用submodule去维护其他模块？</h3><h4 id="如何添加子模块"><a href="#如何添加子模块" class="headerlink" title="如何添加子模块"></a>如何添加子模块</h4><ul>
+<li>git submodule add resp path</li>
+<li>git submodule init</li>
+<li>git submodule update</li>
+<li>git status (这时会看到.submodule和commit_id未提交)</li>
+<li>git commit (保存子模块和子模块的commit_id)</li>
+</ul>
+<h4 id="如何更新子模块"><a href="#如何更新子模块" class="headerlink" title="如何更新子模块"></a>如何更新子模块</h4><ul>
+<li>cd 子模块</li>
+<li>git pull origin master ，不能git pull，因为You are not currently on a branch.</li>
+<li>cd .. &amp;&amp; git status (这里会看到子模块的commit id更新了)</li>
+<li>git commit (提交子模块更新)</li>
+</ul>
+<h4 id="新成员加入开发，如何获取clone项目"><a href="#新成员加入开发，如何获取clone项目" class="headerlink" title="新成员加入开发，如何获取clone项目?"></a>新成员加入开发，如何获取clone项目?</h4><ul>
+<li>git clone resp (父)</li>
+<li>git submodule init (子项目没有内容)</li>
+<li>git submodule update （更新到上次提交到父项目的子项目commit_id， 所以如果此时子项目有更新，需要重新走更新子模块的流程）</li>
+<li>快捷方式:git clone –recursive resp (同时clone所有模块,只到父模块中记录过的commit-id)</li>
+</ul>
+<h4 id="如何删除子模块"><a href="#如何删除子模块" class="headerlink" title="如何删除子模块"></a>如何删除子模块</h4><ul>
+<li>很麻烦<br><a href="http://www.kafeitu.me/git/2012/03/27/git-submodule.html" target="_blank" rel="external">看这里吧</a></li>
+</ul>
+<p>####总结</p>
+<ul>
+<li>子模块在父项目中只是记录commit_id，也依赖它来执行操作</li>
+<li>submodule 为的就是在父项目中永远只更新子模块内容</li>
+<li>所以父项目中不要有需要修改子模块内容的<em>想法</em></li>
+</ul>
+<p><a href="http://www.kafeitu.me/git/2012/03/27/git-submodule.html" target="_blank" rel="external">参考资料</a></p>
+<p>UPDATE:</p>
+<ul>
+<li>尝试过subtree子命令，感觉这个指令更加多的是一种分支管理策略，所以跳不出一个很重要的点就是</li>
+</ul>
+<p><code>git中对于子模块(子仓库)的管理都需要在父项目中有commit_id来追踪，所以个人觉得最需要的管理就是如何可以让子模块的更新最大限度的减少对父项目的影响</code></p>
+<ul>
+<li>参考资料</li>
+<li><a href="http://aoxuis.me/posts/2013/08/07/git-subtree/" target="_blank" rel="external">http://aoxuis.me/posts/2013/08/07/git-subtree/</a></li>
+<li><a href="http://git-scm.com/book/zh/v1/Git-%E5%B7%A5%E5%85%B7-%E5%AD%90%E6%A0%91%E5%90%88%E5%B9%B6" target="_blank" rel="external">http://git-scm.com/book/zh/v1/Git-%E5%B7%A5%E5%85%B7-%E5%AD%90%E6%A0%91%E5%90%88%E5%B9%B6</a></li>
+</ul>
+</div><script type="text/javascript" src="/js/share.js?v=0.0.0" async></script><a data-url="https://www.leisiwo.com/blog/2015/01/10/use-git-submodule/" data-id="cj0n6bg0v002ke4pin5ud969a" class="article-share-link">Share</a><div class="tags"></div><div class="post-nav"><a href="/blog/2015/01/18/use-pastescript/" class="pre">use PasteScript</a><a href="/blog/2015/01/07/what-i-need-from-python-mode-and-web-mode/" class="next">what i need from python-mode and web-mode</a></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><form action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank" class="search-form"><input type="text" name="q" maxlength="20" placeholder="Search"/><input type="hidden" name="sitesearch" value="https://www.leisiwo.com"/></form></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> Categories</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Program/">Program</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Read-Talk-Think/">Read&Talk&Think</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/takeiteasy/">takeiteasy</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/weekend-page/">weekend_page</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> Recent</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/blog/2017/03/24/from-octopress-to-hexo/">from octopress to hexo</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/03/21/ansible-up-and-running-note/">ansible up and running note</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/03/16/python-code-encodings/">Python Code Encodings</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/03/15/understand-character-encoding/">Understand_Character_encoding</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/02/07/two-options-to-seo-for-octopress/">Two options to SEO for Octopress</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2016/12/15/good-sense-for-redis-data-type/">Good Sense For Redis Data Type</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2016/12/07/https-notes/">HTTPS NOTES</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2016/12/01/review-django-middleware/">Review Django: Middleware</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2016/09/28/have-a-talk-with-product-manager/">Have a talk with product manager</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2016/01/01/docker-compose/">docker compose</a></li></ul></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">© <a href="/." rel="nofollow">Software Dev.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a id="rocket" href="#top" class="show"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.pack.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="/css/jquery.fancybox.css?v=0.0.0"><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create','UA-91470533-1','auto');ga('send','pageview');
+</script><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>

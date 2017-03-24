@@ -1,0 +1,59 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="About learning, programming and happy hacking!"><title>python regexp and group | Software Dev</title><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/5.0.0/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.2/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.2/grids-responsive-min.css"><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><link rel="alternate" type="application/atom+xml" href="/atom.xml"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">python regexp and group</h1><a id="logo" href="/.">Software Dev</a><p class="description"></p></div><div id="nav-menu"><a href="/." class="current"><i class="fa fa-home"> Home</i></a><a href="/archives/"><i class="fa fa-archive"> Archive</i></a><a href="/about/"><i class="fa fa-user"> About</i></a><a href="/atom.xml"><i class="fa fa-rss"> RSS</i></a></div></div><div id="layout" class="pure-g"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">python regexp and group</h1><div class="post-meta">Feb 14, 2014<span> | </span><span class="category"><a href="/categories/Program/">Program</a></span><script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js" async></script><span id="busuanzi_container_page_pv"> | <span id="busuanzi_value_page_pv"></span><span> Hits</span></span></div><div class="post-content"><p>#####Why you can see this post</p>
+<p>One day, a guy want the use regexp to match the ed2k link with python, so he get a pattern from google.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pattern : ed2k:\/\/\|file\|[^\|]+\|\d+\|[0-9a-z]+\|(h=[a-z0-9]+\|)?\/</div></pre></td></tr></table></figure>
+<p>It work similar</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ed2k://|file|!%20(%20NEW%20)%20!%20sod%20japan%20-%20[silk%20labo]%20Love%20Switch%20-%20Another%20Stories%20[SLK20]%20(2%20098%20969%20424).mp4|2098969424|438D794BB3571342F8CFA902681A901C|h=5DUPHBUN52JPTRMLBFTN2SYMFNP3KCS4|/</div></pre></td></tr></table></figure>
+<p>but fail at this</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ed2k://|file|[nowys.org]SILK.LABO.东京恋爱模様.TOKYO.LOVERS.LIFE.01(ED2000.COM).mp4|882032017|6DF424D13F8D7D9DCA1F9A31E0DE3EF6|/</div></pre></td></tr></table></figure>
+<p>after the guy know why, this post upload.</p>
+<p>#####So why ?</p>
+<p>1 Day: </p>
+<ul>
+<li>The guy find this <a href="http://www.douban.com/group/topic/32245600/" target="_blank" rel="external">python re模块的findall方法</a> and modify the pattern like this:</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pattern : ed2k:\/\/\|file\|[^\|]+\|\d+\|[0-9a-z]+\|(?:h=[a-z0-9]+\|)?\/</div></pre></td></tr></table></figure>
+<ul>
+<li>It work.</li>
+</ul>
+<p>2-3 Day:</p>
+<ul>
+<li><p>The guy why know why, so he find this book <a href="http://www.amazon.cn/精通正则表达式-杰佛瑞E-F-佛瑞德/dp/B008UCHA58/ref=sr_1_1?ie=UTF8&amp;qid=1392373797&amp;sr=8-1&amp;keywords=精通正则表达式" target="_blank" rel="external">精通正则表达式</a> and read chapter 1.</p>
+</li>
+<li><p>At chapter 1, the guy know many about <strong>[] () . + * ?</strong> and little <strong>UNICODE</strong> knowledge.</p>
+</li>
+</ul>
+<p>4 day:</p>
+<ul>
+<li>In <a href="http://leagueoflegends.com" target="_blank" rel="external">LOL</a></li>
+</ul>
+<p>5 day: </p>
+<ul>
+<li><p>The guy finish reading but only at<br>chapter 4 and know something about <strong>group</strong>. With that knowledge, the guy want to use regex and do something with this “aaabcbbbbccc” and return “aaa,bbb,ccc”.</p>
+</li>
+<li><p>So he use that pattern </p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pattern : &quot;([a-z])\1&#123;2&#125;&quot;</div></pre></td></tr></table></figure>
+<ul>
+<li>that pattern not work at python re.findall()! just output</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">output : [&apos;a&apos;,&apos;b&apos;,&apos;c&apos;]</div></pre></td></tr></table></figure>
+<ul>
+<li>so he find something about re.match, re.search, re.findall with google, and finally the output get right with this pattern</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pattern : &quot;(([a-z])\2&#123;2&#125;)&quot;</div></pre></td></tr></table></figure>
+<ul>
+<li><p>why? See more “<strong>()</strong>“ and <strong>group</strong> with this article:</p>
+</li>
+<li><p><a href="http://www.crifan.com/python_re_search_vs_re_findall/" target="_blank" rel="external">【整理】Python中的re.search和re.findall之间的区别和联系 + re.finall中带命名的组，不带命名的组，非捕获的组，没有分组四种类型之间的区别</a></p>
+</li>
+<li><a href="http://www.cnblogs.com/sevenyuan/archive/2010/12/06/1898075.html" target="_blank" rel="external">Python中re(正则表达式)模块学习</a></li>
+<li><a href="http://www.douban.com/group/topic/32245600/" target="_blank" rel="external">python re模块的findall方法</a></li>
+<li>source code for gist: <a href="https://gist.github.com/snowleung/9000098" target="_blank" rel="external">re_exm</a></li>
+</ul>
+</div><script type="text/javascript" src="/js/share.js?v=0.0.0" async></script><a data-url="https://www.leisiwo.com/blog/2014/02/14/python-regexp-and-group/" data-id="cj0n6bfz00014e4pinc4u3mtt" class="article-share-link">Share</a><div class="tags"></div><div class="post-nav"><a href="/blog/2014/02/17/weekend-page/" class="pre">weekend-page</a><a href="/blog/2014/02/10/weekend-page/" class="next">Weekend-page</a></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><form action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank" class="search-form"><input type="text" name="q" maxlength="20" placeholder="Search"/><input type="hidden" name="sitesearch" value="https://www.leisiwo.com"/></form></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> Categories</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Program/">Program</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Read-Talk-Think/">Read&Talk&Think</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/takeiteasy/">takeiteasy</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/weekend-page/">weekend_page</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> Recent</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/blog/2017/03/24/from-octopress-to-hexo/">from octopress to hexo</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/03/21/ansible-up-and-running-note/">ansible up and running note</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/03/16/python-code-encodings/">Python Code Encodings</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/03/15/understand-character-encoding/">Understand_Character_encoding</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/02/07/two-options-to-seo-for-octopress/">Two options to SEO for Octopress</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2016/12/15/good-sense-for-redis-data-type/">Good Sense For Redis Data Type</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2016/12/07/https-notes/">HTTPS NOTES</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2016/12/01/review-django-middleware/">Review Django: Middleware</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2016/09/28/have-a-talk-with-product-manager/">Have a talk with product manager</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2016/01/01/docker-compose/">docker compose</a></li></ul></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">© <a href="/." rel="nofollow">Software Dev.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a id="rocket" href="#top" class="show"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.pack.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="/css/jquery.fancybox.css?v=0.0.0"><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create','UA-91470533-1','auto');ga('send','pageview');
+</script><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>
