@@ -355,36 +355,29 @@
     <link href="https://www.leisiwo.com/blog/2016/12/15/good-sense-for-redis-data-type/"/>
     <id>https://www.leisiwo.com/blog/2016/12/15/good-sense-for-redis-data-type/</id>
     <published>2016-12-15T11:01:00.000Z</published>
-    <updated>2017-03-23T21:50:54.000Z</updated>
+    <updated>2017-03-24T01:58:16.000Z</updated>
     
-    <content type="html"><![CDATA[<p>###Redis</p>
-<ul>
+    <content type="html"><![CDATA[<h3 id="Redis"><a href="#Redis" class="headerlink" title="Redis"></a>Redis</h3><ul>
 <li>Redis is an open source (BSD licensed), in-memory data structure<br>store, used as a database, cache and message broker.</li>
 </ul>
-<p>###给妹子说的DataType</p>
-<p>Redis支持Strings, Lists, Sets, Hashes, Sorted sets, Bitmaps and<br>HyperLogLogs数种数据结构。下面就给妹子讲解前五种（Strings, Lists,<br>Sets, Hashes, Sorted sets,）</p>
+<h3 id="给妹子说的DataType"><a href="#给妹子说的DataType" class="headerlink" title="给妹子说的DataType"></a>给妹子说的DataType</h3><p>Redis支持Strings, Lists, Sets, Hashes, Sorted sets, Bitmaps and<br>HyperLogLogs数种数据结构。下面就给妹子讲解前五种（Strings, Lists,<br>Sets, Hashes, Sorted sets,）</p>
 <a id="more"></a>
-<p>####Strings(String)</p>
-<ul>
+<h4 id="Strings-String"><a href="#Strings-String" class="headerlink" title="Strings(String)"></a>Strings(String)</h4><ul>
 <li>String，大家都叫他字符串。字符串意思是字符＋串，字符就是类似a,b,c,d等<br>等的，串就是把他们组合在一起（如abcd）；正如吉他谱，如果把Redis比喻为一首吉他曲子，弦（Bm，C）＋谱（拨弦）为一个小节，<br>多个小节组成的Strings，就可以奏响Redis这首曲子了。所以Redis中的String，<br>就是<strong>键为和弦，值为谱</strong>的这种结构。</li>
 </ul>
-<p>####Lists(List)</p>
-<ul>
+<h4 id="Lists-List"><a href="#Lists-List" class="headerlink" title="Lists(List)"></a>Lists(List)</h4><ul>
 <li>List，大家都叫他列表。如果Redis是一个卖糖葫芦串的商人，那么每一个List就是他手<br>中用竹签穿起山楂来的一个串。那Redis中的List，就是<strong>键为竹签，值为山楂</strong>的这种结构</li>
 </ul>
-<p>####Sets(Set)</p>
-<ul>
+<h4 id="Sets-Set"><a href="#Sets-Set" class="headerlink" title="Sets(Set)"></a>Sets(Set)</h4><ul>
 <li>Set，大家都叫他集合。集合相当于一个容器，包含在容器里面的“东西”可以叫<br>为“元素”；元素与元素之间并<strong>无顺序</strong>，并且各个元素是<br><strong>不重复</strong>的。如果Redis是一个生果礼品店，那么每一个Set就<br>是他包装好的生果篮，生果篮里面的生果都放在一起，没有先后顺序，而且同一<br>种生果不应该多于一个（只有一个苹果，不能两个）。所以，Redis中的Set，就<br>是<strong>键为生果篮，值为生果（不重复）</strong>的结构。</li>
 </ul>
-<p>####Hashes(Hash)</p>
-<ul>
+<h4 id="Hashes-Hash"><a href="#Hashes-Hash" class="headerlink" title="Hashes(Hash)"></a>Hashes(Hash)</h4><ul>
 <li>Hash，可以叫他为哈希表。中学的时候学过f(x)=y，表述为当x一定时，通过<br>f(x)总会得到y，而哈希表就是用来表达这个思维过程的。如果Redis是一家蔬菜<br>店，那么每一个hash就是<strong>一个菜类</strong>和<strong>与之对应的价钱</strong>的表格。所以，在<br>Redis中的Hash，就是<strong>键为菜类，值为对应的价钱</strong>的结构。</li>
 </ul>
 <h4 id="Sorted-Sets"><a href="#Sorted-Sets" class="headerlink" title="Sorted Sets"></a>Sorted Sets</h4><ul>
 <li>已排序的集合，回忆之前Sets，提及<strong>无顺序</strong>，那么，这个Sorted Sets就是<strong>有<br>顺序</strong>的。比如我们将生果篮里面的生果，按体积大小来做区分的话，就可以得<br>到一个顺序，比如西瓜最大，到菠萝，到苹果，到草莓这么一个顺序，那原本无<br>序的生果篮，就变成有顺序的了。所以，Redis中的Sorted Set，就是<strong>键为生<br>果篮，值为生果（不重复）与体积大小（可排序）</strong>的结构。</li>
 </ul>
-<p>###REFERENCE:</p>
-<ul>
+<h3 id="REFERENCE"><a href="#REFERENCE" class="headerlink" title="REFERENCE:"></a>REFERENCE:</h3><ul>
 <li><a href="https://redis.io/topics/data-types" target="_blank" rel="external">Data types(Redis)</a></li>
 <li><a href="https://redis.io/topics/data-types-intro" target="_blank" rel="external">An introduction to Redis data types and abstractions</a></li>
 <li><a href="https://en.wikipedia.org/wiki/Key-value_database" target="_blank" rel="external">Key-value database</a></li>
