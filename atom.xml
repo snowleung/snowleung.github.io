@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-03-24T01:21:09.000Z</updated>
+  <updated>2017-03-24T01:40:00.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,33 +14,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://yoursite.com/2017/03/24/hello-world/"/>
-    <id>http://yoursite.com/2017/03/24/hello-world/</id>
-    <published>2017-03-24T01:21:09.000Z</published>
-    <updated>2017-03-24T01:21:09.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
-    
-    </summary>
-    
-    
-  </entry>
   
   <entry>
     <title>from octopress to hexo</title>
@@ -1106,6 +1079,60 @@
     
       &lt;p&gt;#just test post&lt;/p&gt;
 
+    
+    </summary>
+    
+      <category term="takeiteasy" scheme="http://yoursite.com/categories/takeiteasy/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>gokit and foosball</title>
+    <link href="http://yoursite.com/2014/12/18/gokit-and-foosball/"/>
+    <id>http://yoursite.com/2014/12/18/gokit-and-foosball/</id>
+    <published>2014-12-18T04:13:00.000Z</published>
+    <updated>2017-03-23T21:50:54.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>#概述<br>基于Python语言进行开发，并使用了Django框架</p>
+<p>#For <a href="http://www.gizwits.com" target="_blank" rel="external">Gizwits</a></p>
+<p>##依赖的安装包</p>
+<ul>
+<li><a href="https://github.com/gizwits/gservice_sdk_py" target="_blank" rel="external">gservice_sdk_py</a></li>
+</ul>
+<p>##步骤</p>
+<p>###配置gokit。</p>
+<ul>
+<li>请参考<a href="https://github.com/smartfoosball/foosball-mcu/wiki/How-To-Build-Smart-FoosBall-with-GoKit" target="_blank" rel="external">How To Build Smart FoosBall with GoKit</a></li>
+</ul>
+<p>###通过机智云获取gokit反馈的数据</p>
+<ul>
+<li>注册成为<a href="http://www.gizwits.com" target="_blank" rel="external">机智云</a>的开发者，依照<a href="https://github.com/smartfoosball/foosball-mcu/wiki/How-To-Build-Smart-FoosBall-with-GoKit#步骤" target="_blank" rel="external">步骤</a>配置好gokit产品。</li>
+<li>安装<a href="https://github.com/gizwits/gservice_sdk_py" target="_blank" rel="external">gservice_sdk_py</a></li>
+<li>使用机智云注册的gotki产品信息配置<strong>gservice_sdk</strong>的client，然后调用<strong>retrieve_product_histroy_data</strong>方法从机智云获取设备数据。</li>
+<li>根据<strong>retrieve_product_histroy_data</strong>返回的数据更新网站的进球数据, 代码：<a href="https://github.com/smartfoosball/fooscloud/blob/dev/smartfoosball/management/commands/goals.py" target="_blank" rel="external">Command</a><br>APPID和PRODUCK_KEY的获取如下图：<br><img src="https://raw.githubusercontent.com/snowleung/snowleung.github.io/master/assets/photos/app_id_pkey.png" alt="app_id_pk"><br>关键代码如下:</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">gsc = GServiceClient(settings.GW_APPID)</div><div class="line">ts  = 0</div><div class="line">d_team = &#123;&apos;red&apos;: 1, &apos;blue&apos;: 2&#125;</div><div class="line">d_position = &#123;&apos;red_van&apos;: 1, &apos;red_rear&apos;: 2, &apos;blue_van&apos;: 3, &apos;blue_rear&apos;: 4&#125;</div><div class="line">while True:</div><div class="line">    try:</div><div class="line">        game = Game.objects.filter(status=Game.Status.playing.value).first()</div><div class="line">        data = gsc.retrieve_product_histroy_data(settings.PRODUCT_KEY, start_ts=ts, limit=10).json()[&apos;data&apos;]</div></pre></td></tr></table></figure>
+<p>#For <a href="http://weixin.qq.com/" target="_blank" rel="external">Wechat</a></p>
+<p>##依赖的安装包</p>
+<ul>
+<li><a href="https://pypi.python.org/pypi/wechatpy/0.7.2" target="_blank" rel="external">wechatpy 0.7.2</a></li>
+<li><a href="https://pypi.python.org/pypi/enum34/1.0.4" target="_blank" rel="external">enum34 1.0.4</a></li>
+<li><a href="https://pypi.python.org/pypi/requests/2.5.0" target="_blank" rel="external">requests 2.5.0</a></li>
+</ul>
+<p>##步骤</p>
+<p>###编写wechat_echo代码, <a href="https://github.com/smartfoosball/fooscloud/blob/dev/smartfoosball/views.py" target="_blank" rel="external">WechatEcho</a>部份代碼如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line">class WechatEcho(View):</div><div class="line"></div><div class="line">    def get(self, request):</div><div class="line">        signature = request.GET.get(&apos;signature&apos;, &apos;&apos;)</div><div class="line">        timestamp = request.GET.get(&apos;timestamp&apos;, &apos;&apos;)</div><div class="line">        nonce = request.GET.get(&apos;nonce&apos;, &apos;&apos;)</div><div class="line">        echo_str = request.GET.get(&apos;echostr&apos;, &apos;&apos;)</div><div class="line"></div><div class="line">        try:</div><div class="line">            check_signature(TOKEN, signature, timestamp, nonce)</div><div class="line">        except InvalidSignatureException:</div><div class="line">            return HttpResponse(status=403)</div><div class="line">        return HttpResponse(echo_str)</div><div class="line"></div><div class="line">    def post(self, request):</div><div class="line">        signature = request.GET.get(&apos;signature&apos;, &apos;&apos;)</div><div class="line">        timestamp = request.GET.get(&apos;timestamp&apos;, &apos;&apos;)</div><div class="line">        nonce = request.GET.get(&apos;nonce&apos;, &apos;&apos;)</div><div class="line">        echo_str = request.GET.get(&apos;echostr&apos;, &apos;&apos;)</div><div class="line"></div><div class="line">        try:</div><div class="line">            check_signature(TOKEN, signature, timestamp, nonce)</div><div class="line">        except InvalidSignatureException:</div><div class="line">            return HttpResponse(status=403)</div><div class="line"></div><div class="line">        msg = parse_message(request.body)</div><div class="line">        if msg.type == &apos;event&apos;:</div><div class="line">            if msg.event == &apos;subscribe&apos; or msg.event == &apos;subscribe_scan&apos;:</div><div class="line">                # 订阅时的事件</div><div class="line">                reply = create_reply(u&apos;菜鸟，来一局...&apos;, msg)</div><div class="line">                return HttpResponse(reply.render())</div><div class="line"></div><div class="line">        reply = TextReply(content=u&apos;你好，有任何问题请直接回复，我们会尽快处理。&apos;, message=msg)</div><div class="line">        return HttpResponse(reply.render())</div><div class="line">``` </div><div class="line">###启用服务器配置(测试坏境)</div><div class="line">* 登录[微信sanbox](http://mp.weixin.qq.com/debug/cgi-bin/sandbox?t=sandbox/login), 扫描二维码并登陆。</div><div class="line">* **修改接口配置信息**如图。在[urls.py]()增加</div></pre></td></tr></table></figure></p>
+<p>url(r’^wechat_echo$’, csrf_exempt(views.WechatEcho.as_view()), name=”wechat_echo”)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">![api](https://raw.githubusercontent.com/snowleung/snowleung.github.io/master/assets/photos/wechat_api_url.jpeg)</div><div class="line"></div><div class="line">###使用OAUTH方式获取微信用户授权。</div><div class="line">* 登录[微信sanbox](http://mp.weixin.qq.com/debug/cgi-bin/sandbox?t=sandbox/login), 扫描二维码并登陆。在[urls.py]()下增加一条url设置</div></pre></td></tr></table></figure></p>
+<p>url(r’^wechat/oauth2$’, views.wechat_oauth2, name=”wechat_oauth2”)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">根据下图修改**OAuth网页端授权页面**:</div><div class="line">    ![api](https://raw.githubusercontent.com/snowleung/snowleung.github.io/master/assets/photos/wechat_oauth1.png)  </div><div class="line">    ![api](https://raw.githubusercontent.com/snowleung/snowleung.github.io/master/assets/photos/wechat_oauth2.png)</div><div class="line">* 依照微信文档[网页授权获取用户基本信息](http://mp.weixin.qq.com/wiki/17/c0f37d5704f0b64713d5d2c37b468d75.html),编写**用户同意授权**代码[BaseWeixinView](https://github.com/smartfoosball/fooscloud/blob/dev/smartfoosball/views.py)</div><div class="line">* **拉取用户信息**[wechat_oauth2](https://github.com/smartfoosball/fooscloud/blob/dev/smartfoosball/views.py)部份代碼如下：</div></pre></td></tr></table></figure></p>
+<p>class BaseWeixinView(View):<br>    def dispatch(self, <em>args, **kwargs):<br>        if not self.request.user.is_authenticated():<br>            redirect_uri = urllib.urlencode({<br>                    ‘redirect_uri’:<br>                        ‘http://‘ + self.request.get_host() + reverse(“wechat_oauth2”)})<br>            return redirect(‘<a href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=%s&amp;%s&amp;response_type=code&amp;scope=snsapi_userinfo&amp;state=STATE#wechat_redirect" target="_blank" rel="external">https://open.weixin.qq.com/connect/oauth2/authorize?appid=%s&amp;%s&amp;response_type=code&amp;scope=snsapi_userinfo&amp;state=STATE#wechat_redirect</a>‘ % (WX_APPID, redirect_uri))<br>        return super(BaseWeixinView, self).dispatch(</em>args, **kwargs)</p>
+<p>def wechat_oauth2(request):<br>    code = request.GET.get(‘code’)<br>    if code:<br>        params={‘appid’: WX_APPID,<br>                ‘secret’: WX_SECRET,<br>                ‘code’: code,<br>                ‘grant_type’: ‘authorization_code’}<br>        try:<br>            resp = requests.get(‘<a href="https://api.weixin.qq.com/sns/oauth2/access_token" target="_blank" rel="external">https://api.weixin.qq.com/sns/oauth2/access_token</a>‘,<br>                                params=params)<br>            tokens = json.loads(resp.content)<br>            openid = tokens[‘openid’]<br>            params = {‘access_token’: tokens[‘access_token’],<br>                      ‘openid’: openid,<br>                      ‘lang’: ‘zh_CN’}<br>            resp = requests.get(‘<a href="https://api.weixin.qq.com/sns/userinfo" target="_blank" rel="external">https://api.weixin.qq.com/sns/userinfo</a>‘, params=params)<br>            user = json.loads(resp.content)<br>```<br>2014-12-18</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;#概述&lt;br&gt;基于Python语言进行开发，并使用了Django框架&lt;/p&gt;
+&lt;p&gt;#For &lt;a href=&quot;http://www.gizwits.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Gizwits&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;##依赖的安装
     
     </summary>
     
