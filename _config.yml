@@ -4,7 +4,7 @@
 
 # Site
 title: Software Dev
-subtitle: 
+subtitle: 天行健，君子以自强不息。地势坤，君子以厚德载物。
 description: About learning, programming and happy hacking!
 author: Sam Leung
 language: en
@@ -72,6 +72,8 @@ deploy:
   repo: https://github.com/snowleung/snowleung.github.io
   branch: master
 
+# Google Verify
+google-site-verification: googledde837c980e60b40.html
 
 # Extensions
 ## Plugins: http://hexo.io/plugins/
