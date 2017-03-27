@@ -2,6 +2,41 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.leisiwo.com/blog/2013/09/23/git-pages-and-octopress/</loc>
+    
+    <lastmod>2017-03-27T10:54:25.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.leisiwo.com/blog/2013/09/23/read-a-book/</loc>
+    
+    <lastmod>2017-03-27T10:53:59.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.leisiwo.com/blog/2014/09/12/octpress-hole/</loc>
+    
+    <lastmod>2017-03-27T10:53:38.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.leisiwo.com/blog/2014/12/18/gokit-and-foosball/</loc>
+    
+    <lastmod>2017-03-27T10:53:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.leisiwo.com/blog/2015/03/29/try-elk/</loc>
+    
+    <lastmod>2017-03-27T10:52:27.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.leisiwo.com/links/index.html</loc>
     
     <lastmod>2017-03-27T09:56:39.000Z</lastmod>
@@ -54,41 +89,6 @@
     <loc>https://www.leisiwo.com/blog/2014/05/07/weekend-page/</loc>
     
     <lastmod>2017-03-23T22:00:28.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.leisiwo.com/blog/2013/11/30/long-long-memory/</loc>
-    
-    <lastmod>2017-03-23T21:50:54.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.leisiwo.com/blog/2014/01/05/need-delimiter-at-procedure/</loc>
-    
-    <lastmod>2017-03-23T21:50:54.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.leisiwo.com/blog/2014/01/05/weekend-page/</loc>
-    
-    <lastmod>2017-03-23T21:50:54.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.leisiwo.com/blog/2014/01/13/weekend-page/</loc>
-    
-    <lastmod>2017-03-23T21:50:54.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.leisiwo.com/blog/2014/01/20/weekend-page/</loc>
-    
-    <lastmod>2017-03-23T21:50:54.000Z</lastmod>
     
   </url>
   
@@ -226,7 +226,7 @@
   </url>
   
   <url>
-    <loc>https://www.leisiwo.com/blog/2013/09/09/boot-from-usb-vmware/</loc>
+    <loc>https://www.leisiwo.com/blog/2013/09/23/memo-for-emacs-kdb-macro/</loc>
     
     <lastmod>2017-03-23T21:50:54.000Z</lastmod>
     
@@ -261,7 +261,7 @@
   </url>
   
   <url>
-    <loc>https://www.leisiwo.com/blog/2014/09/12/octpress-hole/</loc>
+    <loc>https://www.leisiwo.com/blog/2013/09/09/boot-from-usb-vmware/</loc>
     
     <lastmod>2017-03-23T21:50:54.000Z</lastmod>
     
@@ -282,7 +282,7 @@
   </url>
   
   <url>
-    <loc>https://www.leisiwo.com/blog/2014/12/18/gokit-and-foosball/</loc>
+    <loc>https://www.leisiwo.com/blog/2013/09/23/test-for-codeblock/</loc>
     
     <lastmod>2017-03-23T21:50:54.000Z</lastmod>
     
@@ -317,6 +317,13 @@
   </url>
   
   <url>
+    <loc>https://www.leisiwo.com/blog/2013/10/31/wswswws/</loc>
+    
+    <lastmod>2017-03-23T21:50:54.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.leisiwo.com/blog/2015/02/16/use-docker-for-dev-env/</loc>
     
     <lastmod>2017-03-23T21:50:54.000Z</lastmod>
@@ -332,13 +339,6 @@
   
   <url>
     <loc>https://www.leisiwo.com/blog/2015/03/09/python-effective-cheatsheet-03/</loc>
-    
-    <lastmod>2017-03-23T21:50:54.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.leisiwo.com/blog/2015/03/29/try-elk/</loc>
     
     <lastmod>2017-03-23T21:50:54.000Z</lastmod>
     
@@ -380,7 +380,7 @@
   </url>
   
   <url>
-    <loc>https://www.leisiwo.com/blog/2013/09/23/git-pages-and-octopress/</loc>
+    <loc>https://www.leisiwo.com/blog/2013/11/30/long-long-memory/</loc>
     
     <lastmod>2017-03-23T21:50:54.000Z</lastmod>
     
@@ -415,28 +415,28 @@
   </url>
   
   <url>
-    <loc>https://www.leisiwo.com/blog/2013/09/23/memo-for-emacs-kdb-macro/</loc>
+    <loc>https://www.leisiwo.com/blog/2014/01/05/need-delimiter-at-procedure/</loc>
     
     <lastmod>2017-03-23T21:50:54.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.leisiwo.com/blog/2013/09/23/read-a-book/</loc>
+    <loc>https://www.leisiwo.com/blog/2014/01/05/weekend-page/</loc>
     
     <lastmod>2017-03-23T21:50:54.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.leisiwo.com/blog/2013/09/23/test-for-codeblock/</loc>
+    <loc>https://www.leisiwo.com/blog/2014/01/13/weekend-page/</loc>
     
     <lastmod>2017-03-23T21:50:54.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.leisiwo.com/blog/2013/10/31/wswswws/</loc>
+    <loc>https://www.leisiwo.com/blog/2014/01/20/weekend-page/</loc>
     
     <lastmod>2017-03-23T21:50:54.000Z</lastmod>
     
