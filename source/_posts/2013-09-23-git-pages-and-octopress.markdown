@@ -14,6 +14,6 @@ categories: takeiteasy
 
 请参考最新的git pages设置如下图片
 
-![pages](/assets/photos/20130923181616259249.jpg)
+![pages](/images/20130923181616259249.jpg)
 
 github地址：[My custom domain isn't working](https://help.github.com/articles/my-custom-domain-isn-t-working)

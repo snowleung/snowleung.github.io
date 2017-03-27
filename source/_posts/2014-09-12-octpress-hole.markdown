@@ -38,7 +38,7 @@ categories: takeiteasy
 
   ruby-1.9.3-p0 ====> ruby-1.9.3-p547
 
-  ![RUBY VERSION SWITCH](/assets/photos/20140915octopress_rvm.png)
+  ![RUBY VERSION SWITCH](/images/20140915octopress_rvm.png)
 
   then use 
   ```bash

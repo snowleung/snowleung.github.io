@@ -8,4 +8,4 @@ categories: Read&Talk&Think
 
 今天读了一点书
 
-![](/assets/photos/20130923142138656322.jpg)
+![](/images/20130923142138656322.jpg)

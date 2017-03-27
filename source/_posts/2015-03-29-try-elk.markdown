@@ -12,7 +12,7 @@ categories: Program
 * base :[How To Install Elasticsearch, Logstash, and Kibana 4 on Ubuntu 14.04](https://www.digitalocean.com/community/tutorials/how-to-install-elasticsearch-logstash-and-kibana-4-on-ubuntu-14-04)
 
 * 准备(pcre,zlib是安装ngnix所需的包)
-* ![packages](https://raw.githubusercontent.com/snowleung/snowleung.github.io/master/assets/photos/Screen_Shot_2015-03-29_at_10.52.15_pm.png)
+* ![packages](/images/Screen_Shot_2015-03-29_at_10.52.15_pm.png)
 
 
 * 然后按base中步骤配置各个组件
@@ -57,7 +57,7 @@ output {
 Tue/Jan/15 ERROR /api/login gotsomeerror
 ```
 * 会马上反馈
-* ![response](https://raw.githubusercontent.com/snowleung/snowleung.github.io/master/assets/photos/Screen_Shot_2015-03-29_at_11.19.30_pm.png)
+* ![response](/images/Screen_Shot_2015-03-29_at_11.19.30_pm.png)
 * 然后在kibana中就可以看到刚刚的输入的收集结果了
 
 

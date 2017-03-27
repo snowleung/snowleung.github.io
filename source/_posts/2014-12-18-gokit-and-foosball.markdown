@@ -23,7 +23,7 @@ categories: takeiteasy
 * 使用机智云注册的gotki产品信息配置**gservice_sdk**的client，然后调用**retrieve_product_histroy_data**方法从机智云获取设备数据。
 * 根据**retrieve_product_histroy_data**返回的数据更新网站的进球数据, 代码：[Command](https://github.com/smartfoosball/fooscloud/blob/dev/smartfoosball/management/commands/goals.py)
 APPID和PRODUCK_KEY的获取如下图：
-  ![app_id_pk](https://raw.githubusercontent.com/snowleung/snowleung.github.io/master/assets/photos/app_id_pkey.png)
+  ![app_id_pk](/images/app_id_pkey.png)
   关键代码如下:
 
 ```
@@ -87,7 +87,7 @@ class WechatEcho(View):
 ```
 url(r'^wechat_echo$', csrf_exempt(views.WechatEcho.as_view()), name="wechat_echo")
 ```
-![api](https://raw.githubusercontent.com/snowleung/snowleung.github.io/master/assets/photos/wechat_api_url.jpeg)
+![api](/images/wechat_api_url.jpeg)
 
 ###使用OAUTH方式获取微信用户授权。
 * 登录[微信sanbox](http://mp.weixin.qq.com/debug/cgi-bin/sandbox?t=sandbox/login), 扫描二维码并登陆。在[urls.py]()下增加一条url设置
@@ -95,8 +95,8 @@ url(r'^wechat_echo$', csrf_exempt(views.WechatEcho.as_view()), name="wechat_echo
 url(r'^wechat/oauth2$', views.wechat_oauth2, name="wechat_oauth2")
 ```
 根据下图修改**OAuth网页端授权页面**:
-    ![api](https://raw.githubusercontent.com/snowleung/snowleung.github.io/master/assets/photos/wechat_oauth1.png)  
-    ![api](https://raw.githubusercontent.com/snowleung/snowleung.github.io/master/assets/photos/wechat_oauth2.png)
+    ![api](/images/wechat_oauth1.png)  
+    ![api](/images/wechat_oauth2.png)
 * 依照微信文档[网页授权获取用户基本信息](http://mp.weixin.qq.com/wiki/17/c0f37d5704f0b64713d5d2c37b468d75.html),编写**用户同意授权**代码[BaseWeixinView](https://github.com/smartfoosball/fooscloud/blob/dev/smartfoosball/views.py)
 * **拉取用户信息**[wechat_oauth2](https://github.com/smartfoosball/fooscloud/blob/dev/smartfoosball/views.py)部份代碼如下：
 
