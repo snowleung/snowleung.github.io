@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.leisiwo.com/"/>
-  <updated>2017-03-24T01:47:19.000Z</updated>
+  <updated>2017-03-31T01:50:28.000Z</updated>
   <id>https://www.leisiwo.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://www.leisiwo.com/blog/2017/03/24/from-octopress-to-hexo/"/>
     <id>https://www.leisiwo.com/blog/2017/03/24/from-octopress-to-hexo/</id>
     <published>2017-03-23T23:36:55.000Z</published>
-    <updated>2017-03-24T01:47:19.000Z</updated>
+    <updated>2017-03-31T01:50:28.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Hello-Hexo"><a href="#Hello-Hexo" class="headerlink" title="Hello Hexo"></a>Hello Hexo</h2><p>from octopress to hexo, because:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">when I write, I&apos;m blogger. when I coding, I&apos;m programmer.</div></pre></td></tr></table></figure>
@@ -58,7 +58,7 @@
     <link href="https://www.leisiwo.com/blog/2017/03/21/ansible-up-and-running-note/"/>
     <id>https://www.leisiwo.com/blog/2017/03/21/ansible-up-and-running-note/</id>
     <published>2017-03-21T01:33:00.000Z</published>
-    <updated>2017-03-23T21:50:54.000Z</updated>
+    <updated>2017-03-31T01:50:28.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="What’s-Ansible"><a href="#What’s-Ansible" class="headerlink" title="What’s Ansible"></a>What’s Ansible</h2><h3 id="Ansible-is-Simple-IT-Automation"><a href="#Ansible-is-Simple-IT-Automation" class="headerlink" title="Ansible is Simple IT Automation"></a><a href="https://www.ansible.com/" target="_blank" rel="external">Ansible is Simple IT Automation</a></h3><a id="more"></a>
 <h2 id="QuickView"><a href="#QuickView" class="headerlink" title="QuickView"></a>QuickView</h2><blockquote>
@@ -111,7 +111,7 @@
     <link href="https://www.leisiwo.com/blog/2017/03/16/python-code-encodings/"/>
     <id>https://www.leisiwo.com/blog/2017/03/16/python-code-encodings/</id>
     <published>2017-03-16T02:59:00.000Z</published>
-    <updated>2017-03-23T21:50:54.000Z</updated>
+    <updated>2017-03-31T01:50:28.000Z</updated>
     
     <content type="html"><![CDATA[<p>Python2的编码问题，老生畅谈<br><a id="more"></a></p>
 <p>##Python2.x的str</p>
@@ -205,7 +205,7 @@
     <link href="https://www.leisiwo.com/blog/2017/03/15/understand-character-encoding/"/>
     <id>https://www.leisiwo.com/blog/2017/03/15/understand-character-encoding/</id>
     <published>2017-03-15T03:20:00.000Z</published>
-    <updated>2017-03-23T21:50:54.000Z</updated>
+    <updated>2017-03-31T01:50:28.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="弄清字符编码和它的编码方式"><a href="#弄清字符编码和它的编码方式" class="headerlink" title="弄清字符编码和它的编码方式"></a>弄清字符编码和它的编码方式</h1><p>计算机中，用0和1来作为最小单位，<strong>意义</strong>是假或真，用一定数量的0和1组合来描述世界，一定数量组合的内容足够多时，我们就可以称之为语言。</p>
 <p>同样，在中文里，每一个中文字就是一个最小单位，每一个最小单位都有自己的<strong>意义</strong> ，数量足够多后，同样也称为语言。</p>
@@ -318,7 +318,7 @@
     <link href="https://www.leisiwo.com/blog/2017/02/07/two-options-to-seo-for-octopress/"/>
     <id>https://www.leisiwo.com/blog/2017/02/07/two-options-to-seo-for-octopress/</id>
     <published>2017-02-07T12:55:00.000Z</published>
-    <updated>2017-03-23T21:50:54.000Z</updated>
+    <updated>2017-03-31T01:50:28.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>add META <strong>keywords</strong> and <strong>description</strong> is very important for SEO and aslo basic. </p>
@@ -355,7 +355,7 @@
     <link href="https://www.leisiwo.com/blog/2016/12/15/good-sense-for-redis-data-type/"/>
     <id>https://www.leisiwo.com/blog/2016/12/15/good-sense-for-redis-data-type/</id>
     <published>2016-12-15T11:01:00.000Z</published>
-    <updated>2017-03-24T01:58:16.000Z</updated>
+    <updated>2017-03-31T01:50:28.000Z</updated>
     
     <content type="html"><![CDATA[<h3 id="Redis"><a href="#Redis" class="headerlink" title="Redis"></a>Redis</h3><ul>
 <li>Redis is an open source (BSD licensed), in-memory data structure<br>store, used as a database, cache and message broker.</li>
@@ -401,7 +401,7 @@
     <link href="https://www.leisiwo.com/blog/2016/12/07/https-notes/"/>
     <id>https://www.leisiwo.com/blog/2016/12/07/https-notes/</id>
     <published>2016-12-07T14:49:00.000Z</published>
-    <updated>2017-03-23T21:50:54.000Z</updated>
+    <updated>2017-03-31T01:50:28.000Z</updated>
     
     <content type="html"><![CDATA[<p>###HTTPS###</p>
 <p>HTTP over SSL/TLS，在安全传输层中传输HTTP内容</p>
@@ -460,7 +460,7 @@
     <link href="https://www.leisiwo.com/blog/2016/12/01/review-django-middleware/"/>
     <id>https://www.leisiwo.com/blog/2016/12/01/review-django-middleware/</id>
     <published>2016-12-01T07:11:00.000Z</published>
-    <updated>2017-03-23T21:50:54.000Z</updated>
+    <updated>2017-03-31T01:50:28.000Z</updated>
     
     <content type="html"><![CDATA[<p>###What’s Django Middleware###</p>
 <ul>
@@ -515,7 +515,7 @@
     <link href="https://www.leisiwo.com/blog/2016/09/28/have-a-talk-with-product-manager/"/>
     <id>https://www.leisiwo.com/blog/2016/09/28/have-a-talk-with-product-manager/</id>
     <published>2016-09-28T10:31:00.000Z</published>
-    <updated>2017-03-23T21:50:54.000Z</updated>
+    <updated>2017-03-31T01:50:28.000Z</updated>
     
     <content type="html"><![CDATA[<p>从老东家离职一段时间了，但是行业圈子很小，前些天聊着才知道，一位好朋友Fery（也是旧同事，是一名Product Manager）居然在我家附近的公司上班，再次感叹圈子真的很小，于是约了饭，交流了一些想法。</p>
 <a id="more"></a>
@@ -583,7 +583,7 @@
     <link href="https://www.leisiwo.com/blog/2016/01/01/docker-compose/"/>
     <id>https://www.leisiwo.com/blog/2016/01/01/docker-compose/</id>
     <published>2016-01-01T15:13:00.000Z</published>
-    <updated>2017-03-23T21:50:54.000Z</updated>
+    <updated>2017-03-31T01:50:28.000Z</updated>
     
     <content type="html"><![CDATA[<p>###ENV</p>
 <p><a href="http://dockerpool.com/static/books/docker_practice/dockerfile/basic_structure.html" target="_blank" rel="external">http://dockerpool.com/static/books/docker_practice/dockerfile/basic_structure.html</a></p>
@@ -649,7 +649,7 @@
     <link href="https://www.leisiwo.com/blog/2015/10/06/reader/"/>
     <id>https://www.leisiwo.com/blog/2015/10/06/reader/</id>
     <published>2015-10-05T16:37:00.000Z</published>
-    <updated>2017-03-23T21:50:54.000Z</updated>
+    <updated>2017-03-31T01:50:28.000Z</updated>
     
     <content type="html"><![CDATA[<p>看了如何阅读一本书所做的笔记</p>
 <a id="more"></a>
@@ -707,7 +707,7 @@
     <link href="https://www.leisiwo.com/blog/2015/03/29/try-elk/"/>
     <id>https://www.leisiwo.com/blog/2015/03/29/try-elk/</id>
     <published>2015-03-29T14:49:00.000Z</published>
-    <updated>2017-03-27T10:52:27.000Z</updated>
+    <updated>2017-03-31T01:50:28.000Z</updated>
     
     <content type="html"><![CDATA[<h3 id="ELK-Elasticsearch-Logstash-Kibana"><a href="#ELK-Elasticsearch-Logstash-Kibana" class="headerlink" title="ELK: Elasticsearch + Logstash + Kibana"></a>ELK: Elasticsearch + Logstash + Kibana</h3><ul>
 <li>这里是一个在ubuntu14.04 box上的一些操作</li>
@@ -770,7 +770,7 @@
     <link href="https://www.leisiwo.com/blog/2015/03/09/python-effective-cheatsheet-03/"/>
     <id>https://www.leisiwo.com/blog/2015/03/09/python-effective-cheatsheet-03/</id>
     <published>2015-03-09T15:13:00.000Z</published>
-    <updated>2017-03-23T21:50:54.000Z</updated>
+    <updated>2017-03-31T01:50:28.000Z</updated>
     
     <content type="html"><![CDATA[<h3 id="其实是读书猫纸"><a href="#其实是读书猫纸" class="headerlink" title="其实是读书猫纸"></a>其实是读书猫纸</h3><ul>
 <li><a href="http://www.amazon.cn/Effective%E7%B3%BB%E5%88%97%E4%B8%9B%E4%B9%A6-%E7%BC%96%E5%86%99%E9%AB%98%E8%B4%A8%E9%87%8F%E4%BB%A3%E7%A0%81-%E6%94%B9%E5%96%84Python%E7%A8%8B%E5%BA%8F%E7%9A%8491%E4%B8%AA%E5%BB%BA%E8%AE%AE-%E5%BC%A0%E9%A2%96/dp/B00KYFJTP8/ref=sr_1_1?ie=UTF8&amp;qid=1425914107&amp;sr=8-1&amp;keywords=%E6%94%B9%E5%96%84python" target="_blank" rel="external">Effective系列丛书:编写高质量代码:改善Python程序的91个建议</a></li>
@@ -821,7 +821,7 @@
     <link href="https://www.leisiwo.com/blog/2015/03/08/using-git-tags/"/>
     <id>https://www.leisiwo.com/blog/2015/03/08/using-git-tags/</id>
     <published>2015-03-08T10:05:00.000Z</published>
-    <updated>2017-03-23T21:50:54.000Z</updated>
+    <updated>2017-03-31T01:50:28.000Z</updated>
     
     <content type="html"><![CDATA[<h3 id="想用版本去规范一下自己写的程序"><a href="#想用版本去规范一下自己写的程序" class="headerlink" title="想用版本去规范一下自己写的程序"></a>想用版本去规范一下自己写的程序</h3><p>google 了一下软件版本号规范、风格、规则，也没找到什么好网页，所以还是觉得按自己的想法好了。</p>
 <p>约定：</p>
@@ -872,7 +872,7 @@
     <link href="https://www.leisiwo.com/blog/2015/02/16/use-docker-for-dev-env/"/>
     <id>https://www.leisiwo.com/blog/2015/02/16/use-docker-for-dev-env/</id>
     <published>2015-02-16T08:52:00.000Z</published>
-    <updated>2017-03-23T21:50:54.000Z</updated>
+    <updated>2017-03-31T01:50:28.000Z</updated>
     
     <content type="html"><![CDATA[<h3 id="使用docker去搭建一个简单的开发环境"><a href="#使用docker去搭建一个简单的开发环境" class="headerlink" title="使用docker去搭建一个简单的开发环境"></a>使用docker去搭建一个简单的开发环境</h3><p>基于ubuntu14.03lts vagrant box 做的演示</p>
 <p>演示所需image</p>
@@ -927,7 +927,7 @@
     <link href="https://www.leisiwo.com/blog/2015/01/18/use-pastescript/"/>
     <id>https://www.leisiwo.com/blog/2015/01/18/use-pastescript/</id>
     <published>2015-01-18T03:39:00.000Z</published>
-    <updated>2017-03-23T21:50:54.000Z</updated>
+    <updated>2017-03-31T01:50:28.000Z</updated>
     
     <content type="html"><![CDATA[<h3 id="使用PasteScript来生成setup-py文件"><a href="#使用PasteScript来生成setup-py文件" class="headerlink" title="使用PasteScript来生成setup.py文件"></a>使用PasteScript来生成setup.py文件</h3><ul>
 <li>最重要的是避免手写生成setup.py文件，所以找到了PasteScript这个包</li>
@@ -954,7 +954,7 @@
     <link href="https://www.leisiwo.com/blog/2015/01/10/use-git-submodule/"/>
     <id>https://www.leisiwo.com/blog/2015/01/10/use-git-submodule/</id>
     <published>2015-01-09T16:16:00.000Z</published>
-    <updated>2017-03-23T21:50:54.000Z</updated>
+    <updated>2017-03-31T01:50:28.000Z</updated>
     
     <content type="html"><![CDATA[<h3 id="我有一个-emacs文件，如何用submodule去维护其他模块？"><a href="#我有一个-emacs文件，如何用submodule去维护其他模块？" class="headerlink" title="我有一个.emacs文件，如何用submodule去维护其他模块？"></a>我有一个.emacs文件，如何用submodule去维护其他模块？</h3><h4 id="如何添加子模块"><a href="#如何添加子模块" class="headerlink" title="如何添加子模块"></a>如何添加子模块</h4><ul>
 <li>git submodule add resp path</li>
@@ -1013,7 +1013,7 @@
     <link href="https://www.leisiwo.com/blog/2015/01/07/what-i-need-from-python-mode-and-web-mode/"/>
     <id>https://www.leisiwo.com/blog/2015/01/07/what-i-need-from-python-mode-and-web-mode/</id>
     <published>2015-01-06T16:29:00.000Z</published>
-    <updated>2017-03-23T21:50:54.000Z</updated>
+    <updated>2017-03-31T01:50:28.000Z</updated>
     
     <content type="html"><![CDATA[<p>#web-mode</p>
 <ul>
@@ -1064,7 +1064,7 @@
     <link href="https://www.leisiwo.com/blog/2014/12/18/test-post/"/>
     <id>https://www.leisiwo.com/blog/2014/12/18/test-post/</id>
     <published>2014-12-18T15:05:00.000Z</published>
-    <updated>2017-03-23T21:50:54.000Z</updated>
+    <updated>2017-03-31T01:50:28.000Z</updated>
     
     <content type="html"><![CDATA[<p>#just test post</p>
 ]]></content>
@@ -1086,7 +1086,7 @@
     <link href="https://www.leisiwo.com/blog/2014/12/18/gokit-and-foosball/"/>
     <id>https://www.leisiwo.com/blog/2014/12/18/gokit-and-foosball/</id>
     <published>2014-12-18T04:13:00.000Z</published>
-    <updated>2017-03-27T10:53:00.000Z</updated>
+    <updated>2017-03-31T01:50:28.000Z</updated>
     
     <content type="html"><![CDATA[<p>#概述<br>基于Python语言进行开发，并使用了Django框架</p>
 <p>#For <a href="http://www.gizwits.com" target="_blank" rel="external">Gizwits</a></p>
