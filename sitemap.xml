@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.leisiwo.com/blog/2017/04/03/Your-program-need-the-Ansible-for-configuration/</loc>
+    
+    <lastmod>2017-04-03T16:18:40.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.leisiwo.com/about/index.html</loc>
     
     <lastmod>2017-03-31T01:52:14.000Z</lastmod>
@@ -23,7 +30,7 @@
   </url>
   
   <url>
-    <loc>https://www.leisiwo.com/blog/2013/09/23/test-for-codeblock/</loc>
+    <loc>https://www.leisiwo.com/blog/2013/09/23/memo-for-emacs-kdb-macro/</loc>
     
     <lastmod>2017-03-31T01:50:28.000Z</lastmod>
     
@@ -37,14 +44,7 @@
   </url>
   
   <url>
-    <loc>https://www.leisiwo.com/blog/2013/09/23/memo-for-emacs-kdb-macro/</loc>
-    
-    <lastmod>2017-03-31T01:50:28.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.leisiwo.com/blog/2013/09/09/boot-from-usb-vmware/</loc>
+    <loc>https://www.leisiwo.com/blog/2013/09/23/test-for-codeblock/</loc>
     
     <lastmod>2017-03-31T01:50:28.000Z</lastmod>
     
@@ -52,6 +52,13 @@
   
   <url>
     <loc>https://www.leisiwo.com/blog/2013/10/31/wswswws/</loc>
+    
+    <lastmod>2017-03-31T01:50:28.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.leisiwo.com/blog/2013/11/30/long-long-memory/</loc>
     
     <lastmod>2017-03-31T01:50:28.000Z</lastmod>
     
@@ -72,49 +79,7 @@
   </url>
   
   <url>
-    <loc>https://www.leisiwo.com/blog/2013/11/30/long-long-memory/</loc>
-    
-    <lastmod>2017-03-31T01:50:28.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://www.leisiwo.com/blog/2014/01/13/weekend-page/</loc>
-    
-    <lastmod>2017-03-31T01:50:28.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.leisiwo.com/blog/2014/01/29/do-something-for-octopress/</loc>
-    
-    <lastmod>2017-03-31T01:50:28.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.leisiwo.com/blog/2014/02/02/blog-from-two-place/</loc>
-    
-    <lastmod>2017-03-31T01:50:28.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.leisiwo.com/blog/2014/02/10/weekend-page/</loc>
-    
-    <lastmod>2017-03-31T01:50:28.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.leisiwo.com/blog/2014/02/02/weekend-page/</loc>
-    
-    <lastmod>2017-03-31T01:50:28.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.leisiwo.com/blog/2014/02/14/python-regexp-and-group/</loc>
     
     <lastmod>2017-03-31T01:50:28.000Z</lastmod>
     
@@ -128,7 +93,63 @@
   </url>
   
   <url>
+    <loc>https://www.leisiwo.com/blog/2014/01/29/do-something-for-octopress/</loc>
+    
+    <lastmod>2017-03-31T01:50:28.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.leisiwo.com/blog/2014/01/29/weekend-page/</loc>
+    
+    <lastmod>2017-03-31T01:50:28.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.leisiwo.com/blog/2014/02/02/blog-from-two-place/</loc>
+    
+    <lastmod>2017-03-31T01:50:28.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.leisiwo.com/blog/2014/02/02/weekend-page/</loc>
+    
+    <lastmod>2017-03-31T01:50:28.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.leisiwo.com/blog/2014/02/10/weekend-page/</loc>
+    
+    <lastmod>2017-03-31T01:50:28.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.leisiwo.com/blog/2014/02/14/python-regexp-and-group/</loc>
+    
+    <lastmod>2017-03-31T01:50:28.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.leisiwo.com/blog/2014/02/17/weekend-page/</loc>
+    
+    <lastmod>2017-03-31T01:50:28.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.leisiwo.com/blog/2014/02/27/weekend-page/</loc>
+    
+    <lastmod>2017-03-31T01:50:28.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.leisiwo.com/blog/2014/03/04/weekend-page/</loc>
     
     <lastmod>2017-03-31T01:50:28.000Z</lastmod>
     
@@ -156,21 +177,7 @@
   </url>
   
   <url>
-    <loc>https://www.leisiwo.com/blog/2014/02/27/weekend-page/</loc>
-    
-    <lastmod>2017-03-31T01:50:28.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.leisiwo.com/blog/2014/03/04/weekend-page/</loc>
-    
-    <lastmod>2017-03-31T01:50:28.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.leisiwo.com/blog/2014/01/29/weekend-page/</loc>
+    <loc>https://www.leisiwo.com/blog/2014/03/25/weekend-page/</loc>
     
     <lastmod>2017-03-31T01:50:28.000Z</lastmod>
     
@@ -184,21 +191,7 @@
   </url>
   
   <url>
-    <loc>https://www.leisiwo.com/blog/2014/03/25/weekend-page/</loc>
-    
-    <lastmod>2017-03-31T01:50:28.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://www.leisiwo.com/blog/2014/04/10/weekend-page/</loc>
-    
-    <lastmod>2017-03-31T01:50:28.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.leisiwo.com/blog/2014/04/27/weekend-page/</loc>
     
     <lastmod>2017-03-31T01:50:28.000Z</lastmod>
     
@@ -212,7 +205,7 @@
   </url>
   
   <url>
-    <loc>https://www.leisiwo.com/blog/2014/05/23/weekend-page/</loc>
+    <loc>https://www.leisiwo.com/blog/2014/04/27/weekend-page/</loc>
     
     <lastmod>2017-03-31T01:50:28.000Z</lastmod>
     
@@ -226,7 +219,21 @@
   </url>
   
   <url>
+    <loc>https://www.leisiwo.com/blog/2014/05/23/weekend-page/</loc>
+    
+    <lastmod>2017-03-31T01:50:28.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.leisiwo.com/blog/2013/09/07/test-html5-video/</loc>
+    
+    <lastmod>2017-03-31T01:50:28.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.leisiwo.com/blog/2014/06/06/weekend-page/</loc>
     
     <lastmod>2017-03-31T01:50:28.000Z</lastmod>
     
@@ -247,7 +254,7 @@
   </url>
   
   <url>
-    <loc>https://www.leisiwo.com/blog/2014/06/06/weekend-page/</loc>
+    <loc>https://www.leisiwo.com/blog/2014/09/11/i-am-back/</loc>
     
     <lastmod>2017-03-31T01:50:28.000Z</lastmod>
     
@@ -282,7 +289,7 @@
   </url>
   
   <url>
-    <loc>https://www.leisiwo.com/blog/2014/09/11/i-am-back/</loc>
+    <loc>https://www.leisiwo.com/blog/2014/12/18/test-post/</loc>
     
     <lastmod>2017-03-31T01:50:28.000Z</lastmod>
     
@@ -296,13 +303,6 @@
   </url>
   
   <url>
-    <loc>https://www.leisiwo.com/blog/2015/01/18/use-pastescript/</loc>
-    
-    <lastmod>2017-03-31T01:50:28.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://www.leisiwo.com/blog/2015/01/10/use-git-submodule/</loc>
     
     <lastmod>2017-03-31T01:50:28.000Z</lastmod>
@@ -310,14 +310,7 @@
   </url>
   
   <url>
-    <loc>https://www.leisiwo.com/blog/2014/12/18/test-post/</loc>
-    
-    <lastmod>2017-03-31T01:50:28.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.leisiwo.com/blog/2015/03/08/using-git-tags/</loc>
+    <loc>https://www.leisiwo.com/blog/2015/01/18/use-pastescript/</loc>
     
     <lastmod>2017-03-31T01:50:28.000Z</lastmod>
     
@@ -325,6 +318,13 @@
   
   <url>
     <loc>https://www.leisiwo.com/blog/2015/02/16/use-docker-for-dev-env/</loc>
+    
+    <lastmod>2017-03-31T01:50:28.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.leisiwo.com/blog/2015/03/08/using-git-tags/</loc>
     
     <lastmod>2017-03-31T01:50:28.000Z</lastmod>
     
@@ -366,14 +366,14 @@
   </url>
   
   <url>
-    <loc>https://www.leisiwo.com/blog/2016/12/07/https-notes/</loc>
+    <loc>https://www.leisiwo.com/blog/2016/12/01/review-django-middleware/</loc>
     
     <lastmod>2017-03-31T01:50:28.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.leisiwo.com/blog/2016/12/01/review-django-middleware/</loc>
+    <loc>https://www.leisiwo.com/blog/2016/12/07/https-notes/</loc>
     
     <lastmod>2017-03-31T01:50:28.000Z</lastmod>
     
@@ -387,7 +387,28 @@
   </url>
   
   <url>
+    <loc>https://www.leisiwo.com/blog/2017/03/21/ansible-up-and-running-note/</loc>
+    
+    <lastmod>2017-03-31T01:50:28.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.leisiwo.com/blog/2017/02/07/two-options-to-seo-for-octopress/</loc>
+    
+    <lastmod>2017-03-31T01:50:28.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.leisiwo.com/blog/2013/08/31/first/</loc>
+    
+    <lastmod>2017-03-31T01:50:28.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.leisiwo.com/blog/2017/03/15/understand-character-encoding/</loc>
     
     <lastmod>2017-03-31T01:50:28.000Z</lastmod>
     
@@ -408,20 +429,6 @@
   </url>
   
   <url>
-    <loc>https://www.leisiwo.com/blog/2017/03/15/understand-character-encoding/</loc>
-    
-    <lastmod>2017-03-31T01:50:28.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.leisiwo.com/blog/2017/03/21/ansible-up-and-running-note/</loc>
-    
-    <lastmod>2017-03-31T01:50:28.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://www.leisiwo.com/googledde837c980e60b40.html</loc>
     
     <lastmod>2017-03-31T01:50:28.000Z</lastmod>
@@ -429,14 +436,7 @@
   </url>
   
   <url>
-    <loc>https://www.leisiwo.com/links/index.html</loc>
-    
-    <lastmod>2017-03-31T01:50:28.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.leisiwo.com/blog/2013/08/31/first/</loc>
+    <loc>https://www.leisiwo.com/blog/2013/09/09/boot-from-usb-vmware/</loc>
     
     <lastmod>2017-03-31T01:50:28.000Z</lastmod>
     
@@ -444,6 +444,13 @@
   
   <url>
     <loc>https://www.leisiwo.com/books/index.html</loc>
+    
+    <lastmod>2017-03-31T01:50:28.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.leisiwo.com/links/index.html</loc>
     
     <lastmod>2017-03-31T01:50:28.000Z</lastmod>
     

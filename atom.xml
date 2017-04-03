@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.leisiwo.com/"/>
-  <updated>2017-03-31T01:50:28.000Z</updated>
+  <updated>2017-04-03T16:18:40.000Z</updated>
   <id>https://www.leisiwo.com/</id>
   
   <author>
@@ -14,6 +14,50 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Your program need the Ansible for configuration</title>
+    <link href="https://www.leisiwo.com/blog/2017/04/03/Your-program-need-the-Ansible-for-configuration/"/>
+    <id>https://www.leisiwo.com/blog/2017/04/03/Your-program-need-the-Ansible-for-configuration/</id>
+    <published>2017-04-03T15:28:12.000Z</published>
+    <updated>2017-04-03T16:18:40.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>I use Python. I use <code>python program.py</code> to run my python script.</p>
+<p>But on the server, I use <code>ansible-playbook playbook.yml</code> to let code run at the server.</p>
+<p>I also use <strong>docker</strong>.</p>
+<a id="more"></a>
+<h2 id="Let-the-code-go-under-Ansible-and-Docker"><a href="#Let-the-code-go-under-Ansible-and-Docker" class="headerlink" title="Let the code go under Ansible and Docker"></a>Let the code go under Ansible and Docker</h2><p><strong>Ansible</strong> is for program’s configuration.</p>
+<p><strong>Docker</strong> is for program’s environment.</p>
+<p><strong>Example:</strong></p>
+<p>Project: pychpgoods</p>
+<blockquote>
+<p>In this project, I use Docker and Ansible. Use Ansible to build the Docker image, and run the code by using docker container.</p>
+</blockquote>
+<p>pychpgoods <strong>tree</strong>:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">➜  /Users/saml/workspace/labs/pychpgoods&gt; git:(refactor) ✗ tree</div><div class="line">.</div><div class="line">├── Dockerfile</div><div class="line">├── LICENSE</div><div class="line">├── README.md</div><div class="line">├── deploy</div><div class="line">│   ├── README.md</div><div class="line">│   ├── conf.cfg</div><div class="line">│   ├── conf.cfg.bk</div><div class="line">│   ├── conf.cfg.example</div><div class="line">│   ├── pychpgoods-container.yml</div><div class="line">│   ├── sendlist</div><div class="line">│   └── simplelog.cfg.example</div><div class="line">├── pychpgoods</div><div class="line">│   ├── __init__.py</div><div class="line">│   ├── core.py</div><div class="line">│   ├── courier.py</div><div class="line">│   ├── pymail.py</div><div class="line">│   ├── resources.py</div><div class="line">│   ├── sendedlist.py</div><div class="line">│   └── simplelog.py</div><div class="line">├── requirements.txt</div><div class="line">└── tests</div><div class="line">    ├── __init__.py</div><div class="line">    ├── __pycache__</div><div class="line">    ├── test_core.py</div><div class="line">    ├── test_courier.py</div><div class="line">    └── test_sendedlist.py</div><div class="line"></div><div class="line">4 directories, 22 files</div></pre></td></tr></table></figure>
+<h2 id="Docker-part"><a href="#Docker-part" class="headerlink" title="Docker part"></a>Docker part</h2><blockquote>
+<p>I want my program run and independent of system environment. So I use docker to build my program environment.</p>
+</blockquote>
+<p> <strong>Dockerfile</strong>:</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="string">FROM</span> <span class="string">ansible/ubuntu14.04-ansible:stable</span></div><div class="line"><span class="string">MAINTAINER</span> <span class="string">callsamleung@gmail.com</span></div><div class="line"></div><div class="line"><span class="string">ADD</span> <span class="string">deploy</span> <span class="string">/srv/deploy</span></div><div class="line"><span class="string">WORKDIR</span> <span class="string">/srv/deploy</span></div><div class="line"><span class="string">ADD</span> <span class="string">pychpgoods</span> <span class="string">/srv/project/pychpgoods</span></div><div class="line"><span class="string">RUN</span> <span class="string">ansible-playbook</span> <span class="string">pychpgoods-container.yml</span> <span class="bullet">-c</span> <span class="string">local</span></div><div class="line"><span class="string">RUN</span> <span class="string">ln</span> <span class="bullet">-sf</span> <span class="string">/dev/stdout</span> <span class="string">/srv/deploy/log/pychpgoods.log</span></div><div class="line"><span class="string">CMD</span> <span class="string">["python",</span> <span class="string">"/srv/project/pychpgoods/core.py"</span><span class="string">]</span></div></pre></td></tr></table></figure>
+<h2 id="Ansible-part"><a href="#Ansible-part" class="headerlink" title="Ansible part"></a>Ansible part</h2><blockquote>
+<p>In my program, I need a python config file, cache file and logging config file to let the code go right. I use Ansible help me to copy all that file to the right position.</p>
+</blockquote>
+<p><strong>Ansible playbook</strong> :</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"><span class="meta">---</span></div><div class="line"><span class="attr">- hosts:</span> <span class="string">local</span></div><div class="line"><span class="attr">  vars:</span></div><div class="line"><span class="attr">    project_name:</span> <span class="string">pychpgoods</span></div><div class="line"><span class="attr">    project_path:</span> <span class="string">/srv/project/pychpgoods</span></div><div class="line"><span class="attr">    deploy_path:</span> <span class="string">/srv/project</span></div><div class="line"><span class="attr">    entry_file:</span> <span class="string">/srv/project/pychpgoods/core.py</span></div><div class="line"><span class="attr">    log_path:</span> <span class="string">/srv/deploy/log</span></div><div class="line"><span class="attr">    sendlist_file:</span> <span class="string">/var/tmp/sendlist</span></div><div class="line"><span class="attr">  tasks:</span></div><div class="line"><span class="comment">### COPY SOURCE CODE ###</span></div><div class="line"><span class="attr">    - name:</span> <span class="string">create</span> <span class="string">log</span> <span class="string">folder</span></div><div class="line"><span class="attr">      file:</span></div><div class="line"><span class="attr">        path:</span> <span class="string">"<span class="template-variable">&#123;&#123; log_path &#125;&#125;</span>"</span></div><div class="line"><span class="attr">        state:</span> <span class="string">directory</span></div><div class="line"><span class="attr">        mode:</span> <span class="string">"u+wrx,g+rx,o+rx"</span></div><div class="line"><span class="attr">    - name:</span> <span class="string">copy</span> <span class="string">config</span></div><div class="line"><span class="attr">      template:</span></div><div class="line"><span class="attr">        src:</span> <span class="string">conf.cfg</span></div><div class="line"><span class="attr">        dest:</span> <span class="string">"<span class="template-variable">&#123;&#123; project_path &#125;&#125;</span>/conf.cfg"</span></div><div class="line"><span class="attr">    - name:</span> <span class="string">copy</span> <span class="string">empty</span> <span class="string">sendlist</span></div><div class="line"><span class="attr">      copy:</span></div><div class="line"><span class="attr">        src:</span> <span class="string">sendlist</span></div><div class="line"><span class="attr">        dest:</span> <span class="string">"<span class="template-variable">&#123;&#123; sendlist_file &#125;&#125;</span>"</span></div><div class="line"><span class="attr">        mode:</span> <span class="string">"u+wr,g+wr,g+wr"</span></div><div class="line"><span class="attr">    - name:</span> <span class="string">copy</span> <span class="string">empty</span> <span class="string">simplelog</span> <span class="string">cfg</span></div><div class="line"><span class="attr">      template:</span></div><div class="line"><span class="attr">        src:</span> <span class="string">simplelog.cfg.example</span></div><div class="line"><span class="attr">        dest:</span> <span class="string">"<span class="template-variable">&#123;&#123; project_path &#125;&#125;</span>/simplelog.cfg"</span></div></pre></td></tr></table></figure>
+<p>After that, use <code>docker build -t callsamleung/pychpgoods .</code> than you have a image. use this <code>docker run callsamleung/pychpgoods</code> let the code “build” by <strong>Ansible</strong>, and run under <strong>Docker</strong>(container).</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;I use Python. I use &lt;code&gt;python program.py&lt;/code&gt; to run my python script.&lt;/p&gt;
+&lt;p&gt;But on the server, I use &lt;code&gt;ansible-playbook playbook.yml&lt;/code&gt; to let code run at the server.&lt;/p&gt;
+&lt;p&gt;I also use &lt;strong&gt;docker&lt;/strong&gt;.&lt;/p&gt;
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>from octopress to hexo</title>
@@ -1073,60 +1117,6 @@
     
       &lt;p&gt;#just test post&lt;/p&gt;
 
-    
-    </summary>
-    
-      <category term="takeiteasy" scheme="https://www.leisiwo.com/categories/takeiteasy/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>gokit and foosball</title>
-    <link href="https://www.leisiwo.com/blog/2014/12/18/gokit-and-foosball/"/>
-    <id>https://www.leisiwo.com/blog/2014/12/18/gokit-and-foosball/</id>
-    <published>2014-12-18T04:13:00.000Z</published>
-    <updated>2017-03-31T01:50:28.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>#概述<br>基于Python语言进行开发，并使用了Django框架</p>
-<p>#For <a href="http://www.gizwits.com" target="_blank" rel="external">Gizwits</a></p>
-<p>##依赖的安装包</p>
-<ul>
-<li><a href="https://github.com/gizwits/gservice_sdk_py" target="_blank" rel="external">gservice_sdk_py</a></li>
-</ul>
-<p>##步骤</p>
-<p>###配置gokit。</p>
-<ul>
-<li>请参考<a href="https://github.com/smartfoosball/foosball-mcu/wiki/How-To-Build-Smart-FoosBall-with-GoKit" target="_blank" rel="external">How To Build Smart FoosBall with GoKit</a></li>
-</ul>
-<p>###通过机智云获取gokit反馈的数据</p>
-<ul>
-<li>注册成为<a href="http://www.gizwits.com" target="_blank" rel="external">机智云</a>的开发者，依照<a href="https://github.com/smartfoosball/foosball-mcu/wiki/How-To-Build-Smart-FoosBall-with-GoKit#步骤" target="_blank" rel="external">步骤</a>配置好gokit产品。</li>
-<li>安装<a href="https://github.com/gizwits/gservice_sdk_py" target="_blank" rel="external">gservice_sdk_py</a></li>
-<li>使用机智云注册的gotki产品信息配置<strong>gservice_sdk</strong>的client，然后调用<strong>retrieve_product_histroy_data</strong>方法从机智云获取设备数据。</li>
-<li>根据<strong>retrieve_product_histroy_data</strong>返回的数据更新网站的进球数据, 代码：<a href="https://github.com/smartfoosball/fooscloud/blob/dev/smartfoosball/management/commands/goals.py" target="_blank" rel="external">Command</a><br>APPID和PRODUCK_KEY的获取如下图：<br><img src="/images/app_id_pkey.png" alt="app_id_pk"><br>关键代码如下:</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">gsc = GServiceClient(settings.GW_APPID)</div><div class="line">ts  = 0</div><div class="line">d_team = &#123;&apos;red&apos;: 1, &apos;blue&apos;: 2&#125;</div><div class="line">d_position = &#123;&apos;red_van&apos;: 1, &apos;red_rear&apos;: 2, &apos;blue_van&apos;: 3, &apos;blue_rear&apos;: 4&#125;</div><div class="line">while True:</div><div class="line">    try:</div><div class="line">        game = Game.objects.filter(status=Game.Status.playing.value).first()</div><div class="line">        data = gsc.retrieve_product_histroy_data(settings.PRODUCT_KEY, start_ts=ts, limit=10).json()[&apos;data&apos;]</div></pre></td></tr></table></figure>
-<p>#For <a href="http://weixin.qq.com/" target="_blank" rel="external">Wechat</a></p>
-<p>##依赖的安装包</p>
-<ul>
-<li><a href="https://pypi.python.org/pypi/wechatpy/0.7.2" target="_blank" rel="external">wechatpy 0.7.2</a></li>
-<li><a href="https://pypi.python.org/pypi/enum34/1.0.4" target="_blank" rel="external">enum34 1.0.4</a></li>
-<li><a href="https://pypi.python.org/pypi/requests/2.5.0" target="_blank" rel="external">requests 2.5.0</a></li>
-</ul>
-<p>##步骤</p>
-<p>###编写wechat_echo代码, <a href="https://github.com/smartfoosball/fooscloud/blob/dev/smartfoosball/views.py" target="_blank" rel="external">WechatEcho</a>部份代碼如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line">class WechatEcho(View):</div><div class="line"></div><div class="line">    def get(self, request):</div><div class="line">        signature = request.GET.get(&apos;signature&apos;, &apos;&apos;)</div><div class="line">        timestamp = request.GET.get(&apos;timestamp&apos;, &apos;&apos;)</div><div class="line">        nonce = request.GET.get(&apos;nonce&apos;, &apos;&apos;)</div><div class="line">        echo_str = request.GET.get(&apos;echostr&apos;, &apos;&apos;)</div><div class="line"></div><div class="line">        try:</div><div class="line">            check_signature(TOKEN, signature, timestamp, nonce)</div><div class="line">        except InvalidSignatureException:</div><div class="line">            return HttpResponse(status=403)</div><div class="line">        return HttpResponse(echo_str)</div><div class="line"></div><div class="line">    def post(self, request):</div><div class="line">        signature = request.GET.get(&apos;signature&apos;, &apos;&apos;)</div><div class="line">        timestamp = request.GET.get(&apos;timestamp&apos;, &apos;&apos;)</div><div class="line">        nonce = request.GET.get(&apos;nonce&apos;, &apos;&apos;)</div><div class="line">        echo_str = request.GET.get(&apos;echostr&apos;, &apos;&apos;)</div><div class="line"></div><div class="line">        try:</div><div class="line">            check_signature(TOKEN, signature, timestamp, nonce)</div><div class="line">        except InvalidSignatureException:</div><div class="line">            return HttpResponse(status=403)</div><div class="line"></div><div class="line">        msg = parse_message(request.body)</div><div class="line">        if msg.type == &apos;event&apos;:</div><div class="line">            if msg.event == &apos;subscribe&apos; or msg.event == &apos;subscribe_scan&apos;:</div><div class="line">                # 订阅时的事件</div><div class="line">                reply = create_reply(u&apos;菜鸟，来一局...&apos;, msg)</div><div class="line">                return HttpResponse(reply.render())</div><div class="line"></div><div class="line">        reply = TextReply(content=u&apos;你好，有任何问题请直接回复，我们会尽快处理。&apos;, message=msg)</div><div class="line">        return HttpResponse(reply.render())</div><div class="line">``` </div><div class="line">###启用服务器配置(测试坏境)</div><div class="line">* 登录[微信sanbox](http://mp.weixin.qq.com/debug/cgi-bin/sandbox?t=sandbox/login), 扫描二维码并登陆。</div><div class="line">* **修改接口配置信息**如图。在[urls.py]()增加</div></pre></td></tr></table></figure></p>
-<p>url(r’^wechat_echo$’, csrf_exempt(views.WechatEcho.as_view()), name=”wechat_echo”)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">![api](/images/wechat_api_url.jpeg)</div><div class="line"></div><div class="line">###使用OAUTH方式获取微信用户授权。</div><div class="line">* 登录[微信sanbox](http://mp.weixin.qq.com/debug/cgi-bin/sandbox?t=sandbox/login), 扫描二维码并登陆。在[urls.py]()下增加一条url设置</div></pre></td></tr></table></figure></p>
-<p>url(r’^wechat/oauth2$’, views.wechat_oauth2, name=”wechat_oauth2”)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">根据下图修改**OAuth网页端授权页面**:</div><div class="line">    ![api](/images/wechat_oauth1.png)  </div><div class="line">    ![api](/images/wechat_oauth2.png)</div><div class="line">* 依照微信文档[网页授权获取用户基本信息](http://mp.weixin.qq.com/wiki/17/c0f37d5704f0b64713d5d2c37b468d75.html),编写**用户同意授权**代码[BaseWeixinView](https://github.com/smartfoosball/fooscloud/blob/dev/smartfoosball/views.py)</div><div class="line">* **拉取用户信息**[wechat_oauth2](https://github.com/smartfoosball/fooscloud/blob/dev/smartfoosball/views.py)部份代碼如下：</div></pre></td></tr></table></figure></p>
-<p>class BaseWeixinView(View):<br>    def dispatch(self, <em>args, **kwargs):<br>        if not self.request.user.is_authenticated():<br>            redirect_uri = urllib.urlencode({<br>                    ‘redirect_uri’:<br>                        ‘http://‘ + self.request.get_host() + reverse(“wechat_oauth2”)})<br>            return redirect(‘<a href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=%s&amp;%s&amp;response_type=code&amp;scope=snsapi_userinfo&amp;state=STATE#wechat_redirect" target="_blank" rel="external">https://open.weixin.qq.com/connect/oauth2/authorize?appid=%s&amp;%s&amp;response_type=code&amp;scope=snsapi_userinfo&amp;state=STATE#wechat_redirect</a>‘ % (WX_APPID, redirect_uri))<br>        return super(BaseWeixinView, self).dispatch(</em>args, **kwargs)</p>
-<p>def wechat_oauth2(request):<br>    code = request.GET.get(‘code’)<br>    if code:<br>        params={‘appid’: WX_APPID,<br>                ‘secret’: WX_SECRET,<br>                ‘code’: code,<br>                ‘grant_type’: ‘authorization_code’}<br>        try:<br>            resp = requests.get(‘<a href="https://api.weixin.qq.com/sns/oauth2/access_token" target="_blank" rel="external">https://api.weixin.qq.com/sns/oauth2/access_token</a>‘,<br>                                params=params)<br>            tokens = json.loads(resp.content)<br>            openid = tokens[‘openid’]<br>            params = {‘access_token’: tokens[‘access_token’],<br>                      ‘openid’: openid,<br>                      ‘lang’: ‘zh_CN’}<br>            resp = requests.get(‘<a href="https://api.weixin.qq.com/sns/userinfo" target="_blank" rel="external">https://api.weixin.qq.com/sns/userinfo</a>‘, params=params)<br>            user = json.loads(resp.content)<br>```<br>2014-12-18</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;#概述&lt;br&gt;基于Python语言进行开发，并使用了Django框架&lt;/p&gt;
-&lt;p&gt;#For &lt;a href=&quot;http://www.gizwits.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Gizwits&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;##依赖的安装
     
     </summary>
     
