@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.leisiwo.com/"/>
-  <updated>2017-04-03T16:18:40.000Z</updated>
+  <updated>2017-04-03T16:22:13.000Z</updated>
   <id>https://www.leisiwo.com/</id>
   
   <author>
@@ -16,20 +16,16 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Your program need the Ansible for configuration</title>
-    <link href="https://www.leisiwo.com/blog/2017/04/03/Your-program-need-the-Ansible-for-configuration/"/>
-    <id>https://www.leisiwo.com/blog/2017/04/03/Your-program-need-the-Ansible-for-configuration/</id>
+    <title>Let the code go under Ansible and Docker</title>
+    <link href="https://www.leisiwo.com/blog/2017/04/03/Let-the-code-go-under-Ansible-and-Docker/"/>
+    <id>https://www.leisiwo.com/blog/2017/04/03/Let-the-code-go-under-Ansible-and-Docker/</id>
     <published>2017-04-03T15:28:12.000Z</published>
-    <updated>2017-04-03T16:18:40.000Z</updated>
+    <updated>2017-04-03T16:22:13.000Z</updated>
     
-    <content type="html"><![CDATA[<p>I use Python. I use <code>python program.py</code> to run my python script.</p>
-<p>But on the server, I use <code>ansible-playbook playbook.yml</code> to let code run at the server.</p>
-<p>I also use <strong>docker</strong>.</p>
-<a id="more"></a>
-<h2 id="Let-the-code-go-under-Ansible-and-Docker"><a href="#Let-the-code-go-under-Ansible-and-Docker" class="headerlink" title="Let the code go under Ansible and Docker"></a>Let the code go under Ansible and Docker</h2><p><strong>Ansible</strong> is for program’s configuration.</p>
+    <content type="html"><![CDATA[<p><strong>Ansible</strong> is for program’s configuration.</p>
 <p><strong>Docker</strong> is for program’s environment.</p>
-<p><strong>Example:</strong></p>
-<p>Project: pychpgoods</p>
+<a id="more"></a>
+<h2 id="Let-the-code-go-under-Ansible-and-Docker"><a href="#Let-the-code-go-under-Ansible-and-Docker" class="headerlink" title="Let the code go under Ansible and Docker"></a>Let the code go under Ansible and Docker</h2><p>Project: pychpgoods</p>
 <blockquote>
 <p>In this project, I use Docker and Ansible. Use Ansible to build the Docker image, and run the code by using docker container.</p>
 </blockquote>
@@ -50,9 +46,8 @@
     
     <summary type="html">
     
-      &lt;p&gt;I use Python. I use &lt;code&gt;python program.py&lt;/code&gt; to run my python script.&lt;/p&gt;
-&lt;p&gt;But on the server, I use &lt;code&gt;ansible-playbook playbook.yml&lt;/code&gt; to let code run at the server.&lt;/p&gt;
-&lt;p&gt;I also use &lt;strong&gt;docker&lt;/strong&gt;.&lt;/p&gt;
+      &lt;p&gt;&lt;strong&gt;Ansible&lt;/strong&gt; is for program’s configuration.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Docker&lt;/strong&gt; is for program’s environment.&lt;/p&gt;
     
     </summary>
     

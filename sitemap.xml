@@ -2,9 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://www.leisiwo.com/blog/2017/04/03/Your-program-need-the-Ansible-for-configuration/</loc>
+    <loc>https://www.leisiwo.com/blog/2017/04/03/Let-the-code-go-under-Ansible-and-Docker/</loc>
     
-    <lastmod>2017-04-03T16:18:40.000Z</lastmod>
+    <lastmod>2017-04-03T16:22:13.000Z</lastmod>
     
   </url>
   
@@ -142,7 +142,7 @@
   </url>
   
   <url>
-    <loc>https://www.leisiwo.com/blog/2014/02/27/weekend-page/</loc>
+    <loc>https://www.leisiwo.com/blog/2014/03/09/weekend-page/</loc>
     
     <lastmod>2017-03-31T01:50:28.000Z</lastmod>
     
@@ -156,7 +156,7 @@
   </url>
   
   <url>
-    <loc>https://www.leisiwo.com/blog/2014/03/09/weekend-page/</loc>
+    <loc>https://www.leisiwo.com/blog/2014/02/27/weekend-page/</loc>
     
     <lastmod>2017-03-31T01:50:28.000Z</lastmod>
     
@@ -387,21 +387,7 @@
   </url>
   
   <url>
-    <loc>https://www.leisiwo.com/blog/2017/03/21/ansible-up-and-running-note/</loc>
-    
-    <lastmod>2017-03-31T01:50:28.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://www.leisiwo.com/blog/2017/02/07/two-options-to-seo-for-octopress/</loc>
-    
-    <lastmod>2017-03-31T01:50:28.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.leisiwo.com/blog/2013/08/31/first/</loc>
     
     <lastmod>2017-03-31T01:50:28.000Z</lastmod>
     
@@ -422,7 +408,21 @@
   </url>
   
   <url>
+    <loc>https://www.leisiwo.com/blog/2017/03/21/ansible-up-and-running-note/</loc>
+    
+    <lastmod>2017-03-31T01:50:28.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.leisiwo.com/blog/2017/03/24/from-octopress-to-hexo/</loc>
+    
+    <lastmod>2017-03-31T01:50:28.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.leisiwo.com/blog/2013/08/31/first/</loc>
     
     <lastmod>2017-03-31T01:50:28.000Z</lastmod>
     
