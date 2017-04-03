@@ -1,14 +1,12 @@
 ---
-title: Your program need the Ansible for configuration
+title: Let the code go under Ansible and Docker
 date: 2017-04-03 23:28:12
 tags:
 ---
 
-I use Python. I use `python program.py` to run my python script.
+**Ansible** is for program's configuration.
 
-But on the server, I use `ansible-playbook playbook.yml` to let code run at the server.
-
-I also use **docker**.
+**Docker** is for program's environment.
 
 <!--More-->
 
@@ -16,11 +14,6 @@ I also use **docker**.
 
 ## Let the code go under Ansible and Docker
 
-**Ansible** is for program's configuration.
-
-**Docker** is for program's environment.
-
-**Example:**
 
 Project: pychpgoods
 
@@ -115,3 +108,4 @@ CMD ["python", "/srv/project/pychpgoods/core.py"]
         dest: "{{ project_path }}/simplelog.cfg"
 ```
 After that, use `docker build -t callsamleung/pychpgoods .` than you have a image. use this `docker run callsamleung/pychpgoods` let the code "build" by **Ansible**, and run under **Docker**(container).
+
