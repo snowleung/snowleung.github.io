@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.leisiwo.com/"/>
-  <updated>2017-04-29T11:31:17.000Z</updated>
+  <updated>2017-04-29T11:37:30.000Z</updated>
   <id>https://www.leisiwo.com/</id>
   
   <author>
@@ -16,11 +16,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>About_apache_ab_tools</title>
+    <title>About apache ab tools</title>
     <link href="https://www.leisiwo.com/blog/2017/04/29/About-apache-ab-tools/"/>
     <id>https://www.leisiwo.com/blog/2017/04/29/About-apache-ab-tools/</id>
     <published>2017-04-29T11:30:22.000Z</published>
-    <updated>2017-04-29T11:31:17.000Z</updated>
+    <updated>2017-04-29T11:37:30.000Z</updated>
     
     <content type="html"><![CDATA[<p>服務器開發人員都會用併發數來談服務器的能力高低。其實他們很懶，隱藏了很多條件，就是</p>
 <ul>
