@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.leisiwo.com/blog/2017/04/29/About-apache-ab-tools/</loc>
+    
+    <lastmod>2017-04-29T11:31:17.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.leisiwo.com/blog/2017/04/03/Let-the-code-go-under-Ansible-and-Docker/</loc>
     
     <lastmod>2017-04-03T16:22:13.000Z</lastmod>
@@ -16,14 +23,7 @@
   </url>
   
   <url>
-    <loc>https://www.leisiwo.com/blog/2014/06/03/weekend-page/</loc>
-    
-    <lastmod>2017-03-31T01:50:28.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.leisiwo.com/blog/2013/09/23/git-pages-and-octopress/</loc>
+    <loc>https://www.leisiwo.com/blog/2014/06/06/weekend-page/</loc>
     
     <lastmod>2017-03-31T01:50:28.000Z</lastmod>
     
@@ -142,7 +142,7 @@
   </url>
   
   <url>
-    <loc>https://www.leisiwo.com/blog/2014/03/09/weekend-page/</loc>
+    <loc>https://www.leisiwo.com/blog/2014/02/27/weekend-page/</loc>
     
     <lastmod>2017-03-31T01:50:28.000Z</lastmod>
     
@@ -156,7 +156,7 @@
   </url>
   
   <url>
-    <loc>https://www.leisiwo.com/blog/2014/02/27/weekend-page/</loc>
+    <loc>https://www.leisiwo.com/blog/2014/03/09/weekend-page/</loc>
     
     <lastmod>2017-03-31T01:50:28.000Z</lastmod>
     
@@ -226,14 +226,14 @@
   </url>
   
   <url>
-    <loc>https://www.leisiwo.com/blog/2013/09/07/test-html5-video/</loc>
+    <loc>https://www.leisiwo.com/blog/2014/06/03/weekend-page/</loc>
     
     <lastmod>2017-03-31T01:50:28.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.leisiwo.com/blog/2014/06/06/weekend-page/</loc>
+    <loc>https://www.leisiwo.com/blog/2013/09/07/test-html5-video/</loc>
     
     <lastmod>2017-03-31T01:50:28.000Z</lastmod>
     
@@ -429,6 +429,13 @@
   </url>
   
   <url>
+    <loc>https://www.leisiwo.com/blog/2013/09/09/boot-from-usb-vmware/</loc>
+    
+    <lastmod>2017-03-31T01:50:28.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.leisiwo.com/googledde837c980e60b40.html</loc>
     
     <lastmod>2017-03-31T01:50:28.000Z</lastmod>
@@ -436,7 +443,7 @@
   </url>
   
   <url>
-    <loc>https://www.leisiwo.com/blog/2013/09/09/boot-from-usb-vmware/</loc>
+    <loc>https://www.leisiwo.com/blog/2013/09/23/git-pages-and-octopress/</loc>
     
     <lastmod>2017-03-31T01:50:28.000Z</lastmod>
     
