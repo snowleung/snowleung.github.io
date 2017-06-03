@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.leisiwo.com/blog/2017/06/03/plantuml-note/</loc>
+    
+    <lastmod>2017-06-03T06:46:20.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.leisiwo.com/books/index.html</loc>
     
     <lastmod>2017-06-02T15:58:56.000Z</lastmod>
@@ -38,13 +45,6 @@
   
   <url>
     <loc>https://www.leisiwo.com/blog/2013/09/23/test-for-codeblock/</loc>
-    
-    <lastmod>2017-03-31T01:50:28.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.leisiwo.com/blog/2013/09/23/read-a-book/</loc>
     
     <lastmod>2017-03-31T01:50:28.000Z</lastmod>
     
@@ -163,14 +163,14 @@
   </url>
   
   <url>
-    <loc>https://www.leisiwo.com/blog/2014/03/16/fileio-index/</loc>
+    <loc>https://www.leisiwo.com/blog/2014/03/17/weekend-page/</loc>
     
     <lastmod>2017-03-31T01:50:28.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.leisiwo.com/blog/2014/03/17/weekend-page/</loc>
+    <loc>https://www.leisiwo.com/blog/2014/03/16/fileio-index/</loc>
     
     <lastmod>2017-03-31T01:50:28.000Z</lastmod>
     
@@ -436,13 +436,6 @@
   </url>
   
   <url>
-    <loc>https://www.leisiwo.com/googledde837c980e60b40.html</loc>
-    
-    <lastmod>2017-03-31T01:50:28.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://www.leisiwo.com/blog/2013/09/23/git-pages-and-octopress/</loc>
     
     <lastmod>2017-03-31T01:50:28.000Z</lastmod>
@@ -450,7 +443,21 @@
   </url>
   
   <url>
+    <loc>https://www.leisiwo.com/googledde837c980e60b40.html</loc>
+    
+    <lastmod>2017-03-31T01:50:28.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.leisiwo.com/blog/2013/09/23/memo-for-emacs-kdb-macro/</loc>
+    
+    <lastmod>2017-03-31T01:50:28.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.leisiwo.com/blog/2013/09/23/read-a-book/</loc>
     
     <lastmod>2017-03-31T01:50:28.000Z</lastmod>
     

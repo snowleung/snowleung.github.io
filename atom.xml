@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.leisiwo.com/"/>
-  <updated>2017-04-29T11:37:30.000Z</updated>
+  <updated>2017-06-03T06:46:20.000Z</updated>
   <id>https://www.leisiwo.com/</id>
   
   <author>
@@ -14,6 +14,87 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>plantuml-note</title>
+    <link href="https://www.leisiwo.com/blog/2017/06/03/plantuml-note/"/>
+    <id>https://www.leisiwo.com/blog/2017/06/03/plantuml-note/</id>
+    <published>2017-06-03T03:05:18.000Z</published>
+    <updated>2017-06-03T06:46:20.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Two things for my work, <strong>Sequence Diagram</strong> and <strong>Simple Activity</strong>.</p>
+<a id="more"></a>
+<h2 id="Elements"><a href="#Elements" class="headerlink" title="Elements"></a>Elements</h2><table>
+<thead>
+<tr>
+<th>Elements</th>
+<th>symbol</th>
+<th>understand</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Arrow</td>
+<td>-&gt;,&lt;–</td>
+<td>message transfer</td>
+</tr>
+<tr>
+<td>Participant</td>
+<td>declare by:actor, database…</td>
+<td>like “who”</td>
+</tr>
+<tr>
+<td>Splitting diagrams</td>
+<td>newpage</td>
+<td>Splitting diagrams</td>
+</tr>
+<tr>
+<td>Splitting charter</td>
+<td>==</td>
+<td>splitting “message”</td>
+</tr>
+<tr>
+<td>===Activity diagram===</td>
+<td>===Activity diagram===</td>
+<td>===Activity diagram===</td>
+</tr>
+<tr>
+<td>begin,end</td>
+<td>start, stop</td>
+<td>begin or end in actively</td>
+</tr>
+<tr>
+<td>branch</td>
+<td>if/then/else</td>
+<td>conditions</td>
+</tr>
+<tr>
+<td>repeat</td>
+<td>repeat … repeat while(condition)</td>
+<td>also conditions</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Example-Sequence-Diagram"><a href="#Example-Sequence-Diagram" class="headerlink" title="Example(Sequence Diagram)"></a>Example(Sequence Diagram)</h3><p>❗️bob add todo list,</p>
+<p>🎨bob working,</p>
+<p>✅bob finish the job, and check mark.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">@startuml</div><div class="line">actor Bob</div><div class="line">Bob -&gt; todo : draw a line</div><div class="line">todo -&gt; todo: add uncheck job: draw a line</div><div class="line">Bob -&gt; Bob: drawing</div><div class="line">Bob -&gt; Bob: finish</div><div class="line">Bob -&gt; todo: checked</div><div class="line">@enduml</div></pre></td></tr></table></figure>
+<h4 id="output"><a href="#output" class="headerlink" title="output"></a>output</h4><p><img src="/images/seq_diagram.png" alt="seq_diagram"></p>
+<h3 id="Example-Activity-diagram"><a href="#Example-Activity-diagram" class="headerlink" title="Example(Activity diagram)"></a>Example(Activity diagram)</h3><ul>
+<li>worker handler</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">@startuml</div><div class="line">start</div><div class="line">repeat </div><div class="line">	:check todo list;</div><div class="line">	if (has new job?) then (YES)</div><div class="line">		:add to list;</div><div class="line">	else (NO)</div><div class="line">		:process todo;</div><div class="line">	endif</div><div class="line">repeat while(is all done?)</div><div class="line">stop</div><div class="line">@enduml</div></pre></td></tr></table></figure>
+<h4 id="output-1"><a href="#output-1" class="headerlink" title="output"></a>output</h4><p><img src="/activity_diagram.png" alt="actively_diagram"></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Two things for my work, &lt;strong&gt;Sequence Diagram&lt;/strong&gt; and &lt;strong&gt;Simple Activity&lt;/strong&gt;.&lt;/p&gt;
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>About apache ab tools</title>
@@ -1094,57 +1175,6 @@
     <summary type="html">
     
       &lt;h3 id=&quot;我有一个-emacs文件，如何用submodule去维护其他模块？&quot;&gt;&lt;a href=&quot;#我有一个-emacs文件，如何用submodule去维护其他模块？&quot; class=&quot;headerlink&quot; title=&quot;我有一个.emacs文件，如何用submodule去
-    
-    </summary>
-    
-      <category term="Program" scheme="https://www.leisiwo.com/categories/Program/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>what i need from python-mode and web-mode</title>
-    <link href="https://www.leisiwo.com/blog/2015/01/07/what-i-need-from-python-mode-and-web-mode/"/>
-    <id>https://www.leisiwo.com/blog/2015/01/07/what-i-need-from-python-mode-and-web-mode/</id>
-    <published>2015-01-06T16:29:00.000Z</published>
-    <updated>2017-03-31T01:50:28.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>#web-mode</p>
-<ul>
-<li>插入元素, [C-c C-e i]</li>
-<li>删除整块元素, [C-c C-e k]</li>
-<li>选择整块元素, [C-c C-e s]</li>
-<li>选择整块元素内容(相当于跳转到元素内部), [C-c C-e a]</li>
-<li>插入属性, [C-c C-a i]</li>
-<li>折叠, [C-c C-f]</li>
-<li>缩进缓冲区, [C-c C-i]</li>
-<li>标准化DOM [C-c C-d n]</li>
-<li>html注释 [M-;]</li>
-</ul>
-<p>#python-mode</p>
-<ul>
-<li>快速展开<ol>
-<li>插入class, [C-c C-t c]</li>
-<li>插入def, [C-c C-t d]</li>
-<li>插入for, [C-c C-t f]</li>
-<li>插入if, [C-c C-t i]</li>
-<li>插入try, [C-c C-t t]</li>
-</ol>
-</li>
-<li>def/class跳转,[C-c C-j]</li>
-<li>使用pyflakes分析,[C-c C-v]</li>
-<li>直接运行脚本, [C-c C-c]</li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;#web-mode&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;插入元素, [C-c C-e i]&lt;/li&gt;
-&lt;li&gt;删除整块元素, [C-c C-e k]&lt;/li&gt;
-&lt;li&gt;选择整块元素, [C-c C-e s]&lt;/li&gt;
-&lt;li&gt;选择整块元素内容(相当于跳转到元素内部), [C-c C-
     
     </summary>
     
