@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.leisiwo.com/"/>
-  <updated>2017-06-03T15:05:26.000Z</updated>
+  <updated>2018-10-02T15:17:03.353Z</updated>
   <id>https://www.leisiwo.com/</id>
   
   <author>
@@ -16,83 +16,29 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>plantuml-note</title>
-    <link href="https://www.leisiwo.com/blog/2017/06/03/plantuml-note/"/>
-    <id>https://www.leisiwo.com/blog/2017/06/03/plantuml-note/</id>
-    <published>2017-06-03T03:05:18.000Z</published>
-    <updated>2017-06-03T15:05:26.000Z</updated>
+    <title>what-is-difference-between-unit-testing-and-integration-testing</title>
+    <link href="https://www.leisiwo.com/blog/2018/09/22/what-is-difference-between-unit-testing-and-integration-testing/"/>
+    <id>https://www.leisiwo.com/blog/2018/09/22/what-is-difference-between-unit-testing-and-integration-testing/</id>
+    <published>2018-09-22T15:25:09.000Z</published>
+    <updated>2018-10-02T15:17:03.353Z</updated>
     
-    <content type="html"><![CDATA[<p>Two things for my work, <strong>Sequence Diagram</strong> and <strong>Simple Activity</strong>.</p>
-<a id="more"></a>
-<h2 id="Elements"><a href="#Elements" class="headerlink" title="Elements"></a>Elements</h2><table>
-<thead>
-<tr>
-<th>Elements</th>
-<th>symbol</th>
-<th>understand</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Arrow</td>
-<td>-&gt;,&lt;–</td>
-<td>message transfer</td>
-</tr>
-<tr>
-<td>Participant</td>
-<td>declare by:actor, database…</td>
-<td>like “who”</td>
-</tr>
-<tr>
-<td>Splitting diagrams</td>
-<td>newpage</td>
-<td>Splitting diagrams</td>
-</tr>
-<tr>
-<td>Splitting charter</td>
-<td>==</td>
-<td>splitting “message”</td>
-</tr>
-<tr>
-<td>===Activity diagram===</td>
-<td>===Activity diagram===</td>
-<td>===Activity diagram===</td>
-</tr>
-<tr>
-<td>begin,end</td>
-<td>start, stop</td>
-<td>begin or end in actively</td>
-</tr>
-<tr>
-<td>branch</td>
-<td>if/then/else</td>
-<td>conditions</td>
-</tr>
-<tr>
-<td>repeat</td>
-<td>repeat … repeat while(condition)</td>
-<td>also conditions</td>
-</tr>
-</tbody>
-</table>
-<h3 id="Example-Sequence-Diagram"><a href="#Example-Sequence-Diagram" class="headerlink" title="Example(Sequence Diagram)"></a>Example(Sequence Diagram)</h3><p>❗️bob add todo list,</p>
-<p>🎨bob working,</p>
-<p>✅bob finish the job, and check mark.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">@startuml</div><div class="line">actor Bob</div><div class="line">Bob -&gt; todo : draw a line</div><div class="line">todo -&gt; todo: add uncheck job: draw a line</div><div class="line">Bob -&gt; Bob: drawing</div><div class="line">Bob -&gt; Bob: finish</div><div class="line">Bob -&gt; todo: checked</div><div class="line">@enduml</div></pre></td></tr></table></figure>
-<h4 id="output"><a href="#output" class="headerlink" title="output"></a>output</h4><p><img src="/images/seq_diagram.png" alt="seq_diagram"></p>
-<h3 id="Example-Activity-diagram"><a href="#Example-Activity-diagram" class="headerlink" title="Example(Activity diagram)"></a>Example(Activity diagram)</h3><ul>
-<li>worker handler</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">@startuml</div><div class="line">start</div><div class="line">repeat </div><div class="line">	:check todo list;</div><div class="line">	if (has new job?) then (YES)</div><div class="line">		:add to list;</div><div class="line">	else (NO)</div><div class="line">		:process todo;</div><div class="line">	endif</div><div class="line">repeat while(is all done?)</div><div class="line">stop</div><div class="line">@enduml</div></pre></td></tr></table></figure>
-<h4 id="output-1"><a href="#output-1" class="headerlink" title="output"></a>output</h4><p><img src="/images/activity_diagram.png" alt="activity_diagram"></p>
+    <content type="html"><![CDATA[<h2 id="What-is-difference-between-Unit-Testing-and-Integration-Testing"><a href="#What-is-difference-between-Unit-Testing-and-Integration-Testing" class="headerlink" title="What is difference between Unit Testing and Integration Testing?"></a>What is difference between Unit Testing and Integration Testing?</h2><p>link:<a href="https://www.softwaretestingclass.com/what-is-difference-between-unit-testing-and-integration-testing/" target="_blank" rel="external">https://www.softwaretestingclass.com/what-is-difference-between-unit-testing-and-integration-testing/</a></p>
+<h2 id="单元测试和继承测试的异同"><a href="#单元测试和继承测试的异同" class="headerlink" title="单元测试和继承测试的异同"></a>单元测试和继承测试的异同</h2><p>在软件开发的生命周期中，普通的软件应用程序都并非由单个开发者开发完成。软件应用程序被分为不同的模块，而不同的模块也分属于不同的软件开发团队。当一个模块模块被开发完成的同时，它所对应的功能也已经通过了对应的#单元测试#。一旦所有的模块都被开发完成后并与其他模块集成时，就会以#集成测试#来发现不同模块集成后所构建的系统可能出现的问题。</p>
+<p>###Q.单元测试和集成测试的异同？</p>
+<p>单元测试<br>1、单元测试时一类用于检查一小段代码是否按它的期望运行<br>2、单元测试检查软件应用的单个组件<br>3、单元测试的范围是很小的，它只覆盖一个单元或一小段代码。因此在写小段测试代码时，只作用于测试单独的一个类。<br>4、单元测试不应该依赖于已经被测试过的外部代码。<br>5、这类测试应该覆盖在整个软件测试生命周期中，并且总是由开发者执行。<br>6、单元测试不该再细分为不同类型。<br>7、单元测试应始于在模块的规范书。<br>8、程序代码的细节可在单元测试之中了解。<br>9、当不同的模块集成在一起时，单元测试主要关注某个单元的功能性问题和已暴露的问题。<br>10、单元测试的主要目标是逐一测试每一个单元，并且确保它们运行都是符合预期的。<br>11、单元测试能归类到白盒测试之下。</p>
+<p>集成测试<br>1、集成测试是一类用于检查不同模块之间是否能一起运行<br>2、集成测试会考虑模块集成后的行为<br>3、集成测试的范围非常广，覆盖整个软件应用，同时这些测试也需要费些功夫才能整合在一起<br>4、集成测试依赖于其他系统外部资源，包括分配给系统的数据库，硬件等。<br>5、这类测试在单元测试之后，在系统测试之前，并且总是由测试团队执行。<br>6、集成测试可进一步分成“自上而下集成”，“由下至上集成”等不同的类型。<br>7、集成测试与接口规范一起开始写。<br>8、集成架构的可见性来自于集成测试。<br>9、集成测试贯彻于发现在构建整个系统时，不同模块集成时将出现的问题。<br>10、集成测试的目标是用于测试已经组合在一起的模块，并且确保每次组合后模块的运行结果都符合预期。<br>11、集成测试能同时归类到黑盒和白盒测试之下。</p>
+<p>###结论</p>
+<p>集成测试将有助于验证不同模块开发完成后的整个系统。相关功能的单元测试结果将有助于解决集成测试所发现的问题。单元测试和集成测试的结果同等重要。此时我们已经看到“单元测试和继承测试的异同”的本质。我想我已经在这篇文章中指出了主要的异同。</p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;Two things for my work, &lt;strong&gt;Sequence Diagram&lt;/strong&gt; and &lt;strong&gt;Simple Activity&lt;/strong&gt;.&lt;/p&gt;
+      &lt;h2 id=&quot;What-is-difference-between-Unit-Testing-and-Integration-Testing&quot;&gt;&lt;a href=&quot;#What-is-difference-between-Unit-Testing-and-Integration-T
     
     </summary>
     
+    
+      <category term="TRANSLATE" scheme="https://www.leisiwo.com/tags/TRANSLATE/"/>
     
   </entry>
   
